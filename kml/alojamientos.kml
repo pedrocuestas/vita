@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>alojamientos.kml</name>
+	<Style id="waypoint_h">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="waypoint">
+		<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#waypoint_n</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#waypoint_h</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="waypoint_n">
+		<IconStyle>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Waypoints</name>
+		<open>1</open>
+		<Placemark>
+			<name>Albergue Juvenil San José, 17Euro, Calle Montemar</name>
+			<TimeStamp><when>2014-11-06T12:03:29Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.105231,36.765912,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Apartamento Rural Río Andarax, Calle Romero 27</name>
+			<description>Calle Romero 23
+04460, Fondón, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-06T10:50:43Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.855564,36.982951,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Apartamentos La Posada del Candil</name>
+			<TimeStamp><when>2014-11-06T15:27:41Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.501413,37.327103,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Blanca Brisa 35Euro</name>
+			<description>Blanca Brisa
+Al-3115
+04150, El Cabo de Gata, Andalucia, ESP
+950 370001</description>
+			<TimeStamp><when>2014-11-06T11:26:12Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.238529,36.78066,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cabo de Gata</name>
+			<description>Cabo de Gata
+04150, Almería, Andalucia, ESP
+950 160443</description>
+			<TimeStamp><when>2014-11-06T11:21:10Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.244451,36.802011,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Camping Alpujarras</name>
+			<TimeStamp><when>2014-11-04T17:54:03Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.011111999999999,37.009648,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Camping Puente Colgante</name>
+			<TimeStamp><when>2014-11-06T10:48:16Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.858312,36.984551,808.2199999999999</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casa Rural Cortijo El Campillo 65Euro</name>
+			<TimeStamp><when>2014-11-06T12:39:48Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.096823,36.859569,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casa Rural Cortijo Urra</name>
+			<TimeStamp><when>2014-11-06T13:14:01Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.098207,37.096317,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casa rural El Castillo, Plaza Major</name>
+			<description>Calle Almería 46
+04213, Senés, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-06T13:32:38Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.343664,37.202777,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casa Rural Las Tres Patas</name>
+			<description>Calle Barcelona 10
+04729, Enix, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-06T11:00:57Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.602475,36.877737,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casas rurales El Domingo en el Valle 70Euro (4 casas)</name>
+			<TimeStamp><when>2014-11-06T10:38:55Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.858205,36.987964,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cortijo de la Chanata</name>
+			<TimeStamp><when>2014-11-06T10:56:23Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.691286,36.917045,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cortijo El Saltador B&amp;B</name>
+			<TimeStamp><when>2014-11-06T13:06:44Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.157655,37.033474,421.7</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Alba, Calle Los Martínez</name>
+			<TimeStamp><when>2014-11-06T12:43:13Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.122393,36.850161,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Americano de Almeria, 30Euro</name>
+			<description>Hostal Americano de Almeria
+Avenida de la Estación 6
+04005, Almería, Andalucia, ESP
+950 851186</description>
+			<TimeStamp><when>2014-11-06T11:13:25Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.459586,36.837866,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Estación 25Euro</name>
+			<description>Hostal Estación</description>
+			<TimeStamp><when>2014-11-06T11:14:55Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.452869,36.837995,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal La Palmera, Calle Aguada</name>
+			<TimeStamp><when>2014-11-06T12:52:35Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-1.933465,36.93964,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Las Dunas, Calle Barrionuevo</name>
+			<TimeStamp><when>2014-11-06T11:24:28Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.244118,36.782354,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Los Escullos Los Escullos1</name>
+			<TimeStamp><when>2014-11-06T12:11:04Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.063406,36.803347,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Maribel 27Euro</name>
+			<description>Hostal Maribel</description>
+			<TimeStamp><when>2014-11-06T11:16:55Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.45862,36.844947,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Puerto Genovés 40-70Euro</name>
+			<description>Calle Correo 20
+04118, San José (Níjar), Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-06T11:58:11Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.10914,36.762494,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Puerto Genovés, Calle Balandro</name>
+			<TimeStamp><when>2014-11-06T11:52:43Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.110284,36.765465,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal San José 40-70Euro</name>
+			<TimeStamp><when>2014-11-06T11:47:40Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.104881,36.764268,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Sevilla, 30Euro</name>
+			<description>Avenida de la Cruz 5
+04003, Almería, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-06T11:10:10Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.462584,36.842729,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Sorbas</name>
+			<TimeStamp><when>2014-11-06T13:09:53Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.12712,37.098577,396.0500000000001</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Family, Calle la Lomilla 6</name>
+			<description>Calle la Lomilla 16
+04149, Agua Amarga, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-06T12:46:55Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-1.93802,36.940401,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Las Calas, 65Euro&gt; Calle Del Desagüe 7</name>
+			<description>Calle Del Desagüe 7
+04149, Agua Amarga, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-06T12:50:13Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-1.936955,36.939161,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Naturaleza Rodalquilar</name>
+			<TimeStamp><when>2014-11-06T12:24:20Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.031588,36.850335,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Restaurante Almirez ** 38Euro</name>
+			<TimeStamp><when>2014-11-04T18:32:52Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.907502,36.989986,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Rural La Posada de Ahlam, 35Euro,Paraje Encinar, S/N, 04479 Benecid</name>
+			<TimeStamp><when>2014-11-04T18:41:03Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.859192,36.990044,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Venta del Pobre 25Euro</name>
+			<TimeStamp><when>2014-11-06T12:58:20Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.068219,36.992769,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>La Fuente</name>
+			<TimeStamp><when>2014-11-06T13:39:51Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.454264,37.261226,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Las Gaviotas I</name>
+			<TimeStamp><when>2014-11-06T12:01:11Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.110405,36.767228,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Los Escullos</name>
+			<TimeStamp><when>2014-11-06T12:08:20Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.077596,36.803019,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Nuevo Torreluz</name>
+			<description>Nuevo Torreluz
+Plaza Flores
+04001, Almería, Andalucia, ESP
+950 234399</description>
+			<TimeStamp><when>2014-11-06T11:07:56Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.465057,36.840806,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pensión Isleta del Moro</name>
+			<TimeStamp><when>2014-11-06T12:20:05Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.052286,36.813965,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pensión Nuevo Andarax, Calle Canillejas 27</name>
+			<description>Calle Canillejas 27
+04470, Láujar de Andarax, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T18:36:40Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.892944,36.993225,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pensión Sol y Nieve, Calle Granada3</name>
+			<description>Calle Granada 1
+04479, Bayárcal, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T18:06:33Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.995482,37.031016,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pensión–Restaurante La Escapada, 25Euro,Calle Martín Salinas 1</name>
+			<description>Calle Martín Salinas 1
+04279, Uleila Del Campo, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-06T13:16:46Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.204708,37.184376,0</coordinates>
+			</Point>
+		</Placemark>
+		<name>Waypoints</name>
+		<Placemark>
+			<name>Aura Hotel Algeciras</name>
+			<Style>
+				<IconStyle>
+					<scale>0.9</scale>
+					<Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon>
+					</IconStyle>
+			</Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.45439139008522,36.141088251024485</coordinates></Point></Placemark><Placemark><name>bike shop in Calle Trasbolsa 3</name><description>Calle Trasbolsa 3
+11540, Sanlúcar de Barrameda, Andalucia, ESP</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.353758368641138,36.780235441401601</coordinates></Point></Placemark><Placemark><name>Caballo Negro with bike shop</name><description>Caballo Negro</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.17356538772583,36.539969444274902</coordinates></Point></Placemark><Placemark><name>Casa Rural Ahora</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.389253189787269,36.53705170378089</coordinates></Point></Placemark><Placemark><name>Castilo de Castellar</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.452651977539063,36.319169998168945</coordinates></Point></Placemark><Placemark><name>Estación Almoraima</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.42999267578125,36.276490688323975,16.28125</coordinates></Point></Placemark><Placemark><name>Hostal Alameda Tarifa</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.604327963665128,36.011964026838541</coordinates></Point></Placemark><Placemark><name>Hostal El Anon Calle Consuelo 28</name><description>Calle Consuelo 28</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.452879630029202,36.432429291307926</coordinates></Point></Placemark><Placemark><name>Hostal la Bohemia</name><description>Hostal la Bohemia</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.350419521331787,36.780059337615967</coordinates></Point></Placemark><Placemark><name>HOSTAL LA CONILEÑA Calle Venus 2</name><description>Calle Venus 2
+11140, Conil de la Frontera, Andalucia, ESP</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.088921995833516,36.27991528250277</coordinates></Point></Placemark><Placemark><name>Hostal la posada Calle Quevedo 3</name><description>Calle Quevedo 3
+11140, Conil de la Frontera, Andalucia, ESP</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.087456000968814,36.275963466614485</coordinates></Point></Placemark><Placemark><name>Hostal Los Jerezanos</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.763316154479981,36.084058284759521</coordinates></Point></Placemark><Placemark><name>Hostal Reyes</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.074432954192162,36.239015031605959</coordinates></Point></Placemark><Placemark><name>hostal villa</name><description>Piñero Lema Josefa</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.145906448364258,36.421952247619629</coordinates></Point></Placemark><Placemark><name>Hostal-Restaurante El Campanario</name><description>Hostal-Restaurante El Campanario</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.186482906341553,36.373286247253418</coordinates></Point></Placemark><Placemark><name>Hotel Almadrabeta</name><description>Hotel Almadrabeta</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.845756530761719,36.136972904205322</coordinates></Point></Placemark><Placemark><name>Hotel Real Avenida Pablo Picasso</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.490705650299788,36.182555537670851</coordinates></Point></Placemark><Placemark><name>Huerta Grande</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.501860538497567,36.080453395843506,226.58984375</coordinates></Point></Placemark><Placemark><name>Jimena Real</name><description>Jimena Real</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.452823638916016,36.433432102203369</coordinates></Point></Placemark><Placemark><name>Los Cantaros</name><description>Los Cantaros</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.224291324615479,36.599364280700684</coordinates></Point></Placemark><Placemark><name>Meson de Sancho</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.587187726050615,36.025513876229525,79.857600000000005</coordinates></Point></Placemark><Placemark><name>Pension pinobrena, Calle Ramón Y Cajal 32</name><description>Calle Ramón Y Cajal 32
+11160, Barbate, Andalucia, ESP</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.917381905019283,36.188229331746697</coordinates></Point></Placemark><Placemark><name>POsada Ananda Avenida 2 de Mayo 13</name><description>Avenida 2 de Mayo 11</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.388272339478135,36.540533630177379</coordinates></Point></Placemark><Placemark><name>Posada La Casa Grande</name><description>Calle Fuente Nueva 37</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.45550249516964,36.438247924670577</coordinates></Point></Placemark><Placemark><name>Station El Puerto de Santa María</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.217875480651856,36.603999137878418</coordinates></Point></Placemark><Placemark><name>Station Estación de Jerez</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.12661600112915,36.680023670196533</coordinates></Point></Placemark><Placemark><name>Station Jimena de la Frontera</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.434284210205078,36.424269676208496</coordinates></Point></Placemark><Placemark><name>Station Puerto Real</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.185302734375,36.530892848968506</coordinates></Point></Placemark><Placemark><name>youth hostel</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.510285692289472,36.07567772269249</coordinates></Point></Placemark>
+<name>Waypoints</name><Placemark><name>A.R. Sierra Trapera, Calle Portugal 18</name><description>Calle Portugal 18
+14206, Valsequillo, Andalucia, ESP</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.353450058028102,38.404278550297022</coordinates></Point></Placemark><Placemark><name>Apartemenos, C / Real Baja, La Venta del Charco , 28Euro?</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.279024600982666,38.202509880065918</coordinates></Point></Placemark><Placemark><name>Casa Rural Charqueña</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.278368465602398,38.205233998596668</coordinates></Point></Placemark><Placemark><name>Casa Rural La Posada de Las Ventas ?</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.278612295165658,38.203599276021123</coordinates></Point></Placemark><Placemark><name>Casa Rural Pedroches ,Calle Pedroche, 12, 14440 Villanueva de Córdoba</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.630190469324589,38.324482580646873</coordinates></Point></Placemark><Placemark><name>Hostal El Cazador, Avenida Marqués de Santillana 112</name><description>Avenida Marqués de Santillana 143
+14270, Hinojosa Del Duque, Andalucia, ESP</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.137158315628767,38.49578345194459</coordinates></Point></Placemark><Placemark><name>Hostal El Volao Hotel 21-30Euro</name><description>Hostal El Volao Hotel</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.62573766708374,38.323509693145752</coordinates></Point></Placemark><Placemark><name>Hostal La Encina, Pza Independencia 9, – (14445) Cardeña</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.323580451309681,38.270691633224487</coordinates></Point></Placemark><Placemark><name>Hostal Ruda, Calle Padre Manjón 12</name><description>Calle Padre Manjón 7</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.144917191937566,38.502481430768967</coordinates></Point></Placemark><Placemark><name>Hostal Rural Cañadas Reales</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.782915115356445,38.496222496032715</coordinates></Point></Placemark><Placemark><name>Hotel Piedra y Luz ***, Avd. del Parque, 55 - Tlf: 957-110-806</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.142956245690584,38.492556922137737</coordinates></Point></Placemark><Placemark><name>HOTEL RURAL LA CASA DEL MÉDICO, 70Euro, Calle Contreras, 4</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.62653998285532,38.323373822495341</coordinates></Point></Placemark><Placemark><name>Hotel Rural Romero Torres, Crtra\ La Granjuela  S/N, Fuente Ovejuna, 14290, Córdoba</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.408005183562636,38.275195816531777</coordinates></Point></Placemark><Placemark><name>Hotel Rural “Casas de Don Adame , C/. Buenavista El Viso</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.956517405807972,38.48452010191977</coordinates></Point></Placemark><Placemark><name>Hotel-Restaurante El Comendador, Calle Luís Rodríguez Cabeza 19</name><description>Calle Luís Rodríguez Cabeza 19</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.421288823708892,38.266345867887139</coordinates></Point></Placemark><Placemark><name>Pensión Lope de Vega (common baths), Calle Corredera 70</name><description>Calle Corredera 70
+14290, Fuente Obejuna, Andalucia, ESP</description><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.418701665475965,38.262751791626215</coordinates></Point></Placemark><Placemark><name>Pensión Merino, C/. San Gregorio, 4 – 696-370-219 – Pedroche</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.762085247784853,38.429323341697454</coordinates></Point></Placemark><Placemark><name>Station Villa Del Río</name><Style><IconStyle><scale>0.9</scale><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href></Icon></IconStyle></Style><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.28368091583252,37.981259822845459</coordinates></Point></Placemark>
+<name>Waypoints</name>
+		<Placemark>
+			<name>Bus Callejón San Francisco</name>
+			<TimeStamp><when>2014-11-08T17:02:40Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.775748,37.492017,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Camping Hoyo de los Pinos</name>
+			<TimeStamp><when>2014-11-06T16:31:59Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.912319,37.7598,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Campocámara 30Euro</name>
+			<description>Campocámara</description>
+			<TimeStamp><when>2014-11-06T16:20:24Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.857969,37.737651,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Anabel</name>
+			<description>Anabel</description>
+			<TimeStamp><when>2014-11-06T15:47:45Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.772546,37.486424,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Casa Grande</name>
+			<TimeStamp><when>2014-11-06T15:49:36Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.777969,37.493974,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Casa Grande, Carretera Ronda</name>
+			<TimeStamp><when>2014-11-06T15:45:32Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.768791,37.483678,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Casa Pedro, Avenida Lepanto 16</name>
+			<description>Avenida Lepanto 12
+04890, Serón, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-06T13:52:20Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.505694,37.344071,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Rte. La Posada , Plaza San José 3</name>
+			<description>Plaza San José 3
+18814, Cortes de Baza, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-06T15:57:32Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.771534,37.657166,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Rural Los Nogales</name>
+			<TimeStamp><when>2014-11-06T16:34:03Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.910832,37.748171,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pensión Los Marines</name>
+			<TimeStamp><when>2014-11-06T15:42:12Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.594871,37.396398,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Valle del Paraíso La Teja, La Teja</name>
+			<TimeStamp><when>2014-11-06T16:13:23Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-2.808858,37.673017,851.73</coordinates>
+			</Point>
+		</Placemark>
+		<name>Waypoints</name>
+		<Placemark>
+			<name>Albergue Almora, 30Euro, Calle la Solanilla 7</name>
+			<description>Calle la Solanilla 7</description>
+			<TimeStamp><when>2014-11-04T15:41:50Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.540114,36.976586,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Alquería de Los Lentos 75Euro</name>
+			<TimeStamp><when>2014-11-04T15:17:21Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.547382,36.982105,871.46</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Apartahotel Restaurante La Pará de la Suerte</name>
+			<TimeStamp><when>2014-11-04T17:11:24Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.174184,36.946811,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Apartamentos Oasis, Avenida Constitución</name>
+			<TimeStamp><when>2014-11-04T17:18:37Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.136754,36.956811,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bar-Pensión Tino, Calle Altillo 38</name>
+			<description>Calle Altillo 42
+18452, Juviles, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T17:01:46Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.2262,36.948483,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>C.R. El Corral de Serafín, 80Euro, Calle Santo Cristo</name>
+			<TimeStamp><when>2014-11-04T15:32:38Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.54163,36.977787,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>C.R. La Rubia , 120Euro, Calle Pasión 11</name>
+			<description>Calle Pasión 11
+18657, Nigüelas, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T15:36:47Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.538014,36.978307,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casa Azul (Bed &amp; Breakfast), Calle Horno 8</name>
+			<description>Calle Horno 8</description>
+			<TimeStamp><when>2014-11-04T14:54:40Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.632122,36.927207,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casa Las Chimeneas, 85Euro, 4 Casas,</name>
+			<description>Calle Real 11
+18494, Mairena, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T17:46:03Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.044222,37.003789,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casa Rural La Huerta del Cura, 40Euro</name>
+			<TimeStamp><when>2014-11-04T15:25:50Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.539679,36.978543,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casa Rural Viña y Rosales, 35Euro, Calle la Iglesia 14</name>
+			<description>Calle la Iglesia 14
+18494, Mairena, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T17:48:51Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.04306,37.00452,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casas rurales Balcón de Válor, 9 casas, Calle Torrecilla</name>
+			<description>Calle Torrecilla 5
+18470, Válor, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T17:40:00Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.079559,36.995876,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Granja-Escuela Huerto Alegre, book in advance hostel</name>
+			<TimeStamp><when>2014-11-04T14:39:43Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.74166,36.878743,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hospedería La Almijara, Avenida Mediterráneo, 37Jayena</name>
+			<TimeStamp><when>2014-11-04T14:33:07Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.823757,36.948876,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal ** Poqueira, 25Euro</name>
+			<description>Calle Doctor Castillo 2
+18413, Capileira, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T16:18:48Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.359062,36.961547,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Ana, 30Euro, Carretera de Granada 8</name>
+			<description>Carretera de Granada 8
+18120, Alhama de Granada, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T14:13:27Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.990621,37.004249,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal BARRANCO DE POQUEIRA, Calle Cercado 6</name>
+			<description>Calle Cercado 6</description>
+			<TimeStamp><when>2014-11-04T15:55:03Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.360482999999999,36.941357,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Fernando, Barrio Medio</name>
+			<TimeStamp><when>2014-11-04T16:29:53Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.268002,37.002324,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Pampaneira / Hostal Alfonso, 42Euro, Avenida de la Alpujarra 1</name>
+			<description>Avenida de la Alpujarra 1
+18411, Pampaneira, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T15:49:34Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.360958,36.940038,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Rural Atalaya, 36Euro,  Calle Perchel</name>
+			<TimeStamp><when>2014-11-04T16:12:53Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.358297,36.95996,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hostal Ruta del Mulhacén, Avenida de la Alpujarra 6</name>
+			<description>Avenida de la Alpujarra 6</description>
+			<TimeStamp><when>2014-11-04T15:57:16Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.361046,36.939789,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Pepe</name>
+			<TimeStamp><when>2014-11-04T16:34:09Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.264806,36.999078,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Refugio Nevada</name>
+			<TimeStamp><when>2014-11-04T18:02:32Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.012371,37.00947,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Restaurant El Cadí ***</name>
+			<description>El Cadi</description>
+			<TimeStamp><when>2014-11-04T17:12:54Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.180413,36.94464,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel rural  40 EuroLa Seguiriyia Restaurante</name>
+			<description>La Seguiriyia Restaurante</description>
+			<TimeStamp><when>2014-11-04T14:20:02Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.987265,37.002318,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Rural Alquería de Morayma **</name>
+			<TimeStamp><when>2014-11-04T17:09:16Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.183503,36.923525,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel Rural El Rincón de Yegen, 40Euro, Camino de las Eras, Yegen</name>
+			<TimeStamp><when>2014-11-04T17:24:29Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.119166,36.982677,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Iain Fisher (private house), Calle Zoraba 24</name>
+			<description>Calle Zoraba 22
+18659, Albuñuelas, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T14:47:30Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.622506,36.92707,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>La Fragua</name>
+			<TimeStamp><when>2014-11-04T16:33:48Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.266137000000001,37.002318,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Los Arcos, 40 Euro, Plaza de la Iglesia 3</name>
+			<TimeStamp><when>2014-11-04T17:35:57Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.083354,36.996077,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Mesón Despensa del Valle,Calle Santa Ana 5</name>
+			<description>Calle Santa Ana 5
+18658, Restábal, Andalucia, ESP</description>
+			<TimeStamp><when>2014-11-04T14:57:39Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.581217,36.928833,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pensión Rural El Ventorro, 60Euro</name>
+			<TimeStamp><when>2014-11-04T14:26:01Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.982810000000001,36.983859,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pensión-Mesón Los Naranjos, Melegís 40Euro</name>
+			<TimeStamp><when>2014-11-04T15:01:18Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.576815,36.934477,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Picnic area “El Cañuelo”</name>
+			<TimeStamp><when>2014-11-04T14:43:54Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.705382,36.886375,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Real de Larores, 50Euro</name>
+			<description>Real de Larores</description>
+			<TimeStamp><when>2014-11-04T17:51:10Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.012099,37.007296,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rene Huyten (private house), Calle Zoraba 32</name>
+			<TimeStamp><when>2014-11-04T14:49:25Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint</styleUrl>
+			<Point>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates>-3.623121,36.926805,0</coordinates>
+			</Point>
+		</Placemark>
+		<name>Waypoints</name>
+		<Placemark><name>Bar Seoane</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.881582736968994,37.651498317718506</coordinates></Point></Placemark>
+		<Placemark><name>Camping Doñana Playa</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.778151895850897,37.12378291413188</coordinates></Point></Placemark>
+		<Placemark><name>Camping Llano de la Torre</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.94786548614502,37.95926570892334,292.62109375</coordinates></Point></Placemark>
+		<Placemark><name>Camping Sierra de Aracena</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.543332459405065,37.880854681134224</coordinates></Point></Placemark>
+		<Placemark><name>Casa Olalla?, Avenida de Andalucía 60 40Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.226303232833743,37.906863642856479</coordinates></Point></Placemark>
+		<Placemark><name>Cepsa Ask about alojamiento</name><description>Cepsa</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.966748237609863,37.795758247375488</coordinates></Point></Placemark>
+		<Placemark><name>Cinco Balcones, 60Euro, Plaza Santa Lucía 23</name><description>Plaza Santa Lucía 27
+21200, Aracena, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.562095433473587,37.896365979686379</coordinates></Point></Placemark>
+<Placemark><name>El Aceitón, 18Euro, Avenida de Portuga</name><description>Avenida de Portugal 5
+21230, Cortegana, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.821211827918887,37.914242232218385</coordinates></Point></Placemark>
+<Placemark><name>El Madroñal Cabinas 2 nochas 52Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.672778129577637,37.904870510101318</coordinates></Point></Placemark>
+<Placemark><name>Estación de Almonaster</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.796889305114746,37.902402877807617</coordinates></Point></Placemark>
+<Placemark><name>Estación de San Juan del Puerto</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.846508579328656,37.309857392683625</coordinates></Point></Placemark>
+<Placemark><name>Finca La Portilla doesn’t live in the village.</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.974161695688963,37.939334800466895</coordinates></Point></Placemark>
+<Placemark><name>Hostal Carballo 2 nights min</name><description>Carballo</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.661319732666016,37.904419898986816</coordinates></Point></Placemark>
+<Placemark><name>Hostal Ciudad, Calle Palenque, 17,</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.837205169722438,37.378655886277556</coordinates></Point></Placemark>
+<Placemark><name>Hostal Las Lomas Calañas</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.880980078130961,37.652722913771868</coordinates></Point></Placemark>
+<Placemark><name>Hostal Real, 26Euro, c/ Real 35, San Juan del Puerto</name><description>Calle Real 39
+21610, San Juan Del Puerto, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.83899805881083,37.315011927857995</coordinates></Point></Placemark>
+<Placemark><name>Hostal Restaurante La Casa del Cura, 75Euro, Corteconcepción</name><description>Avenida Andalucía 6
+21209, Corteconcepción, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.505522364750505,37.89519133977592</coordinates></Point></Placemark>
+<Placemark><name>Hostal Rocío – Sector L, Parcela 60</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.549816783517599,37.000815449282527</coordinates></Point></Placemark>
+<Placemark><name>Hostal Toribio, 42Euro, Calle Iglesia 1</name><description>Calle Iglesia 1
+21291, Galaroza, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.712474571540952,37.926343940198421</coordinates></Point></Placemark>
+<Placemark><name>Hostal Toscano</name><description>Hostal Toscano</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.840384006500244,37.315106391906738</coordinates></Point></Placemark>
+<Placemark><name>Hotel Galaroza Sierra 60Euro</name><description>Hotel Galaroza Sierra</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.715242862701416,37.925598621368408</coordinates></Point></Placemark>
+<Placemark><name>hotel montearoma, 43Euro, Plaza San Pedro 1</name><description>Plaza San Pedro 1
+21600, Valverde Del Camino, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.755332248285413,37.576160011813045</coordinates></Point></Placemark>
+<Placemark><name>Hotel Plaza Escribano C/ Lora Tamayo, nº 5</name><description>Plaza Escribano</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.83499813079834,37.274379730224609</coordinates></Point></Placemark>
+<Placemark><name>Hotel Rural Molino del Bombo, 30Euro, Calle Ancha 4</name><description>Calle Ancha 4
+21200, Aracena, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.563188433647156,37.896394729614258</coordinates></Point></Placemark>
+<Placemark><name>HOTEL RURAL SIERRA LUZ, 50Euro,  Calle Jesús Nazareno</name><description>Calle Jesús Nazareno 38
+21230, Cortegana, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.826703399419785,37.906019920483232</coordinates></Point></Placemark>
+<Placemark><name>Hotel Sierra De Aracena 45Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.563665866851807,37.893755435943604</coordinates></Point></Placemark>
+<Placemark><name>La Cañá del Corchuelo , Albetgue Rural , Paraje de Jabata</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.314072823151946,37.969892369583249</coordinates></Point></Placemark>
+<Placemark><name>Los Castaños 45Euro</name><description>Los Castaños</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.565446853637695,37.892060279846191</coordinates></Point></Placemark>
+<Placemark><name>Narayana Casa Rural Camilo 50Euro, Calle Andévalo 11</name><description>Calle Andévalo 11
+21320, El Cerro de Andévalo, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.94015639834106,37.735422877594829</coordinates></Point></Placemark>
+<Placemark><name>Nazaret</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.830876497551799,37.255761595442891,73.359375</coordinates></Point></Placemark>
+<Placemark><name>Pension Cervantes, 40Euro, Calle Cervantes 27</name><description>Calle Cervantes 27
+21230, Cortegana, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.821252731606364,37.909500505775213</coordinates></Point></Placemark>
+<Placemark><name>Pensión Carmelo?, Calle Marina Española 13</name><description>Travesía Calle Marina Española 13
+21260, Santa Olalla Del Cala, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.222847206518054,37.907326659187675</coordinates></Point></Placemark>
+<Placemark><name>Pensión El Fidalgo</name><description>Ronda Del Pintor Goya 48
+21760, Matalascañas, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.558283343911171,37.007658937945962</coordinates></Point></Placemark>
+<Placemark><name>Pensión La Plazoleta, 58 Calle Labradores</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.834762096405029,37.385530471801758</coordinates></Point></Placemark>
+<Placemark><name>Pensión Platero, Calle Sor Ángela de la Cruz 3</name><description>Calle Sor Ángela de la Cruz 3
+21800, Moguer, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.837941939011216,37.276629013940692</coordinates></Point></Placemark>
+<Placemark><name>Reina de los Ángeles 30Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.56929599121213,37.890613898634911</coordinates></Point></Placemark>
+<Placemark><name>RURAL APARTHOTEL GALAROZA, 80Euro, Calle de la Cultura</name><description>Calle de la Cultura 6
+21291, Galaroza, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.712501477450132,37.926673097535968</coordinates></Point></Placemark>
+<Placemark><name>Rural Finca La Media Legua 80Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.5967530105263,37.898836126551032</coordinates></Point></Placemark>
+<Placemark><name>Station Calañas</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.876497268676758,37.651970386505127</coordinates></Point></Placemark>
+<Placemark><name>Station Jabugo-Galaroza (El Repilado)</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.772706508636475,37.926735877990723</coordinates></Point></Placemark>
+<Placemark><name>Turístico Rural Puerto Peñas 40Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-7.057406902313232,37.944395542144775,361.5625</coordinates></Point></Placemark>
+<Placemark><name>Victoria Hostal</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.541779041290283,36.995193958282471</coordinates></Point></Placemark>
+<name>Waypoints</name>
+<Placemark><name>Albergue La Posada del Perchel, Avda Sierra Segura 14,  Pontones</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.67015709541738,38.119099047034979</coordinates></Point></Placemark>
+<Placemark><name>Albergue “El Vaquerizo” not Tuesday</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.22174072265625,38.345117568969727</coordinates></Point></Placemark>
+<Placemark><name>Apartamentos Refugio del Segura 60Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.670128596946597,38.118883213028312</coordinates></Point></Placemark>
+<Placemark><name>Apartamentos Rurales La Aldeilla</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.360434649512172,38.413049792870879</coordinates></Point></Placemark>
+<Placemark><name>Autobuses de Andújar</name><description>Estación de Autobuses de Andújar</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.046230316162109,38.039946556091309</coordinates></Point></Placemark>
+<Placemark><name>Avenida 34Euro</name><description>Avenida
+A-6301
+23280, Beas de Segura, Andalucia, ESP
+953 424277</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.89865255355835,38.254909515380859</coordinates></Point></Placemark>
+<Placemark><name>Camping de Montillana</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.773940563201904,38.185923099517822,771.15625</coordinates></Point></Placemark>
+<Placemark><name>Casa Rural Alto Segura</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.686586380004883,38.115499019622803</coordinates></Point></Placemark>
+<Placemark><name>Casa Rural El Collado de los Jardines, 70Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.490133285522461,38.39348316192627</coordinates></Point></Placemark>
+<Placemark><name>Casa Rural Nava de San Pedro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.880635233595967,37.869343142956495</coordinates></Point></Placemark>
+<Placemark><name>Casas Rurales Atalaya del Segura, 40Euro , Calle Atalaya 12</name><description>Calle Atalaya 12
+23264, Chiclana de Segura, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.043789397925139,38.311895644292235</coordinates></Point></Placemark>
+<Placemark><name>Estación de Andújar</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.0659499168396,38.027994632720947</coordinates></Point></Placemark>
+<Placemark><name>Hospedería Rural Palacio Guzmanes, 55Euro</name><description>Hospedería Rural Palacio Guzmanes
+Calle Trinidad
+23711, Baños de la Encina, Andalucia, ESP
+953 613075</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.77354621887207,38.170559406280518</coordinates></Point></Placemark>
+<Placemark><name>Hostal El Mirador , Calle Puerta Nueva 11</name><description>Calle Puerta Nueva 11
+23292, Hornos, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.718846565112472,38.21590868756175</coordinates></Point></Placemark>
+<Placemark><name>Hostal El Zorzal, Calle Vista Alegre 5</name><description>Calle Vista Alegre 5
+23265, Venta de Los Santos, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.076302297413349,38.361673336476088</coordinates></Point></Placemark>
+<Placemark><name>Hostal Peinado, Calle Madrid 108</name><description>Calle Madrid 110
+23267, Aldeahermosa, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.125919224694371,38.32972152158618</coordinates></Point></Placemark>
+<Placemark><name>Hotel Apartamentos rurales Raisa</name><description>Raisa
+Calle Puerta Nueva 35
+23292, Hornos, Andalucia, ESP
+953 495023</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.717421054840088,38.216264247894287</coordinates></Point></Placemark>
+<Placemark><name>Hotel Del Val *** 60Euro?</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.037864003330469,38.039830047637224</coordinates></Point></Placemark>
+<Placemark><name>Hotel El Soto</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.087085723876953,38.032801151275635</coordinates></Point></Placemark>
+<Placemark><name>Hotel Logasasanti *  32Euro 5 Calle Doctor Fleming</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.056955883279443,38.038680553436279</coordinates></Point></Placemark>
+<Placemark><name>Hotel Losam</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.755680084228516,38.214290142059326</coordinates></Point></Placemark>
+<Placemark><name>Hotel Orellana Perdiz I</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.591589936986566,38.282194370403886</coordinates></Point></Placemark>
+<Placemark><name>Hotel Orellana Perdiz II</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.588390816003084,38.29533233307302</coordinates></Point></Placemark>
+<Placemark><name>Hotel Restaurante Baños, 52Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.777691572904587,38.173649478703737</coordinates></Point></Placemark>
+<Placemark><name>Hotel Rural Dehesa Rincón 25Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.906597508117557,37.791537791490555</coordinates></Point></Placemark>
+<Placemark><name>Hotel Rural Hospedería Las Cañadillas</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.797663025557995,38.174689672887325,590.2734375</coordinates></Point></Placemark>
+<Placemark><name>Hotel Ruta del Segura, Avenida de la Democracia</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.670439314097166,38.118687411770225</coordinates></Point></Placemark>
+<Placemark><name>La Casa Rural La Cimbarra, Avenida Andalucía 32</name><description>Avenida Andalucía 32
+23215, Aldeaquemada, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.371082516387105,38.412557523697615</coordinates></Point></Placemark>
+<Placemark><name>La Gran Parada, 25Euro</name><description>La Gran Parada
+Avenida de Vilches
+23200, La Carolina, Andalucia, ESP
+953 660052</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.610618114471436,38.271582126617432</coordinates></Point></Placemark>
+<Placemark><name>La Veguilla</name><description>La Veguilla
+A-312
+23340, Arroyo Del Ojanco, Andalucia, ESP
+953 425482</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.953863143920898,38.285400867462158</coordinates></Point></Placemark>
+<Placemark><name>Orellana Perdiz</name><description>Orellana Perdiz
+Carretera Madrid-Cádiz
+23200, La Carolina, Andalucia, ESP
+953 660600</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.609566688537598,38.269608020782471</coordinates></Point></Placemark>
+<Placemark><name>Pensión El Cruce, Calle Puerta Nueva 27</name><description>Calle Puerta Nueva 27
+23292, Hornos, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.717678211629391,38.216180009767413</coordinates></Point></Placemark>
+<Placemark><name>Pensión Los Jardineros, 15Euro,Calle General Sanjurjo 1</name><description>Calle General Sanjurjo 1
+23200, La Carolina, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-3.613585224375129,38.277139076963067</coordinates></Point></Placemark>
+<Placemark><name>Pensión-Rte. La Reserva</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.056875165551901,38.040018305182457</coordinates></Point></Placemark>
+<Placemark><name>Pontón Alto Casa Rural, Completa</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-2.683541737496853,38.117204401642084</coordinates></Point></Placemark>
+<name>Waypoints</name>
+<Placemark><name>Albergue camping El Chorro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.760825196281076,36.909162271767855</coordinates></Point></Placemark>
+<Placemark><name>Apartamentos Restaurante La Garganta</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.759418964385986,36.907024383544922</coordinates></Point></Placemark>
+<Placemark><name>Apartmentos Ardales</name><description>Joe
+Calle El Burgo 4
+29550, Ardales, Andalucia, ESP
+952 458390</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.84745979309082,36.878657341003418</coordinates></Point></Placemark>
+<Placemark><name>C.R. La Cañada del Sacristán, 90Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.423243375495076,37.035556007176638</coordinates></Point></Placemark>
+<Placemark><name>Cabanas Libar  Parque Natural Sierra de Grazalema</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.288280760869384,36.656191572546959</coordinates></Point></Placemark>
+<Placemark><name>Camping El Torcal</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.531579976901412,36.984313996508718</coordinates></Point></Placemark>
+<Placemark><name>Cueva Del Gato</name><description>Cueva Del Gato</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.230178833007813,36.733496189117432</coordinates></Point></Placemark>
+<Placemark><name>El Abogao</name><description>El Abogao</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.11314868927002,36.786131858825684</coordinates></Point></Placemark>
+<Placemark><name>El Gecko private retreat Calle Real Tesoro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.331314373761416,36.596286864951253</coordinates></Point></Placemark>
+<Placemark><name>Estación de Autobuses</name><description>Estación de Autobuses</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.4339919090271,36.713433265686035</coordinates></Point></Placemark>
+<Placemark><name>Estación de Benaojan</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.247795581817627,36.711030006408691</coordinates></Point></Placemark>
+<Placemark><name>Estación de Jimena de Libar</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.281617315486074,36.660704892128706</coordinates></Point></Placemark>
+<Placemark><name>Estación Del Chorro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.759032726287842,36.907625198364258,236.00390625</coordinates></Point></Placemark>
+<Placemark><name>Hostal El Cruce</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.844275088980794,36.881935084238648</coordinates></Point></Placemark>
+<Placemark><name>Hostal La Yedra *</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.45920467376709,36.981353759765625</coordinates></Point></Placemark>
+<Placemark><name>Hostal Tilos 3 Calle Grilo 30Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.436095682904124,36.713496716693044</coordinates></Point></Placemark>
+<Placemark><name>Hotel Castilla</name><description>Hotel Castilla</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.561493396759033,37.018260955810547</coordinates></Point></Placemark>
+<Placemark><name>Hotel Colon</name><description>Colon</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.167200565338135,36.744482517242432</coordinates></Point></Placemark>
+<Placemark><name>Hotel Residencia El Tajo</name><description>Hotel Residencia El Tajo
+Calle Cruz Verde 7
+29400, Ronda, Andalucia, ESP
+952 875099</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.163402557373047,36.744332313537598</coordinates></Point></Placemark>
+<Placemark><name>Hotel Rte. Paneque *</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.328374313190579,37.068908857181668</coordinates></Point></Placemark>
+<Placemark><name>Hotel Toril, Calle Toril 3</name><description>Calle Toril 3</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.558232836425304,37.020187452435493</coordinates></Point></Placemark>
+<Placemark><name>Hotel Venta de las Delicias</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.367709159851074,36.998841762542725</coordinates></Point></Placemark>
+<Placemark><name>La Sierra  ****</name><description>La Sierra
+29200, Antequera, Andalucia, ESP
+952 845410</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.468989372253418,36.987640857696533</coordinates></Point></Placemark>
+<Placemark><name>Molina del Santo -expensive</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.25014796294272,36.712963376194239</coordinates></Point></Placemark>
+<Placemark><name>Pensio Vista a la sierra</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.68340465798974,36.936227018013597</coordinates></Point></Placemark>
+<Placemark><name>Pension La AvenidaCalle Doctor Conejo Mir 36</name><description>Calle Doctor Conejo Mir 10</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.680725717917085,36.932185348123312</coordinates></Point></Placemark>
+<Placemark><name>Pension sierra de la nieves Calle Real 16</name><description>Calle Real 16</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.947666367515922,36.789438687264919</coordinates></Point></Placemark>
+<Placemark><name>Pensión Al Andalus, Calle Las Pilas 13</name><description>Calle Las Pilas 13
+18120, Alhama de Granada, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.098911499604583,36.95870116353035</coordinates></Point></Placemark>
+<Placemark><name>Pensión Andalucía, Avenida Martínez Astein</name><description>Avenida Martínez Astein 19
+29400, Ronda, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.161730786785483,36.747985566034913</coordinates></Point></Placemark>
+<Placemark><name>Pensión Aquí te quiero ver Sanchez Martin Maria Angeles</name><description>Sanchez Martin Maria Angeles
+Calle Delicias 21
+18125, Ventas de Zafarraya, Andalucia, ESP
+958 362222</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.122812747955322,36.953458786010742</coordinates></Point></Placemark>
+<Placemark><name>Pensión Bella Vista. Calle Archidona 27</name><description>Calle Archidona 27
+29200, Antequera, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.552587289363146,37.021027067676187</coordinates></Point></Placemark>
+<Placemark><name>Pensión Casa Bartolo, Plaza Buenos Aires</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.121932983398438,36.954874992370605</coordinates></Point></Placemark>
+<Placemark><name>Posada Del Canonigo</name><description>Posada Del Canonigo</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.946830272674561,36.789522171020508</coordinates></Point></Placemark>
+<Placemark><name>Refugio de Alamut</name><description>Refugio de Alamut</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.684402942657471,36.943202018737793</coordinates></Point></Placemark>
+<Placemark><name>Station Ronda</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.161986351013184,36.748559474945068</coordinates></Point></Placemark>
+<Placemark><name>Venta El Cortijuelo</name><description>El Cortijuelo</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-4.312219619750977,37.043216228485107</coordinates></Point></Placemark>
+<Placemark><name>Virgen de Los Reyes</name><description>Virgen de Los Reyes</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.16533374786377,36.743688583374023</coordinates></Point></Placemark>
+<name>Waypoints</name>
+<Placemark><name>C.R. Cortijo Nª Sª de las Angustias</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.723158037289977,38.029192490503192</coordinates></Point></Placemark>
+<Placemark><name>Camping Batán de las Monjas, Vía Verde</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.663123661652207,37.971841916441917</coordinates></Point></Placemark>
+<Placemark><name>Camping Fundicón del Huéznar</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.68258099257946,37.938356213271618,428.890625</coordinates></Point></Placemark>
+<Placemark><name>Casa Concha,  C/ La Cruz, 8  Almadén</name><description>Calle Numancia 8
+41240, Almadén de la Plata, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.083329673856497,37.872925065457821</coordinates></Point></Placemark>
+<Placemark><name>Casa Cuartel Hostal, Alanís</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.714774038642645,38.038216447457671</coordinates></Point></Placemark>
+<Placemark><name>Casa Rural Adriano 60Euro, Barrio Nuevo 8</name><description>Barrio Nuevo 8
+41380, Alanís, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.715290699154139,38.037046585232019</coordinates></Point></Placemark>
+<Placemark><name>Casa Rural El Cano Cabezas, Calle Gran Vía 181</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.482474286109209,38.201180007308722</coordinates></Point></Placemark>
+<Placemark><name>Casa Rural, Calle de Rodríguez Zapata 9</name><description>Calle de Rodríguez Zapata 9
+41380, Alanís, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.713381888344884,38.037255629897118</coordinates></Point></Placemark>
+<Placemark><name>Estación de Alanís</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.758252143859863,37.996451854705811,508.75</coordinates></Point></Placemark>
+<Placemark><name>Gran Avenida</name><description>Gran Avenida</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.055376529693604,37.295215129852295</coordinates></Point></Placemark>
+<Placemark><name>Hostal Casa Kini Pza. Juan Carlos I, nº 12  Cazalla de la Sierra</name><description>Calle Córdoba 12
+41370, Cazalla de la Sierra, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.758504774421454,37.938340958207846</coordinates></Point></Placemark>
+<Placemark><name>Hostal Castro Martínez, Calle Virgen Del Monte 36</name><description>Calle Virgen Del Monte 34
+41370, Cazalla de la Sierra, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.759183205664158,37.931311894208193</coordinates></Point></Placemark>
+<Placemark><name>Hostal Juan Marquez</name><description>Hostal Juan Marquez
+Avenida de Andalucía 101
+41100, Coria Del Río, Andalucia, ESP
+954 770146</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.05072021484375,37.283413410186768</coordinates></Point></Placemark>
+<Placemark><name>Hotel El Romeral</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-6.082777976989746,37.873134613037109</coordinates></Point></Placemark>
+<Placemark><name>Hotel Vega de Cazalla, Calle Durillo 44Euro</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.764980632811785,37.92385577224195</coordinates></Point></Placemark>
+<Placemark><name>Pensión Hospedaje La Milagrosa?, Calle Llana, 29</name><description>Calle Castelar 8
+41370, Cazalla de la Sierra, Andalucia, ESP</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.75962744653225,37.933585401624441</coordinates></Point></Placemark>
+<Placemark><name>Posada Del Moro 45Euro</name><description>Posada Del Moro
+Paseo Del Moro
+41370, Cazalla de la Sierra, Andalucia, ESP
+954 884858</description><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.761706829071045,37.92630672454834</coordinates></Point></Placemark>
+<Placemark><name>Station Cazalla - Constantina</name><styleUrl>#waypoint</styleUrl><Point><extrude>0</extrude><altitudeMode>clampToGround</altitudeMode><coordinates>-5.704865455627441,37.932507991790771</coordinates></Point></Placemark>	
+	</Folder>
+</Document>
+</kml>

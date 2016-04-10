@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+<head>
+<link href='http://vita.comuv.com/favicon.ico' rel='shortcut icon' type='image/x-icon'/>	
+<!--[if lt IE 9]><script src="excanvas.js"></script><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" Content="transandalus, bicicleta, btt, mtb, cicloturismo, vita, visor">
+<meta name="description" content="Visor de TransAndalus">
+<meta name="author" content="pedro cuestas" >
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<!--
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+-->
+
+<title>ViTA-Visor de TransAndalus</title>
+
+<link rel="stylesheet" type="text/css" href="css/vita.css" media="screen"/>
+
+</head>
+
+<body ng-app="myApp" style="cursor:default" onselectstart="return false" onload="transandalus()">
+
+<div id="trigger" ng-app="myApp">
+	<table id="cuadro_buscar" width="100%" cellpadding="1px" cellspacing="1px">
+		<tr>
+			<td>
+				<img id="iconoVolver" title="{{'volver_principal'|translate}}" src="icon/volver.svg" onclick="" onmouseover="">
+			</td>
+			<td>
+				<img id="iconoMenu" title="{{'menu'|translate}}" src="icon/menu.svg" onclick="desplegarMenu()" onmouseout="esconderListaBuscador()">
+			</td>
+			<td ng-controller="ctrl">
+				<img id="iconoIdioma" ng-click="changeLanguage()" title="{{'idioma'|translate}}" src="icon/es.svg">
+			</td>
+			<td>
+				<input id="buscar3" title="{{'buscar_transandalus'|translate}}" class="buscar3" type="text" name="buscar3" placeholder="{{'buscar_transandalus'|translate}}" size="20" min="4" max="100"  oninput="minBuscador(3)" onmouseover="contenidoListaBuscador()">
+			</td>
+			<td>
+				<img title="{{'buscar'|translate}}" src="icon/buscar.svg" onclick="buscador(3)">
+			</td>
+			<td>
+					<img title="{{'etapometro'|translate}}" src="icon/etapometro.svg" onclick="desplegarEtapometro()">
+			</td>
+		</tr>
+		
+	</table>
+</div>
+
+<div id="lista_buscador"></div>
+
+<div id="cabecera_menu">
+<a href='#' ><img src="img/visor.svg" title="{{'volver_principal'|translate}}" style="float: middle;" onclick=""/>
+<img title="{{'plegar'|translate}}" style="float: right; padding-top:10px;padding-right:10px;" src="icon/replegar.svg" onclick="desplegarMenu()"></a>
+</div>
+
+<div id="menu">
+<ul>
+	
+   <li id="nodo_etapometro" class='active has-sub'><a href='#' onclick="menuPoblaciones()"><img src="icon/poblaciones.svg">{{'poblaciones'|translate}}</a>
+      
+      <ul>
+		  
+		 <!-- ALMERÍA  --> 
+         <li  id="prov0"  class='has-sub'><a onclick="limite(0)" href='#'><img src="img/provincia/0.svg" width="12%" height="12%"><span >ALMER&Iacute;A</span></a>
+         </li>
+         
+         <!-- CÁDIZ -->
+         <li id="prov1" class='has-sub'><a onclick="limite(1)" href='#'><img src="img/provincia/1.svg" width="12%" height="12%"><span>C&Aacute;DIZ</span></a>
+         </li>
+         
+         <!-- CÓRDOBA -->
+         <li id="prov2" class='has-sub'><a onclick="limite(2)" href='#'><img src="img/provincia/2.svg" width="12%" height="12%"><span> C&Oacute;RDOBA</span></a>
+
+         </li>
+		<!-- GRANADA  -->          
+         <li id="prov3" class='has-sub'><a onclick="limite(3)" href='#' ><img src="img/provincia/3.svg" width="12%" height="12%"><span>GRANADA</span></a>
+
+         </li>
+         <!-- HUELVA -->
+         <li id="prov4" class='has-sub'><a onclick="limite(4)" href='#' ><img src="img/provincia/4.svg" width="12%" height="12%"><span>HUELVA</span></a>
+		 </li>
+		
+		 <!-- JAÉN -->         
+         <li id="prov5" class='has-sub'><a onclick="limite(5)" href='#' ><img src="img/provincia/5.svg" width="12%" height="12%"><span>JA&Eacute;N</span></a>
+         </li>
+         
+         <!-- MÁLAGA -->
+         <li id="prov6" class='has-sub'><a onclick="limite(6)" href='#' ><img src="img/provincia/6.svg" width="12%" height="12%"><span> M&Aacute;LAGA</span></a>
+         </li>
+         
+         <!-- SEVILLA -->
+         <li id="prov7" class='has-sub'><a onclick="limite(7)" href='#' ><img src="img/provincia/7.svg" width="12%" height="12%"><span>SEVILLA</span></a>
+         </li> 
+         
+              
+      </ul>
+      
+   </li>
+   
+   <!----------------------ALTERNATIVAS | ENLACES---------------------->
+   
+   <li class='active has-sub' ><a  id="alternativas" onclick="poblacionesAlternativasOn()" href='#' ><img src="icon/alternativas.svg"><span>{{'alternativas'|translate}}</span></a>
+      <!-- Alternativas(Secundario) Granada -->
+      <ul>
+		 <li class='has-sub'><a href='#'><span> GRANADA</span></a>
+            <ul>
+               <li><a href='#' onclick="centrarTramo(82)"><img src="icon/menu/home-mini.png"><span> Lanjar&oacute;n (Alternativa)</span></a></li>
+               <li class='last' onclick="centrarTramo(84)"><a href='#'><img src="icon/menu/home-mini.png"><span> Granada (Enlace)</span></a></li>
+            </ul>
+         </li> 
+	  </ul>
+	  
+	   <!-- Alternativas(Secundario) Córdoba -->
+	   
+      <ul>
+		 <li class='has-sub'><a href='#'><span> C&Oacute;RDOBA</span></a>
+            <ul>
+               <li class='last' onclick="centrarTramo(88)"><a href='#'><img src="icon/menu/home-mini.png"><span> C&oacute;rdoba (Enlace)</span></a></li>
+            </ul>
+         </li> 
+	  </ul>
+	  
+	  <!-- Alternativas(Secundario) Sevilla -->
+	  
+      <ul>
+		 <li class='has-sub'><a href='#'><span> SEVILLA</span></a>
+            <ul>
+               <li><a href='#' onclick="centrarTramo(83)"><img src="icon/menu/home-mini.png"><span> Sevilla (Enlace)</span></a></li>
+               <li><a href='#' onclick="centrarTramo(80)"><img src="icon/menu/home-mini.png"><span> Coria del R&iacute;o (Alternativa)</span></a></li>
+               <li><a href='#' onclick="centrarTramo(79)"><img src="icon/menu/home-mini.png"><span> Villamanrrique de la Condesa (Alternativa)</span></a></li>
+               <li class='last' onclick="centrarTramo(78)"><a href='#'><img src="icon/menu/home-mini.png"><span> Almonte (Alternativa)</span></a></li>
+            </ul>
+         </li> 
+	  </ul>
+	  
+	  <!-- Alternativas(Secundario) Málaga -->
+	  
+      <ul>
+		 <li class='has-sub'><a href='#'><span> M&Aacute;LAGA</span></a>
+            <ul>
+              <li class='last' onclick="centrarTramo(85)"><a href='#'><img src="icon/menu/home-mini.png"><span> M&aacute;laga (Enlace)</span></a></li>
+            </ul>
+         </li> 
+	  </ul>
+	  
+   </li>
+   
+   <li class='active has-sub'><a href='#'><img src="icon/servicios.svg"><span>{{'servicios'|translate}}</span></a>
+		<ul>
+			<li href='#' onclick="alojamientoOn()"><a href='#'><img src="icon/alojamiento.svg"><span>{{'alojamiento'|translate}}</span></a>
+			<li href='#' onclick="campingOn()"><a href='#'><img src="icon/camping.svg"><span>{{'camping'|translate}}</span></a>
+			<li href='#' onclick="transporteOn()"><a href='#'><img src="icon/estacionestren.svg"><span>{{'estacionestren'|translate}}</span></a>
+
+			<li href='#'><a href='#'><img src="icon/talleres.svg"><span>{{'talleres' | translate}}</span></a>
+			<li class='last' href='#'><a href='#'><img src="icon/variables.svg"><span>{{'otros' | translate}}</span></a>
+		</ul>
+   </li>
+   <li class='active has-sub'><a href='#'><img src="icon/climatologia.svg"><span>{{'climatologia'|translate}}</span></a>
+		<ul>
+			<li href='#' onclick="climaTA(0)"><a id="clima0" href='#' ><img src="icon/temperatura.svg"><span>{{'temperatura'|translate}}</span></a>
+			<li href='#' onclick="climaTA(1)"><a id="clima1" href='#' ><img src="icon/lluvia.svg"><span>{{'lluvia'|translate}}</span></a>
+			<li href='#' onclick="climaTA(2)"><a id="clima2" href='#' ><img src="icon/nieve.svg"><span>{{'nieve'|translate}}</span></a>
+			<li class='last' href='#' onclick="climaTA(3)"><a id="clima3" href='#' ><img src="icon/viento.svg"><span>{{'viento'|translate}}</span></a>
+		</ul>
+   </li>
+   
+   <li class='last' onclick="centrarMapa()"><a href='#'><img src="icon/centrar.svg"><span>{{'centrar'|translate}}</span></a></li>
+
+   <li class='last' onclick="crearJSON()"><a href='#'><img src="icon/centrar.svg"><span>Obtener JSON</span></a></li>
+
+
+</ul>
+</div>
+
+
+<!---------------------------MENÚ ETAPÓMETRO--------------------------->
+
+<div id="menu_etapometro">
+
+	<table id="cuadro_etapometro" width="100%" height="160px" cellpadding="2px" cellspacing="2px">
+		
+<!-----------------------Submenú Etapómetro---------------------------->		
+		<tr>
+			<td width="24px" height="24px" align="center">
+				<img title="{{'menu'|translate}}" src="icon/menu.svg" onclick="desplegarMenu()"/>
+			</td>
+			
+			<td width="24px" height="24px" align="center">
+				<img id="calcular" name="calcular" class="imgalign" title="{{'calcular'|translate}}" src="icon/calcular.svg" onclick="calcularEtapas()" onmouseover="activoOn(this)" onmouseout="activoOff(this)"/>	
+			</td>	
+			
+			<td width="24px" height="24" align="center">
+				<img class="imgalign" name="borrarE" title="{{'borrar'|translate}}" src="icon/borrarE.svg" onclick="resetearEtapometro()" onmouseover="activoOn(this)" onmouseout="activoOff(this)"/>	
+			</td>
+			
+			<td width="24px" height="24px" align="center">
+				<img class="imgalign" name="variables" title="{{'variables'|translate}}" src="icon/variables.svg" onclick="variableEtapometro()" onmouseover="activoOn(this)" onmouseout="activoOff(this)"/>
+			</td>
+			
+			<td width="24px" height="24" align="center">
+				<img class="imgalign" name="perfil" title="{{'perfil'|translate}}" src="icon/perfil.svg" onclick="perfilEtapometro()" onmouseover="activoOn(this)" onmouseout="activoOff(this)"/>	
+			</td>
+			
+			<td width="24px" height="24" align="center">
+				<img class="imgalign" name="alternativas" title="{{'alternativas'|translate}}" src="icon/alternativas.svg" onclick="masAlterna()" onmouseover="activoOn(this)" onmouseout="activoOff(this)"/>	
+			</td>
+			<td width="24px" height="24px" align="center">
+				<img class="imgalign" name="ayuda" title="{{'ayuda'|translate}}" src="icon/ayuda.svg" onclick="ayuda()" onmouseover="activoOn(this)" onmouseout="activoOff(this)"/>
+			</td>			
+			<td width="24px" height="24" align="center">
+				<img class="imgalign" title="{{'cerrar'|translate}}" src="icon/cerrar.svg" onclick="esconderPestana()">
+			
+			</td>	
+		</tr>
+		
+<!----------------------------Buscar Inicio---------------------------->		
+		<tr>
+			<td width="24px"  align="center">
+				<img  title="{{'inicio'|translate}}" src="icon/menu/empezar.png" onclick="" draggable="true" ondragstart="drag(0)">
+			</td>
+			<td colspan ="5">
+				<input id="buscar0" title="{{'inicio'|translate}}" class="buscarIniFin" type="text" placeholder="{{'inicio'|translate}}" oninput="cambiaIF(0)" onfocus="focusIFA(0)">
+			</td>
+			
+			<td width="24px">
+				<img id="lupa_0" class="imgalign" title="{{'buscar'|translate}}" src="icon/buscar_sombra.svg" onclick="buscarIF(0)">
+			</td>
+			<td rowspan ="2" width="24px" >
+				<img id="sentido" title="{{'sentido'|translate}}" style="float: right;" src="icon/sentidoA.svg" onclick="cambiarSentido()">
+			</td>
+		</tr>
+		
+<!-----------------------------Buscar Final---------------------------->			
+		<tr>
+			<td width="24px" align="center">
+				<img title="{{'final'|translate}}" src="icon/menu/finalizar.png" onclick="" draggable="true" ondragstart="drag(1)">
+			</td>
+			<td colspan ="5">
+				<input id="buscar1" title="{{'final'|translate}}" class="buscarIniFin" type="text" placeholder="{{'final'|translate}}" oninput="cambiaIF(1)" onfocus="focusIFA(1)">
+			</td>
+			
+			<td width="24px">
+				<img id="lupa_1" title="{{'buscar'|translate}}" src="icon/buscar_sombra.svg" onclick="buscarIF(1)">
+			</td>
+		</tr>
+		
+	</table>
+</div>
+
+<!-------------------------Buscar Alternativa-------------------------->
+<div id="buscarAlternativasC">
+<table id="buscarAlternativas">
+		<tr>
+			<td width="24px" align="center">
+				<img title="{{'alternativa'|translate}}" src="icon/menu/homeAlterna.png" onclick="">
+			</td>
+			<td colspan ="5">
+				<input id="buscar2" title="{{'final'|translate}}" class="buscarIniFin" type="text" placeholder="{{'alternativa' | translate }}" oninput="cambiaIF(2)" onfocus="focusIFA(2)">
+			</td>
+			<td width="24px">
+				<img id="lupa_2" title="{{'buscar'|translate}}" src="icon/buscar_sombra.svg" onclick="">
+			</td>
+		</tr>
+</table>
+<p id="distancia">{{'distancia' | translate}}</p><p id="altitud">{{'altitud' | translate}}</p>
+</div>
+
+<!------------------------Opciones Etapómetro-------------------------->
+
+<div id="lista_etapometro"></div>
+
+<div id="variables">	
+	<div >
+		<img src="icon/variables.svg" style="text-align: center">{{'opciones' | translate }}<hr>
+		
+		<input id="checked0" type="checkbox" checked="checked" onclick="checked0=this.value"/>
+		<img src="icon/distancia.svg">
+		<input id="variableE0" type="range" min="15" step="5" max="150"  oninput="variarE(0)"><input id="c_variableE0" type="text" style="width: 40px; text-align: right; background-color: orange" size="4"> Km<br>
+		
+		<input id="checked1" type="checkbox" checked="checked" onclick="checked1=this.value"/>
+		<img src="icon/desnivel.svg">
+		<input id="variableE1" type="range" min="200" max="2500" step="20" oninput="variarE(1)"><input id="c_variableE1" type="text" style="width: 40px; text-align: right; background-color: orange" size="4"> m</span><br>
+		
+		<input id="checked2" type="checkbox" checked="checked" onclick="vincularVelocidades(this.checked)"/>
+		<img src="icon/reloj.svg">
+		<input id="variableE2" type="range" min="1" max="12" oninput="variarE(2)"><input id="c_variableE2" type="text" style="width: 40px; text-align: right; background-color: orange" size="4"> h</span><br>
+	</div>
+	
+	<div id="velocidades_medias">
+	
+		<table>
+			<tr>
+			
+				<td>
+					<img src="icon/reloj.svg">
+				</td>
+				<td>
+					<img src="icon/carretera.svg">
+					<input id="variableE3" type="range" min="15" max="40" oninput="variarE(3)"><input id="c_variableE3" type="text" style="width: 40px; text-align: right; background-color: orange" size="3"> Km/h<br>
+				
+					<img src="icon/camino.svg">
+					<input id="variableE4" type="range" min="10" max="25" oninput="variarE(4)"><input id="c_variableE4" type="text" style="width: 40px; text-align: right; background-color: orange" size="3"> Km/h<br>
+				
+					<img src="icon/sendero.svg">
+					<input id="variableE5" type="range" min="4" max="15" oninput="variarE(5)"><input id="c_variableE5" type="text" style="width: 40px; text-align: right; background-color: orange" size="3"> Km/h
+				</td>
+			</tr>
+
+		</table>
+	</div>
+	
+	<hr>
+	
+	
+	<table>
+		<tr>
+			<td width="24px" id="etapas"></td>
+			<td><img src="icon/menos.svg" onclick="variarEtapas(1)"><img src="icon/mas.svg" onclick="variarEtapas(0)"></td><td>{{'maxetapas' | translate}}</td></tr>
+	</table>
+			<hr>
+</div>
+
+<div id="pestana" title="{{'plegardesplegar' | translate}}" style="visibility: hidden;" onclick="desplegarEtapometro()"></div>
+
+<div id="selectorcapa1" title="Terrain de Google Maps" onclick="seleccionarTipoMapa(1)"></div>
+<div id="selectorcapa2" title="Terrain de Google Maps" onclick="seleccionarTipoMapa(2)"></div>
+<div id="selectorcapa3" title="Sigpac" onclick="seleccionarTipoMapa(3)"></div>
+<div id="selectorcapa4" title="OSM " onclick="seleccionarTipoMapa(4)"></div>
+<div id="selectorcapa5" title="OSM " onclick="seleccionarTipoMapa(5)"></div>
+<div id="selectorcapa6" title="Relief" onclick="seleccionarTipoMapa(6)"></div>
+
+<div id="cerrarperfil" onclick="cerrarPerfil()"></div>
+
+<div id="chart_perfil"></div>
+
+<div id="map_canvas">
+
+<hr>
+<img src="img/vita.png"><br>
+ViTA-Visor de TransAndalus
+<br>Una simple aplicaci&oacute;n basada en Google Maps Javascript V3 para visualizar el trazado de la ruta de gran recorrido TransAndalus.
+<p><strong>Cargando mapa......<br>
+Puede tardar unos segundos, dependiendo de su PC y conexi&oacute;n a Internet.<br>
+</strong></p>
+<h5 class="western" color="green">Navegadores compatibles con la versi&oacute;n Google Maps Javascript V3:</h5>
+<ul>
+	<font size="2">
+	  <li>IE 7.0+ (Windows). Nota: Funciona en IE9, pero no es seguro que lo haga con versiones inferiores.
+	  </li>
+	  <li>Firefox 3.0+ (Windows, Mac OS X, Linux)
+	  </li>
+	  <li>Safari 4+ (Mac OS X, iOS)
+	  </li>
+	  <li>Chrome (Windows, Mac OS X, Linux)
+	  </li>
+	  <li>Android
+	  </li>
+	  <li>BlackBerry 6
+	  </li>
+	  <li>Dolfin 2.0+ (Samsung Bada)
+	  </li>
+</ul>
+</font>
+<hr>
+</div>
+
+<div id="licencia"></div>
+
+<div id="licencia2"></div>
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+
+<script type="text/javascript" src="js/angular-translate.min.js"></script>
+
+<script type="text/javascript" src="js/clave.js"></script>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=drawing,geometry,places,panoramio,weather&sensor=true"></script> 
+
+<script type="text/javascript" src="js/infobox.js"></script>
+
+<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
+
+<script type="text/javascript" src="js/vita.js"></script> 
+
+</body>
+</html>

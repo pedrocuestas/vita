@@ -1,0 +1,424 @@
+html { 
+				height: 100%;
+				width:100%;
+}
+
+body { 
+				
+				height: 100%; 
+				width:100%;
+				margin: 0%; 
+				padding: 0%; 
+				background-color: #C8DAA8;
+				overflow-y:hidden;
+				overflow-x:hidden; 
+	 }
+
+
+/*---------------------------------------------------------------------------
+
+Mapa
+
+----------------------------------------------------------------------------*/
+
+#map_canvas 	{
+				overflow-y:hidden;
+				overflow-x:hidden; 
+				width:100%;
+				height:100%;
+				background-color: transparent;
+				/*
+				border:1px solid orange;
+				left: 0.1%;
+				top: 0.1%;				
+				position: absolute;
+				overflow: hidden;
+				background-color: #C8DAA8;
+				*/
+				cursor: default;				
+				}
+
+/*---------------------------------------------------------------------------
+
+Selector capa mapa
+
+----------------------------------------------------------------------------*/
+
+#selector_mapa 	{
+				
+				top:;
+				left:;
+				overflow-y:hidden;
+				overflow-x:hidden; 
+				width:50px;
+				height:50px;
+				background-color: transparent;
+				cursor: default;				
+				}
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------
+
+Etiqueta licencia capas mapa
+
+----------------------------------------------------------------------------*/
+
+div#licencia { 
+				width:20%;
+				height:14px;
+				left: 33%;
+				top: 97%;				
+				position: absolute;
+				overflow: hidden;
+				background-color: #E5E5E5;
+				cursor: default;
+				font-size: 10px;
+				display: none;				
+				}
+
+div#licencia2 { 
+				width:15%;
+				height:14px;
+				left:15%;
+				top: 97%;				
+				position: absolute;
+				overflow: hidden;
+				background-color: #E5E5E5;
+				cursor: default;
+				font-size: 10px;
+				display: none;	 				
+				}
+
+
+/*---------------------------------------------------------------------------
+
+Icono menú desplegable / Buscador en TransAndalus
+
+----------------------------------------------------------------------------*/
+
+div#menu 	{
+				width: 100px;
+				height: 64px;
+				position: absolute;
+				left:25px;
+				top: 25px;				
+				background-color: #C8DAA8;	
+				overflow: hidden;	
+				}	
+
+/*--------------------------------------------------------------------------
+
+Menú desplegable
+
+---------------------------------------------------------------------------*/
+		
+div#menuvita
+				{ 
+				width: 100px;
+				height: 100%;
+				position: absolute;				
+				overflow: auto;
+				}		
+
+
+
+/*--------------------------------------------------------------------------
+
+------------------------------------------
+
+---------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+div#ex0{
+				width:100%;
+				height:100%;
+				
+				/* top: 1%; */
+				
+				
+				
+				/*
+				 * position: absolute;
+				// border:1px solid orange;
+				left: 0.1%;
+				top: 0.1%;				
+				
+				overflow: hidden;
+				*/
+				background-color: green;
+				
+}
+
+.textbox {
+				width: 295px; 
+				height: 18px; 
+				font-size: 16px; 
+				font-weight: bold; 
+				overflow: hidden;
+				font-family: "Courrier" 
+				}
+
+.textbox2 {
+				width: 50px; 
+				height: 14px; 
+				font-size: 13px; 
+				font-weight: bold; 
+				overflow: hidden;
+				font-family: "Courrier" 
+				}
+	
+div#audiocaja		{
+				background-color: transparent;				
+				width: 23%;
+				height:48px;
+				position: absolute;
+				left:50%;
+				top: 94%;
+				overflow: auto;							
+				}	
+
+div#lateral,iframe#ilateral{
+				background-color: transparent;				
+				background-image:url('../Imagenes/fondo2.png');
+				background-attachment:fixed;
+				background-position:center;
+				background-repeat: repeat;
+				border-top-left-radius: 20px;
+				border-bottom-left-radius: 20px;
+				position: absolute;
+				width: 25%;
+				height: 90%;
+				
+				left:75%;
+				top: 38px;
+				overflow: auto;						
+				} 						
+		
+
+div#enlaces{
+				
+				top: 60%;
+				left:6%;
+				width: 23.9%;		
+				height: 35%;
+				position: absolute;
+				background-color: transparent;				
+				background-image:url('../Imagenes/fondo2.png');
+				background-attachment:fixed;
+				background-position:center;
+				background-repeat:repeat;
+				
+				border-bottom-left-radius: 40px;
+				overflow: auto;
+				
+				/*overflow-x:auto;
+				 * 
+				 * pointer-events: none;
+				direction: rtl;
+				-webkit-text-stroke: 0.4px white;
+				*/ 
+				color: purple;
+				display: none;
+				scrollbar-arrow-color: #A52A2A;
+				font-family: Arial; 
+				font-size: 14px;
+				font-weight: bold;
+				
+				}
+				
+.poblacion 	{
+				width: auto;
+				height: auto;
+				border: 1.5px solid green;											
+				background-color: #AEB78E;	
+				min-width: 175px;	
+				}
+
+
+
+.infoaux,.infoperfil,.infolista,.infotuita,.infopint
+				{
+				width: 100%;
+				height: 100%;											
+				}
+
+
+.infow 	{
+				width: auto;
+				height: auto;
+				border: 1px solid green;											
+				background-color: #AEB78E;	
+				min-width: 175px;	
+				}
+
+.alerta {
+				display: table-cell;
+				border: solid 2px blue;
+				width: 325px;
+				height: auto;										
+				background-color: #FFA500;
+				font-family: Verdana,Arial; 
+				font-size: 12px;
+				font-weight: bold;
+				color: blue; 
+				text-align: center;
+				vertical-align: middle;
+		}
+
+			
+.infoaux 	{
+				border: 1px solid black;
+				font-family: Verdana,Arial; 
+				font-size: 8px;
+				font-weight: bold; 											
+				background-color: #FFA500;	
+				min-height: 0px;
+				min-width: 0px;		
+				}			
+				
+.infoperfil{
+				height: auto;
+				width: auto;											
+				background-color: #FFA500;
+				border: 1px solid green;	
+				min-height: 75px;
+				min-width: 100px;
+				max-width: 200px;
+				border-radius: 10px;
+							
+				}			
+
+
+.provincia {
+				width: auto;
+				height: auto;									
+				background-color: #ADD8E6;						
+				min-width: 135px;
+				}
+
+
+.tuita {
+				width: auto;
+				height: auto;									
+				background-color: #F5F5F5;						
+				max-width: 225px;
+				}
+
+
+							
+.infolista {
+															
+				background-color: #ADD8E6;						
+				width: auto;
+				height: auto;
+				font-family: Verdana,Arial; 
+				font-size: 10px;
+				font-weight: bold;
+				border-radius: 4px;	
+				/*
+				min-height: 50px;
+				min-width: 100px;
+				*/
+										
+				}
+	
+.infotuita {
+				
+				border: 1px solid green;
+				font-family: Verdana,Arial; 
+				font-size: 10px;												
+				background-color: #ADD8E6;						
+				min-height: 100px;
+				min-width: 300px;
+				border-radius: 4px;
+										
+				}
+				
+.infopint {
+				width: auto;
+				height: auto;
+				border: 1px solid green;											
+				background-color: #FFEF00;
+				text-align:center;						
+				min-width: 175px;
+										
+				}						
+ 
+.perfilaux {
+				width: auto;
+				height: auto;
+				border: 1px solid green;											
+				background-color: #F1B12A;
+				text-align: left;						
+				/* min-width: 140px; */
+				border-radius: 4px;						
+				}	
+
+.etiqueta	{ 
+				font-family: Verdana,Arial; 
+				font-size: 9px;
+				color: solid green;
+				text-align: center;
+				border: solid 1px #C8DAA8;
+				/*background-color: #99B584;*/
+				min-width: 45px;
+				}
+
+.etiquetaperfil	{ 
+				width: auto;
+				
+				font-family: Times New Roman,Arial; 
+				font-size: 11px;
+				color: black;
+				font-weight: bold;
+				text-align: center;
+				background-color: #99B584;
+				
+				}
+
+				
+.etiqueta2	{ 
+				font-family: Verdana,Arial; 
+				font-size: 10 px; 
+				font-weight: bold;
+				color: solid green;
+				border: solid 1px #C8DAA8;
+				background-color: #99B584;
+				text-align:center;
+				width: auto;
+				}
+
+.bloque1,.bloque2,.bloque3,.bloque4	{ 
+				vertical-align: center; 
+				text-align:left; 
+				width: 5%;
+				font-family: Verdana,Arial; 
+				font-size: 10 px; 
+				color: black;
+				}
+
+
+.bloque1	{width: 5%;}
+.bloque2	{width: 95%;}			
+.bloque3	{width: 50%;}
+.bloque4	{width: 45%;}
+ 	
+.textoTrack {
+				font-family: Verdana,Arial; 
+				font-size: 5 px; 
+				color: black;
+				}
+
+
+

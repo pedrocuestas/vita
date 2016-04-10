@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="expires" content="0">
+</head>
+<body>
+<div>
+		<img src="Iconos/vita/variables.svg"><h4 ng-app="myApp">{{'maximo' | translate }}</h4><hr>
+		
+		<input id="checked0" type="checkbox" checked="checked" onclick="checked0=this.value"/>
+		<img src="Iconos/vita/distancia.svg">
+		<input id="variableE0" type="range" min="15" step="5" max="150"  oninput="variarE(0)"><input id="c_variableE0" type="text" style="width: 40px; text-align: right; background-color: orange" size="4"> Km<br>
+		
+		<input id="checked1" type="checkbox" checked="checked" onclick="checked1=this.value"/>
+		<img src="Iconos/vita/desnivel.svg">
+		<input id="variableE1" type="range" min="200" max="2500" step="20" oninput="variarE(1)"><input id="c_variableE1" type="text" style="width: 40px; text-align: right; background-color: orange" size="4"> m</span><br>
+		
+		<input id="checked2" type="checkbox" checked="checked" onclick="vincularVelocidades(this.checked)"/>
+		<img src="Iconos/vita/reloj.svg">
+		<input id="variableE2" type="range" min="1" max="12" oninput="variarE(2)"><input id="c_variableE2" type="text" style="width: 40px; text-align: right; background-color: orange" size="4"> h</span><br>
+	</div>
+	
+	<div id="velocidades_medias">
+	
+		<table>
+			<tr>
+			
+				<td>
+					<img src="Iconos/vita/reloj.svg">
+				</td>
+				<td>
+					<img src="Iconos/vita/carretera.svg">
+					<input id="variableE3" type="range" min="15" max="40" oninput="variarE(3)"><input id="c_variableE3" type="text" style="width: 40px; text-align: right; background-color: orange" size="3"> Km/h<br>
+				
+					<img src="Iconos/vita/camino.svg">
+					<input id="variableE4" type="range" min="10" max="25" oninput="variarE(4)"><input id="c_variableE4" type="text" style="width: 40px; text-align: right; background-color: orange" size="3"> Km/h<br>
+				
+					<img src="Iconos/vita/sendero.svg">
+					<input id="variableE5" type="range" min="4" max="15" oninput="variarE(5)"><input id="c_variableE5" type="text" style="width: 40px; text-align: right; background-color: orange" size="3"> Km/h
+				</td>
+			</tr>
+
+		</table>
+	</div>
+	
+	<hr>
+	
+	
+	<table>
+		<tr>
+			<td width="24px" id="etapas">
+			</td><td><input type="range" min="1" max="19" value="9" oninput="variarEtapas(this.value)"></td><td>N&uacute;mero de etapas</td></tr>
+			</table>
+			<hr>
+</body>
+</html>
