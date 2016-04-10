@@ -10,513 +10,9 @@ var andalucia=["Almer\u00eda",37.45,-2.122,"C\u00e1diz",36.255,-5.376,"C\u00f3rd
 
 var nodo=[];
 var sentidoah=[];
-for(var n=1;89>n;n++){nodo[n]=[];sentidoah[n]=[]};
-
-//----------------------------------------------------------------------
-// NODO : 1
-nodo[1][2]=1; sentidoah[1][2]=1;
-nodo[1][76]=76; sentidoah[1][0]=0;
-//----------------------------------;
-// NODO : 2
-nodo[2][3]=2; sentidoah[2][3]=1;
-nodo[2][1]=1; sentidoah[2][1]=0;
-//----------------------------------;
-// NODO : 3
-nodo[3][4]=3; sentidoah[3][4]=1;
-nodo[3][2]=2; sentidoah[3][2]=0;
-//----------------------------------;
-// NODO : 4
-nodo[4][5]=4; sentidoah[4][5]=1;
-nodo[4][3]=3; sentidoah[4][3]=0;
-
-sentidoah[4][86]=0;
-sentidoah[86][4]=0;
-//----------------------------------;
-// NODO : 5 Almería
-nodo[5][6]=5; sentidoah[5][6]=1;
-nodo[5][4]=4; sentidoah[5][4]=0;
-
-nodo[5][86]=86;
-nodo[86][5]=86;
-sentidoah[5][86]=0;
-sentidoah[86][5]=1;
-
-//----------------------------------;
-// NODO : 6
-nodo[6][7]=6; sentidoah[6][7]=1;
-nodo[6][5]=5; sentidoah[6][5]=0;
-//----------------------------------;
-// NODO : 7
-nodo[7][8]=7; sentidoah[7][8]=1;
-nodo[7][6]=6; sentidoah[7][6]=0;
-//----------------------------------;
-// NODO : 8
-nodo[8][9]=8; sentidoah[8][9]=1;
-nodo[8][7]=7; sentidoah[8][7]=0;
-//----------------------------------;
-// NODO : 9
-nodo[9][10]=9; sentidoah[9][10]=1;
-nodo[9][8]=8; sentidoah[9][8]=0;
-//----------------------------------;
-// NODO : 10
-nodo[10][11]=10; sentidoah[10][11]=1;
-nodo[10][9]=9; sentidoah[10][9]=0;
-//----------------------------------;
-// NODO : 11
-nodo[11][12]=11; sentidoah[11][12]=1;
-nodo[11][10]=10; sentidoah[11][10]=0;
-//----------------------------------;
-// NODO : 12
-nodo[12][13]=12; sentidoah[12][13]=1;
-nodo[12][11]=11; sentidoah[12][11]=0;
-//----------------------------------;
-// NODO : 13
-nodo[13][14]=13; sentidoah[13][14]=1;
-nodo[13][12]=12; sentidoah[13][12]=0;
-//----------------------------------;
-// NODO : 14
-nodo[14][15]=14; sentidoah[14][15]=1;
-nodo[14][13]=13; sentidoah[14][13]=0;
-//----------------------------------;
-// NODO : 15
-nodo[15][16]=15; sentidoah[15][16]=1;
-nodo[15][14]=14; sentidoah[15][14]=0;
-//----------------------------------;
-// NODO : 16
-nodo[16][17]=16; sentidoah[16][17]=1;
-nodo[16][15]=15; sentidoah[16][15]=0;
-
-sentidoah[16][87]=0;
-sentidoah[87][16]=0;
-//----------------------------------;
-
-// NODO : 17 PONTONES - MURCIA
-nodo[17][18]=17; sentidoah[17][18]=1;
-nodo[17][16]=16; sentidoah[17][16]=0;
-
-nodo[17][87]=87;
-nodo[87][17]=87; 
-sentidoah[17][87]=0;
-sentidoah[87][17]=1;
-//----------------------------------;
-// NODO : 18
-nodo[18][19]=18; sentidoah[18][19]=1;
-nodo[18][17]=17; sentidoah[18][17]=0;
-//----------------------------------;
-// NODO : 19
-nodo[19][20]=19; sentidoah[19][20]=1;
-nodo[19][18]=18; sentidoah[19][18]=0;
-//----------------------------------;
-// NODO : 20
-nodo[20][21]=20; sentidoah[20][21]=1;
-nodo[20][19]=19; sentidoah[20][19]=0;
-//----------------------------------;
-// NODO : 21
-nodo[21][22]=21; sentidoah[21][22]=1;
-nodo[21][20]=20; sentidoah[21][20]=0;
-//----------------------------------;
-// NODO : 22
-nodo[22][23]=22; sentidoah[22][23]=1;
-nodo[22][21]=21; sentidoah[22][21]=0;
-//----------------------------------;
-// NODO : 23
-nodo[23][24]=23; sentidoah[23][24]=1;
-nodo[23][22]=22; sentidoah[23][22]=0;
-//----------------------------------;
-// NODO : 24
-nodo[24][25]=24; sentidoah[24][25]=1;
-nodo[24][23]=23; sentidoah[24][23]=0;
-
-sentidoah[24][87]=0;
-sentidoah[87][24]=0;
-
-//----------------------------------;
-// NODO : 25 MARMOLEJO - CÓRDOBA
-nodo[25][26]=25; sentidoah[25][26]=1;
-nodo[25][24]=24; sentidoah[25][24]=0;
-
-nodo[25][88]=88;
-nodo[88][25]=88;
-sentidoah[25][88]=0;
-sentidoah[88][25]=1;
-//----------------------------------;
-// NODO : 26
-nodo[26][27]=26; sentidoah[26][27]=1;
-nodo[26][25]=25; sentidoah[26][25]=0;
-//----------------------------------;
-// NODO : 27
-nodo[27][28]=27; sentidoah[27][28]=1;
-nodo[27][26]=26; sentidoah[27][26]=0;
-//----------------------------------;
-// NODO : 28
-nodo[28][29]=28; sentidoah[28][29]=1;
-nodo[28][27]=27; sentidoah[28][27]=0;
-//----------------------------------;
-// NODO : 29
-nodo[29][30]=29; sentidoah[29][30]=1;
-nodo[29][28]=28; sentidoah[29][28]=0;
-//----------------------------------;
-// NODO : 30
-nodo[30][31]=30; sentidoah[30][31]=1;
-nodo[30][29]=29; sentidoah[30][29]=0;
-//----------------------------------;
-// NODO : 31
-nodo[31][32]=31; sentidoah[31][32]=1;
-nodo[31][30]=30; sentidoah[31][30]=0;
-//----------------------------------;
-// NODO : 32
-nodo[32][33]=32; sentidoah[32][33]=1;
-nodo[32][31]=31; sentidoah[32][31]=0;
-//----------------------------------;
-// NODO : 33
-nodo[33][34]=33; sentidoah[33][34]=1;
-nodo[33][32]=32; sentidoah[33][32]=0;
-//----------------------------------;
-// NODO : 34
-nodo[34][35]=34; sentidoah[34][35]=1;
-nodo[34][33]=33; sentidoah[34][33]=0;
-//----------------------------------;
-// NODO : 35
-nodo[35][36]=35; sentidoah[35][36]=1;
-nodo[35][34]=34; sentidoah[35][34]=0;
-//----------------------------------;
-// NODO : 36
-nodo[36][37]=36; sentidoah[36][37]=1;
-nodo[36][35]=35; sentidoah[36][35]=0;
-//----------------------------------;
-// NODO : 37
-nodo[37][38]=37; sentidoah[37][38]=1;
-nodo[37][36]=36; sentidoah[37][36]=0;
-//----------------------------------;
-// NODO : 38
-nodo[38][39]=38; sentidoah[38][39]=1;
-nodo[38][37]=37; sentidoah[38][37]=0;
-//----------------------------------;
-// NODO : 39
-nodo[39][40]=39; sentidoah[39][40]=1;
-nodo[39][38]=38; sentidoah[39][38]=0;
-//----------------------------------;
-// NODO : 40
-nodo[40][41]=40; sentidoah[40][41]=1;
-nodo[40][39]=39; sentidoah[40][39]=0;
-//----------------------------------;
-// NODO : 41
-nodo[41][42]=41; sentidoah[41][42]=1;
-nodo[41][40]=40; sentidoah[41][40]=0;
-//----------------------------------;
-// NODO : 42
-nodo[42][43]=42; sentidoah[42][43]=1;
-nodo[42][41]=41; sentidoah[42][41]=0;
-//----------------------------------;
-// NODO : 43
-nodo[43][44]=43; sentidoah[43][44]=1;
-nodo[43][42]=42; sentidoah[43][42]=0;
-
-sentidoah[43][77]=0;
-sentidoah[77][43]=0;
-
-//----------------------------------;
-// NODO : 44 MOGUER - ALMONTE
-nodo[44][45]=44; sentidoah[44][45]=1;
-nodo[44][43]=43; sentidoah[44][43]=0;
-
-nodo[44][78]=77;
-nodo[78][44]=77;
-
-sentidoah[44][77]=0;
-sentidoah[77][44]=0;
-//----------------------------------;
-// NODO : 45
-nodo[45][46]=45; sentidoah[45][46]=1;
-nodo[45][44]=44; sentidoah[45][44]=0;
-
-sentidoah[45][80]=0;
-sentidoah[80][45]=0;
-
-//----------------------------------;
-// NODO : 46
-nodo[46][47]=46; sentidoah[46][47]=1;
-nodo[46][45]=45; sentidoah[46][45]=0;
-
-nodo[46][80]=80;
-nodo[80][46]=80;
-
-sentidoah[46][80]=0;
-sentidoah[80][46]=1;
-
-//----------------------------------;
-// NODO : 47
-nodo[47][48]=47; sentidoah[47][48]=1;
-nodo[47][46]=46; sentidoah[47][46]=0;
-//----------------------------------;
-// NODO : 48
-nodo[48][49]=48; sentidoah[48][49]=1;
-nodo[48][47]=47; sentidoah[48][47]=0;
-//----------------------------------;
-// NODO : 49
-nodo[49][50]=49; sentidoah[49][50]=1;
-nodo[49][48]=48; sentidoah[49][48]=0;
-//----------------------------------;
-// NODO : 50
-nodo[50][51]=50; sentidoah[50][51]=1;
-nodo[50][49]=49; sentidoah[50][49]=0;
-//----------------------------------;
-// NODO : 51
-nodo[51][52]=51; sentidoah[51][52]=1;
-nodo[51][50]=50; sentidoah[51][50]=0;
-//----------------------------------;
-// NODO : 52
-nodo[52][53]=52; sentidoah[52][53]=1;
-nodo[52][51]=51; sentidoah[52][51]=0;
-//----------------------------------;
-// NODO : 53
-nodo[53][54]=53; sentidoah[53][54]=1;
-nodo[53][52]=52; sentidoah[53][52]=0;
-//----------------------------------;
-// NODO : 54
-nodo[54][55]=54; sentidoah[54][55]=1;
-nodo[54][53]=53; sentidoah[54][53]=0;
-//----------------------------------;
-// NODO : 55
-nodo[55][56]=55; sentidoah[55][56]=1;
-nodo[55][54]=54; sentidoah[55][54]=0;
-//----------------------------------;
-// NODO : 56
-nodo[56][57]=56; sentidoah[56][57]=1;
-nodo[56][55]=55; sentidoah[56][55]=0;
-//----------------------------------;
-// NODO : 57
-nodo[57][58]=57; sentidoah[57][58]=1;
-nodo[57][56]=56; sentidoah[57][56]=0;
-//----------------------------------;
-// NODO : 58
-nodo[58][59]=58; sentidoah[58][59]=1;
-nodo[58][57]=57; sentidoah[58][57]=0;
-//----------------------------------;
-// NODO : 59
-nodo[59][60]=59; sentidoah[59][60]=1;
-nodo[59][58]=58; sentidoah[59][58]=0;
-//----------------------------------;
-// NODO : 60
-nodo[60][61]=60; sentidoah[60][61]=1;
-nodo[60][59]=59; sentidoah[60][59]=0;
-//----------------------------------;
-// NODO : 61
-nodo[61][62]=61; sentidoah[61][62]=1;
-nodo[61][60]=60; sentidoah[61][60]=0;
-//----------------------------------;
-// NODO : 62
-nodo[62][63]=62; sentidoah[62][63]=1;
-nodo[62][61]=61; sentidoah[62][61]=0;
-//----------------------------------;
-// NODO : 63
-nodo[63][64]=63; sentidoah[63][64]=1;
-nodo[63][62]=62; sentidoah[63][62]=0;
-//----------------------------------;
-// NODO : 64
-nodo[64][65]=64; sentidoah[64][65]=1;
-nodo[64][63]=63; sentidoah[64][63]=0;
-
-sentidoah[64][85]=0;
-sentidoah[85][64]=0;
-
-//----------------------------------;
-// NODO : 65 ANTEQUERA - MÁLAGA
-nodo[65][66]=65; sentidoah[65][66]=1;
-nodo[65][64]=64; sentidoah[65][64]=0;
-
-nodo[65][85]=85;
-nodo[85][65]=85;
-
-sentidoah[65][85]=0;
-sentidoah[85][65]=1;
-//----------------------------------;
-// NODO : 66
-nodo[66][67]=66; sentidoah[66][67]=1;
-nodo[66][65]=65; sentidoah[66][65]=0;
-//----------------------------------;
-// NODO : 67
-nodo[67][68]=67; sentidoah[67][68]=1;
-nodo[67][66]=66; sentidoah[67][66]=0;
-//----------------------------------;
-// NODO : 68
-nodo[68][69]=68; sentidoah[68][69]=1;
-nodo[68][67]=67; sentidoah[68][67]=0;
-//----------------------------------;
-// NODO : 69
-nodo[69][70]=69; sentidoah[69][70]=1;
-nodo[69][68]=68; sentidoah[69][68]=0;
-//----------------------------------;
-// NODO : 70
-nodo[70][71]=70; sentidoah[70][71]=1;
-nodo[70][69]=69; sentidoah[70][69]=0;
-//----------------------------------;
-// NODO : 71
-nodo[71][72]=71; sentidoah[71][72]=1;
-nodo[71][70]=70; sentidoah[71][70]=0;
-
-sentidoah[71][84]=0;
-sentidoah[84][71]=0;
-
-sentidoah[71][81]=1;
-sentidoah[81][71]=0;
-
-//----------------------------------;
-// NODO : 72 NIGUELAS - GRANADA - LANJARÓN
-nodo[72][73]=72; sentidoah[72][73]=1;
-nodo[72][71]=71; sentidoah[72][71]=0;
-
-nodo[72][84]=84;
-nodo[84][72]=84;
-
-nodo[72][82]=81;
-nodo[82][72]=81;
-
-sentidoah[72][84]=0;
-sentidoah[84][72]=1;
-
-sentidoah[84][81]=1;
-sentidoah[81][84]=0;
-
-//----------------------------------;
-// NODO : 73
-nodo[73][74]=73; sentidoah[73][74]=1;
-nodo[73][72]=72; sentidoah[73][72]=0;
-
-nodo[73][82]=82;
-nodo[82][73]=82;
-
-sentidoah[73][82]=0;
-sentidoah[82][73]=1;
-
-//----------------------------------;
-// NODO : 74
-nodo[74][75]=74; sentidoah[74][75]=1;
-nodo[74][73]=73; sentidoah[74][73]=0;
-//----------------------------------;
-// NODO : 75
-nodo[75][76]=75; sentidoah[75][76]=1;
-nodo[75][74]=74; sentidoah[75][74]=0;
-//----------------------------------;
-// NODO : 76
-nodo[76][1]=76; sentidoah[76][1]=1;
-nodo[76][75]=75; sentidoah[76][75]=0;
-//----------------------------------;
-
-// NODO : 77
-//----------------------------------;
-
-// NODO : 78
-nodo[78][79]=78; sentidoah[78][79]=1;
-                
-//----------------------------------;
-// NODO : 79
-nodo[79][80]=79; sentidoah[79][80]=1;
-nodo[79][78]=78; sentidoah[79][78]=0;
-//----------------------------------;
-// NODO : 80 VILLAMANRIQUE - SANLÚCAR - SEVILLA
-
-nodo[80][79]=79; sentidoah[80][79]=0;
-
-nodo[80][83]=83; sentidoah[80][83]=0;
-nodo[83][80]=83; sentidoah[83][80]=0;
-
-//----------------------------------;
-
-// NODO : 81
-sentidoah[81][82]=1;
-
-//----------------------------------;
-// NODO : 82
-
-nodo[82][81]=81; sentidoah[82][81]=0;
-nodo[82][73]=82; sentidoah[82][73]=1;
-
-//----------------------------------;
-// NODO : 83
-
-//----------------------------------;
-// NODO : 84
-
-//----------------------------------;
-// NODO : 85
-
-//----------------------------------;
-// NODO : 86
-
-//----------------------------------;
-// NODO : 87
-
-//----------------------------------;
-// NODO : 88
-
-//----------------------------------;
-
 var aTA=[];
 
-// Iconos
-
-var icono=[
-"home",
-"empezar",
-"finalizar",
-"peatonal",
-"lodging-0star",
-"ruins",
-"information",
-"mountainbiking",
-"samllcity",
-"house",
-"chapel",
-"road",
-"beach",
-"hill",
-"snowy",
-"river",
-"bridge_old",
-"picnic",
-"citywalls",
-"cow-export",
-"taxiboat",
-"levelcrossing",
-"train",
-"forest",
-"tuita",
-"lighthouse",
-"flecha",
-"mapa",
-"mapa2",
-"desprendimiento",
-"dibujarOn",
-"puntero",
-"peatonal",
-"inicio_track",
-"final_track",
-"final_track",
-"final_track",
-"final_track",
-"final_track",
-"road",
-"lodging_0star",
-"restaurant",
-"supermarket",
-"bicycle_shop",
-"workshop",
-"workshop",
-"hospital-building",
-"drugstore",
-"atm",
-"police",
-"tents",
-"wifi",
-"bus",
-"train",
-"airport"
-];
-
-
 var tinta="#0EBFFA #0E6AFA #36D236 #FFFF00 #ff8000 #FF0000 #A020F0 #40310B".split(" ");
-// var fisicaTramo="fisica_cian fisica_azul fisica_verde fisica_amarillo fisica_naranja fisica_rojo".split(" ");
 var nivel=["bajo","medio","alto"];
 
 var POBLACIONES=76;
@@ -612,9 +108,9 @@ var AlojamientoKML=campingKML=transporteKML=protegidosKML=false;
 
 var menuPrincipalVisible=false;
 var etapometroActivo=false;
-var puntero_enlace=0;
+// var puntero_enlace=0;
 var perfilAnterior=perfilActivo=false;
-var etapometroActivo = false;
+var etapometroActivo=false;
 var mapaAnterior=1;
 var SENTIDO="A";
 var etapometro=[];etapometro[0]=etapometro[1]=etapometro[2]=etapometro[3]=etapometro[4]=false;
@@ -624,7 +120,7 @@ var climataAnterior=false;
 var marcadorElegido=false;
 var V=[];
 var variarEtapasOn=false;
-var lengua=[2];lengua[0]="es";lengua[1]="en";
+// var lengua=[2];lengua[0]="es";lengua[1]="en";
 var idioma='es';
 var activoPE=false;
 var primeraVuelta=false;
@@ -632,9 +128,6 @@ var nodoActual=false;
 
 var ventanaPoblacion = new google.maps.InfoWindow();
 var ventanaProvincia = new google.maps.InfoWindow();
-
-
-
 var marcadorPoblacion=[];
 var marcadorPrincipal=[];
 var marcadorPerfil=gmM({icon:jsIcono("mountainbiking")});
@@ -793,14 +286,24 @@ function transandalus(){
 							aTA=data;
 								$.getJSON( "json/poi.json", function( data ) {
 									interes=data;
-										$.getJSON( "json/provincia.json", function( data ) {
-											poligonoProvincia=data;
-											
-											verProvincias();
-											colocarPoblaciones();
-											incluirMenu();
-											setTimeout("borrarInicio()",4000);
-											
+										$.getJSON( "json/nodo.json", function( data ) {
+											  nodo=data;
+												$.getJSON( "json/sentido.json", function( data ) {
+													sentidoah=data;
+														$.getJSON( "json/icono.json", function( data ) {
+															icono=data;
+																$.getJSON( "json/provincia.json", function( data ) {
+																	poligonoProvincia=data;
+																	
+																	verProvincias();
+																	colocarPoblaciones();
+																	incluirMenu();
+																	setTimeout("borrarInicio()",4000);
+																	
+																});
+														
+														});
+												});	
 										});
 								});
 						
@@ -845,8 +348,10 @@ function perfil(b,c,r,d){
 							
 				{
 					ppp++;
-					DistanciaX+=computarD(tTA.getAt(p),tTA.getAt(p+1))/1000;
+					// DistanciaX+=computarD(tTA.getAt(p),tTA.getAt(p+1))/1000;
+					DistanciaX+=google.maps.geometry.spherical.computeDistanceBetween(tTA.getAt(p),tTA.getAt(p+1))/1000;
 					
+					function computarD(b,c){return }
 					DistanciaX=parseFloat(redondeo(DistanciaX,2));
 					// var AltitudY=aTA[e[1]][p+1];
 					if (ppp==r){
@@ -858,7 +363,6 @@ function perfil(b,c,r,d){
 				}	
 		}
 	});
-
 
 		var tt=idioma=='es'; 
 		var options = {
@@ -957,7 +461,7 @@ function desplegarEtapometro(){
 		else{$("#pestana").css("background-image","url(icon/desplegar.svg)")}
 }
 
-//----------------------------------------- Pestaña ETAPÓMETRO (ocultar)
+//------------------------------------- Pestaña ETAPÓMETRO (ver/ocultar)
 
 function esconderPestana(){
 	
@@ -1093,15 +597,6 @@ function cerrarProvincia(b){
 	
 	listener(poligonoProvincia[b],"click",function(){
 		
-		//  var element=$("#prov"+b);
-		
-			// c.removeClass('open');
-			// c.find('li').removeClass('open');
-			// c.find('ul').slideUp();
-		
-		
-		
-		
 		var element = $("#prov"+b);
 			if (element.hasClass('open')) {
 				element.removeClass('open');
@@ -1110,22 +605,6 @@ function cerrarProvincia(b){
 
 			}
 			
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		//$("#prov"+b).trigger('click');
-		// document.getElementById("prov"+b).click();
 		poligonoProvincia[b].setOptions({visible:!1});
 		ventanaProvincia.close()	
 		})
@@ -1185,21 +664,6 @@ function colocarPoblaciones2(b){
 	listener(marcadorPoblacion[b],"mouseover",function(){infomarcador(b)});
 }
 
-/*
-function poblacion(){
-	limiteProvincias();
-	i_poblacion=htmlIcono("bandera")+"Inicio/Final de tramos:"+cl+hr;
-	for(var i=1;i<=POBLACIONES;i++){
-		puntoPoblacion(i);
-		imagen(i,"poblacion");
-		puntero_enlace=i;
-		grupo=1;
-		i_poblacion+=listaBuscador(ta[i][nombre]+'<span style="padding-left: 20px;"><hr></span>')
-	}
-	i_poblacion+=htmlIcono("bandera");
-	ventanaLateral(i_poblacion)
-}
-*/
 
 //-------------------------------------- Listar poblacions por provincia
 
@@ -1226,9 +690,10 @@ function provinciaListar(b,c){
 						{
 								puntoPoblacion(i),
 								imagen(i,"home-mini"),
-								puntero_enlace=i,
+								// puntero_enlace=i,
 								grupo=1,
-								i_poblacion+='<li onclick="centrarTramoE('+i+') class="lugar_encontrado""><img src="'+img.src+'" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + ta[i][nombre] + "</li>";	 //  i_poblacion+='<li onclick="centrarTramoE('+i+')"><a id="'+img.name+'" class="lugar_encontrado"><img src="'+img.src+'" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + ta[i][nombre] + "</a></li>";
+								// i_poblacion+='<li onclick="centrarTramoE('+i+') class="lugar_encontrado""><img src="'+img.src+'" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + ta[i][nombre] + "</li>";	 //  
+								i_poblacion+='<li onclick="centrarTramoE('+i+')"><a id="'+img.name+'" class="lugar_encontrado"><img src="'+img.src+'" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + ta[i][nombre] + "</a></li>";
 						}
 					}
 			}
@@ -1280,7 +745,7 @@ function puntos_principalesOn(){(principales=!principales)?(Fon(gE("interes")),p
 
 function puntos_principales(){
 	i_puntos="<p>"+htmlIcono("importante")+rojo3+"Inter&eacute;s  e  incidencias:"+"</p>"+hr;
-	for(i=0;i<totalPrincipal-2;i+=2)tramo=principal[i],pTramo=principal[i+1],iNom=tramo+","+pTramo,ll(interes[tramo][pTramo][y],interes[tramo][pTramo][x]),grupo=2,cambiarHtml(interes[tramo][pTramo][2]),marcadorPrincipal[i/2+1]=gmM(opcionesMarcador(1,pat,icono[interes[tramo][pTramo][3]])),infopint(marcadorPrincipal[i/2+1],tramo,pTramo),imagen(iNom,icono[interes[tramo][pTramo][3]]),puntero_enlace=i,
+	for(i=0;i<totalPrincipal-2;i+=2)tramo=principal[i],pTramo=principal[i+1],iNom=tramo+","+pTramo,ll(interes[tramo][pTramo][y],interes[tramo][pTramo][x]),grupo=2,cambiarHtml(interes[tramo][pTramo][2]),marcadorPrincipal[i/2+1]=gmM(opcionesMarcador(1,pat,icono[interes[tramo][pTramo][3]])),infopint(marcadorPrincipal[i/2+1],tramo,pTramo),imagen(iNom,icono[interes[tramo][pTramo][3]]), // puntero_enlace=i,
 	i_puntos+=listaBuscador(verde2+"Tramo: "+ta[ta[tramo][pob1]][nombre]+hacia+ta[ta[tramo][pob2]][nombre]+cl+azul2+interes[tramo][pTramo][2]+hr);i_puntos+=htmlIcono("importante")+hr;ventanaLateral(i_puntos)
 }
 
@@ -1297,7 +762,7 @@ function infomarcador(b){
 
 function infomarcador2(b){
 	serviciosVertical(b);
-	listaLateral='<spam class="lugar_encontrado">'+htmlIcono("hill")+aTA[b][0]+" msnm"+cl+htmlIconoMini("home")+ta[b][nombre]+cl+'<a style="text-decoration:none;" title="TransAndalus" target="_blank" href= "http://www.transandalus.org/index.php?option=com_content&task=view&id='+ta[b][webta]+'">'+htmlIcono("transandalus")+'</a><a style="text-decoration:none;" title="Turismo Andaluz" target="_blank" href="http://www.andalucia.org/es/destinos/provincias/cordoba/municipios/'+
+	listaLateral='<spam class="lugar_encontrado">'+htmlIcono("hill")+aTA[b][0]+" msnm"+cl+'<img src="icon/menu/home-mini.png">'+ta[b][nombre]+cl+'<a style="text-decoration:none;" title="TransAndalus" target="_blank" href= "http://www.transandalus.org/index.php?option=com_content&task=view&id='+ta[b][webta]+'">'+htmlIcono("transandalus")+'</a><a style="text-decoration:none;" title="Turismo Andaluz" target="_blank" href="http://www.andalucia.org/es/destinos/provincias/cordoba/municipios/'+
 	ta[b][turismo]+'">'+htmlIcono("turismoandaluz")+'</a><a style="text-decoration:none;" title="Wikipedia" target="_blank" href="http://es.wikipedia.org/wiki/'+ta[b][nombre]+'">'+htmlIcono("wikipedia")+"</a>";
 	infoClima(b);
 	info=listaLateral+meteoRuta;
@@ -1307,7 +772,8 @@ function infomarcador2(b){
 //------------------------------------ Opciones: variar número de etapas
 
 function variableEtapometro(){
-	$( "#lista_etapometro" ).html($("#variables").html());
+	// if (PlanRuta.length>0){htmlAnterior=$("#lista_etapometro").html()}
+	$("#lista_etapometro").html($("#variables").html());
 	cargarValores();
 	if (PlanContador>0){$("#etapas").text(etapasEtapometro)}
 }
@@ -1348,7 +814,6 @@ function cargarValores(){
 
 
 
-function infoClima(b){b=ta[b][31];meteoRuta='<div id="c_'+b+'" class="mini" style="border-image: initial; width: 50px; height: 67px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; overflow-x: hidden; overflow-y: hidden; background-position: initial initial; background-repeat: initial initial; "><iframe id="'+("fr_"+b)+'" src="'+("http://www.eltiempo.es/widget/get_widget/"+b)+'?v=11000" frameborder="0" scrolling="no" width="100%" height="100%" allowtransparency="true" style="overflow: hidden;"></iframe></div>'}
 
 
 function serviciosHorizontal(b){
@@ -1368,6 +833,9 @@ function serviciosVertical(b){
 }
 
 //--------------------------------------------------- Capas Climatología 
+
+function infoClima(b){b=ta[b][31];meteoRuta='<div id="c_'+b+'" class="mini" style="border-image: initial; width: 50px; height: 67px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; overflow-x: hidden; overflow-y: hidden; background-position: initial initial; background-repeat: initial initial; "><iframe id="'+("fr_"+b)+'" src="'+("http://www.eltiempo.es/widget/get_widget/"+b)+'?v=11000" frameborder="0" scrolling="no" width="100%" height="100%" allowtransparency="true" style="overflow: hidden;"></iframe></div>'}
+
 
 function climaTA(b){
 	
@@ -1586,7 +1054,7 @@ function ventana(b){
 
 function ventanaLateral(b){$("#lista_etapometro").html(b)}
 
-function ayuda(){
+function help(){
 	$.ajax({
 		url: 'html/etapometro.html',
 		dataType: 'html',
@@ -1610,14 +1078,22 @@ function rutaTA(){
 		setTimeout('rutandalus()',600);
 		
 	}
-		else {$('#lista_etapometro').html('<img src="icon/calcular.svg"> Seleccione primero poblaciones de inicio y final de ruta.')};
+		else {help();
+			// $('#lista_etapometro').html('<img src="icon/calcular.svg"> Seleccione primero poblaciones de inicio y final de ruta.')
+			};
 }
 
 //------------------------------------------------- Resultado Etapómetro
 
 function rutandalus(){
 	
-	resetearRutandalus();
+	// resetearRutandalus();
+	// function resetearRutandalus(){
+	itaMedia=itaTotal=pendiente=pendienteMedia=pendienteAnterior=totalPendiente=acumulado=acumulado_total=distancia=distanciaAproximada=tecnicaTotal=distanciaTotal=0;
+	iEtapometro=aEtapometro=aRutandalus="";
+	// etapasEtapometro=1
+	// }
+	
 	h=0,k=0,r=0;
 	var v="",u="";
 	etapasEtapometro=1;
@@ -1661,15 +1137,16 @@ function rutandalus(){
 	
 	for (var cc=PlanRuta.length-1, c=1;c<=cc;c++){
 		
-		b=PlanRuta[c];
+		var b=PlanRuta[c];
 
 					tramoRuTAndalus=c;
-					tramo=PlanRuta[c][1];
-
+					// tramo=PlanRuta[c][1];
+					tramo=b[1];
 					k+=distanciaTramo(tramo);
 					h+=ta[tramo][tecnica];
 					
-					"H"==PlanRuta[c][2]?
+					// "H"==PlanRuta[c][2]?
+					"H"==b[2]?
 					(s_H=!0,s1=pob2,s2=pob1,ser=pob2,tah=28):
 					(s_H=!1,s1=pob1,s2=pob2,ser=pob1,tah=29);
 				
@@ -1699,7 +1176,7 @@ function rutandalus(){
 									'<td style="text-align: right;">'+ta[tramo][tah]+
 									'm<td style="text-align: right;">'+ta[tramo][ita]+
 									'<small>/76</small><td style="text-align: center;">'+dificultadTecnica()+
-									'<td style="text-align: left;">'+missTApometro(ta[tramo][missta])+
+									'<td style="text-align: left;"><img src="icon/missta'+ta[tramo][missta]+'.svg">'+ // missTApometro(ta[tramo][missta])+
 									'<td style="text-align: center;">'+terreno()+
 							  '</tr>';	
 						}else{v=""}
@@ -1727,22 +1204,23 @@ function rutandalus(){
 	if (!variarEtapasOn){
 	t+='<tr style="text-align: right;font-size: 12px;font-weight: bold;color: orange;">'+
 	   '<td >'+Math.round(w)+' Km</td><td>'+horas(B)+'</td><td>'+A+' m</td><td colspan="2">'+colorT+'<small>/76</small></td><td colspan="2">Total: '+
-	   tramoRuTAndalus+' tramos</td></tr></table>'; // </body></html>';
+	   tramoRuTAndalus+(idioma=='es'?' tramos':' stages')+'</td></tr></table>'; // </body></html>';
 
 		$("#lista_etapometro").html(t);
 		
 		var PlanPerfil=[];
 	
 		activoPE=true;
+		var perfilActivoA=perfilActivo;
 		PlanRuta.forEach(function(b,c){
 			PlanPerfil[1]=[];
 			PlanPerfil[1][1]=b[1];
 			PlanPerfil[1][2]=b[2];
 			SENTIDO=="A"?(s1=pob1,s2=pob2):(s1=pob2,s2=pob1);
-			perfil(PlanPerfil, (idioma=='es'?"Tramo: ":"Section: ") + ta[ta[b[1]][s1]][nombre] +' a '+ ta[ta[b[1]][s2]][nombre],10,"provisional"+c);
+			perfil(PlanPerfil, (idioma=='es'?"Tramo: ":"Section: ") + ta[ta[b[1]][s1]][nombre] +' ----> '+ ta[ta[b[1]][s2]][nombre],10,"provisional"+c);
 			})
 		activoPE=false;
-		
+		perfilActivo=perfilActivoA;	
 		}else{$("#etapas").text(etapasEtapometro)};
 	
 	$("#kilometraje").html(htmlIconoM('bici')+Math.round(w)+" Km");
@@ -1780,43 +1258,19 @@ function timeTramo(b){
 	
 function horas(b){horasT=Math.floor(b);minutosT=Math.floor(Math.round(60*(b-horasT)));return horasT+"h "+minutosT+"'"}
 
-function missTApometro(b){
-	
-		
-	return missTAValoracion='<img src="icon/missta'+b+'.svg">';
-	}
+// function missTApometro(b){return '<img src="icon/missta'+b+'.svg">'}
 
-// RESETEAR ruTAndalus
-/*
-function resetearRutandalus(){	
-	resetear();
-}
-*/
 function htmlIcono(b){return'<img src="icon/menu/'+b+'.png">'}
 
 function htmlIconoM(b){return'<img src="icon/'+b+'.svg">'}
 
-function htmlIconoMini(b){return'<img src="icon/menu/'+b+'-mini.png">'}
-
 function htmlIconoMicro(b){return'<img width="10px" height="10px" src="icon/menu/'+b+'-mini.png">'}
-
-function htmlIconoMedio(b){return'<img width="20" height="20" src="icon/menu/'+b+'.png">'}
 
 function jsIcono(b){return"icon/mapa/"+b+".png"}
 
 function jsIconoMenu(b){return"icon/menu/"+b+".png"}
 
-// function rectangulos(b){swne(b);esquinas=new google.maps.LatLngBounds(sw,ne);rectangulo[b]=new google.maps.Rectangle({map:map,bounds:esquinas,strokeColor:tinta[colorTrack],strokeOpacity:.3,fillColor:tinta[colorTrack],fillOpacity:.3,clicable:!1});listener(rectangulo[b],"mouseover",function(){audios(b)})}
-
-function resetearRutandalus(){
-	itaMedia=itaTotal=pendiente=pendienteMedia=pendienteAnterior=totalPendiente=acumulado=acumulado_total=distancia=distanciaAproximada=tecnicaTotal=distanciaTotal=0;
-	iEtapometro=aEtapometro=aRutandalus="";
-	etapasEtapometro=1
-}
-
 function redondeo(b,c){return parseFloat(b).toFixed(c)}
-
-// function ventanaNavegador(b,c){window.open("","","height=500px,width="+c).document.write(b)}
 
 function puntoPoblacion(b){return punto=trackTA[b].getPath().getAt(0)}
 
@@ -1843,11 +1297,6 @@ function colorPerfil(b){return Math.round((POBLACIONES-ta[b][ita])/(POBLACIONES/
 
 function tipoPoblacion(b){return b<=POBLACIONES?"home":"home2"}
 
-function computarD(b,c){return google.maps.geometry.spherical.computeDistanceBetween(b,c)}
-
-//
-// FUNCIONES BÁSICAS NUEVA VERSIÓN -----------------------------------------------------------------------------------
-// 
 
 //--------------------------------------------------------- Centrar mapa
 
@@ -1873,7 +1322,6 @@ function centrarTramoE(c){
 }
 
 
-
 function iniciofinalColocar(){
 	
 	if (etapometro[0] && !etapometro[1]){
@@ -1886,8 +1334,6 @@ function iniciofinalColocar(){
 		
 		cambiaEIF(0);
 		
-		
-	
 	}else if (!etapometro[0] && etapometro[1]){
 		
 		if (etapometro[4]){resetMarcador(etapometro[4])};
@@ -1903,7 +1349,7 @@ function iniciofinalColocar(){
 	if(etapometro[0]&&etapometro[1]){calcularTramos()}
 }
 
-
+//-------------------------------- Marcadores Inicio/Final de Etapómetro
 
 function resetMarcador(b){
 	if(marcadorPoblacion[b]){marcadorPoblacion[b].setOptions({visible: true, icon: jsIcono(tipoPoblacion(b)),draggable: false})};
@@ -1961,18 +1407,15 @@ function buscador(b){
 	lugar=limpiarBuscador($('#buscar'+b).val());
 	if (lugar!=""){
 		if (b==3){
-				// for(var c in circuloSombreado)circuloSombreado[c]&&circuloSombreado[c].setMap(null);
 				marcadorInteres.forEach(function(b,d){b&&b.forEach(function(b,c){b&&(b.setMap(null),marcadorInteres[d][c]=null)})});
 				ventanaPoblacion.close();
 				buscarGrupos();
 				if (0==encontrado){totalEncontrado+=htmlIcono("direccion")};
-					// totalEncontrado="<!DOCTYPE html><html><head><title></title></head><body>"+totalEncontrado+"</body></html>";
 				$("#lista_buscador").css("visibility","visible");
-				$("#lista_buscador").html(totalEncontrado); // ventanaLateral(totalEncontrado)
+				$("#lista_buscador").html(totalEncontrado);
 		}
-		else if (b==0 || b==1){
+		else if (b<2){
 			grupo=1;
-			// for(var c in circuloSombreado)circuloSombreado[c]&&circuloSombreado[c].setMap(null);
 			inicioOfinal=0;
 			patronBuscador(TOTAL_POBLACIONES);
 			if (0==encontrado){listaLateral="No encontrado"};
@@ -2003,14 +1446,12 @@ function patronBuscador(b){
 	pat="";
 	var c=new RegExp(lugar,"gi");
 	inicioOfinal=0;
-	for(i=1;i<=b;i++){
+	for(var i=1;i<=b;i++){
 		switch(grupo){
-			case 1:
-				limpiarBuscador(ta[i][30]);
-			break;
-			case 2:
-				interes[ii][i]&&limpiarBuscador(interes[ii][i][2]);
-			break;
+			
+			case 1: limpiarBuscador(ta[i][30]); break;
+			
+			case 2: interes[ii][i]&&limpiarBuscador(interes[ii][i][2]); break;
 			
 		}
 			busca=c.exec(pat);
@@ -2031,10 +1472,7 @@ function listaBuscador(b){
 // á\u00e1  é\u00e9  í\u00ed  ó\u00f3  ú\u00fa ü\00fc ñ\u00f1
 
 function limpiarBuscador(b){
-	// return pat=b.replace(/[\u00e1,a,\u00e9,e,\u00ed,i,\u00f3,o,\u00fa,\u00fc,u,\u00f1,\u00E1,\u00E9,\u00ED,\u00F3,\u00FA,\u00FC,\u00F1]/gi,"-")
-	
-	// console.log ("Entra BUSCADOR: "+b); // borraralerta
-	
+
 	b.replace(/[á]/gi,"a");
 	b.replace(/[é]/gi,"e");
 	b.replace(/[í]/gi,"i");
@@ -2043,7 +1481,6 @@ function limpiarBuscador(b){
 	b.replace(/[ü]/gi,"u");
 	b.replace(/[ñ]/gi,"n");
 	b.replace(/ /gi,"-");
-	// console.log ("Salida BUSCADOR: "+b); // borraralerta
 	return pat=b
 }
 
@@ -2052,15 +1489,14 @@ function cambiarHtml(b){
 }
 
 function infopint_lateral1(b){
-	puntop=b.id; 
-	puntoPoblacion(puntop);
-	infomarcador2(puntop);
+	puntoPoblacion(b.id);
+	infomarcador2(b.id);
 	ventana(ventanaPoblacion);
 }
 
 
 function infopint_lateral2(b){
-	n=b.id.split(",");
+	var n=b.id.split(",");
 	tramo=n[0];
 	pTramo=n[1];
 	infopint2(n[0],n[1]);
@@ -2069,12 +1505,11 @@ function infopint_lateral2(b){
 }
 
 
-
 function listadoLateral(b){
 	switch(grupo){
 		case 1:
 			imagen(b,"home-mini");
-			punto=puntoPoblacion(b); // trackTA[b].getPath().getAt(0);
+			puntoPoblacion(b);
 			listaBuscador(ta[b][nombre]);
 			b>POBLACIONES&&colocarPoblaciones2(b);
 		break;
@@ -2150,7 +1585,7 @@ function cambiarSentido(){
 			$("#buscar1").val(ta[etapometro[1]][nombre]);
 												
 			calcularTramos();
-			
+			alert (perfilActivo); // borraralerta
 			if (perfilActivo){perfilEtapometro()}
 	}
 
@@ -2804,5 +2239,5 @@ jQuery.fn.print = function(){
 // -----------AUXILIAR
 
 function crearJSON(){	
-	$("#lista_etapometro").html(JSON.stringify(aTA));	
+	$("#lista_etapometro").html(JSON.stringify(icono));	
 }
