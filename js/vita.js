@@ -348,12 +348,10 @@ function perfil(b,c,r,d){
 							
 				{
 					ppp++;
-					// DistanciaX+=computarD(tTA.getAt(p),tTA.getAt(p+1))/1000;
 					DistanciaX+=google.maps.geometry.spherical.computeDistanceBetween(tTA.getAt(p),tTA.getAt(p+1))/1000;
 					
 					function computarD(b,c){return }
 					DistanciaX=parseFloat(redondeo(DistanciaX,2));
-					// var AltitudY=aTA[e[1]][p+1];
 					if (ppp==r){
 						tTAtotal.push(tTA.getAt(p+1));	
 						data.addRow([DistanciaX,aTA[e[1]][p+1]]);
@@ -812,10 +810,6 @@ function cargarValores(){
 	for (var i=6;i<9;i++){variableE[i]=$("#checked"+(i-6)+":checked").val()}
 }
 
-
-
-
-
 function serviciosHorizontal(b){
 	serviciosH="";
 	for(ii=dormir;ii<avion+1;ii++)0!=ta[b][ii]&&(serviciosH+=htmlIconoMicro(icono[40+(ii-dormir)]));
@@ -1087,14 +1081,8 @@ function rutaTA(){
 
 function rutandalus(){
 	
-	// resetearRutandalus();
-	// function resetearRutandalus(){
-	itaMedia=itaTotal=pendiente=pendienteMedia=pendienteAnterior=totalPendiente=acumulado=acumulado_total=distancia=distanciaAproximada=tecnicaTotal=distanciaTotal=0;
-	iEtapometro=aEtapometro=aRutandalus="";
-	// etapasEtapometro=1
-	// }
-	
-	h=0,k=0,r=0;
+	itaMedia=0;
+	h=0,k=0;
 	var v="",u="";
 	etapasEtapometro=1;
 	var w=tiEtapometro=deEtapometro=kmEtapometro=A=B=0;
@@ -1150,7 +1138,7 @@ function rutandalus(){
 					(s_H=!0,s1=pob2,s2=pob1,ser=pob2,tah=28):
 					(s_H=!1,s1=pob1,s2=pob2,ser=pob1,tah=29);
 				
-					distancia=0;
+					// distancia=0;
 					
 					kmEtapometro+=kmTramo;
 					deEtapometro+=ta[tramo][tah];
@@ -1158,7 +1146,7 @@ function rutandalus(){
 					w+=kmTramo;
 					A+=ta[tramo][tah];
 					B+=tiempoTramo;
-					r+=ta[tramo][ita];
+					itaMedia+=ta[tramo][ita];
 					
 					if (!variarEtapasOn){
 						v =   '<tr><td colspan="7" bgcolor="#008000"></tr>'+
@@ -1171,12 +1159,12 @@ function rutandalus(){
 									'<td colspan="7">'+htmlIconoM('poblacion')+ta[ta[tramo][s1]][nombre]+" "+htmlIconoM('poblacion')+ta[ta[tramo][s2]][nombre]+" ("+serviciosHorizontal(ta[tramo][ser])+')'+ hr +
 							  '</tr>'+
 							  '<tr style="font-size: 12px, color: blue">'+
-									'<td style="text-align: right;">'+kmTramo+
-									'Km<td style="text-align: right;">'+horas(tiempoTramo)+
-									'<td style="text-align: right;">'+ta[tramo][tah]+
-									'm<td style="text-align: right;">'+ta[tramo][ita]+
+									'<td class="right">'+kmTramo+
+									'Km<td class="right">'+horas(tiempoTramo)+
+									'<td class="right">'+ta[tramo][tah]+
+									'm<td class="right">'+ta[tramo][ita]+
 									'<small>/76</small><td style="text-align: center;">'+dificultadTecnica()+
-									'<td style="text-align: left;"><img src="icon/missta'+ta[tramo][missta]+'.svg">'+ // missTApometro(ta[tramo][missta])+
+									'<td style="text-align: left;"><img src="icon/missta'+ta[tramo][missta]+'.svg">'+
 									'<td style="text-align: center;">'+terreno()+
 							  '</tr>';	
 						}else{v=""}
@@ -1198,13 +1186,12 @@ function rutandalus(){
 	(!variarEtapasOn)&&(t+=u+subTotal(0));
 	u="";
 	kmEtapometro=deEtapometro=tiEtapometro=0;
-	colorT=Math.round(r/tramoRuTAndalus);
-	// colorTrack=26>colorT?2:50<colorT?0:1;
+	itaMedia=Math.round(itaMedia/tramoRuTAndalus);
 	
 	if (!variarEtapasOn){
 	t+='<tr style="text-align: right;font-size: 12px;font-weight: bold;color: orange;">'+
-	   '<td >'+Math.round(w)+' Km</td><td>'+horas(B)+'</td><td>'+A+' m</td><td colspan="2">'+colorT+'<small>/76</small></td><td colspan="2">Total: '+
-	   tramoRuTAndalus+(idioma=='es'?' tramos':' stages')+'</td></tr></table>'; // </body></html>';
+	   '<td >'+Math.round(w)+' Km</td><td>'+horas(B)+'</td><td>'+A+' m</td><td colspan="2">'+itaMedia+'<small>/76</small></td><td colspan="2">Total: '+
+	   tramoRuTAndalus+(idioma=='es'?' tramos':' stages')+'</td></tr></table>';
 
 		$("#lista_etapometro").html(t);
 		
@@ -1258,8 +1245,6 @@ function timeTramo(b){
 	
 function horas(b){horasT=Math.floor(b);minutosT=Math.floor(Math.round(60*(b-horasT)));return horasT+"h "+minutosT+"'"}
 
-// function missTApometro(b){return '<img src="icon/missta'+b+'.svg">'}
-
 function htmlIcono(b){return'<img src="icon/menu/'+b+'.png">'}
 
 function htmlIconoM(b){return'<img src="icon/'+b+'.svg">'}
@@ -1308,8 +1293,7 @@ function centrarTramo(b){
 	// swne(b);
 	// map.fitBounds(new google.maps.LatLngBounds(sw,ne));
 	infomarcador2(b);
-	puntoPoblacion(b);
-	map.setCenter(punto);
+	map.setCenter(puntoPoblacion(b));
 	ventana(ventanaPoblacion);
 	$("#lista_buscador").html(infoLateral);	
 }
@@ -1395,7 +1379,6 @@ function minBuscador(b){
 }
 
 function minBuscador2(b){
-	// $("#buscar"+b).val(ta[etapometro[b]=iniciofinalPoblacion][nombre]);
 	buscador(b);
 	etapometro[b]=iniciofinalPoblacion;
 	if (b<3){c=ta[iniciofinalPoblacion][nombre];$("#buscar"+b).val(c)}		
@@ -1459,7 +1442,7 @@ function patronBuscador(b){
 				listadoLateral(i);
 				pat="";
 				inicioOfinal++;
-				if (inicioOfinal==1){iniciofinalPoblacion=i} //alert (i)
+				if (inicioOfinal==1){iniciofinalPoblacion=i}
 				}			
 	}
 }
@@ -1472,7 +1455,6 @@ function listaBuscador(b){
 // á\u00e1  é\u00e9  í\u00ed  ó\u00f3  ú\u00fa ü\00fc ñ\u00f1
 
 function limpiarBuscador(b){
-
 	b.replace(/[á]/gi,"a");
 	b.replace(/[é]/gi,"e");
 	b.replace(/[í]/gi,"i");
@@ -1585,7 +1567,6 @@ function cambiarSentido(){
 			$("#buscar1").val(ta[etapometro[1]][nombre]);
 												
 			calcularTramos();
-			alert (perfilActivo); // borraralerta
 			if (perfilActivo){perfilEtapometro()}
 	}
 
@@ -1615,7 +1596,6 @@ function calcularTramos(){
 		while(igualIF || (nodoActual!=etapometro[1])){					
 			
 				if (nodoSiguiente==0 && igualIF==true){
-				
 					igualIF=false;
 					nodoSiguienteIgual(nodoActual)
 				}
@@ -1802,7 +1782,6 @@ function calcularTramos(){
 				nodoActual=nodoSiguiente;
 
 				}
-
 
 	} else {
 		$("#lista_etapometro").html('<img src="icon/calcular.svg"></img>Seleccione poblaciones de inicio y final para calcular su ruta.')
@@ -2065,7 +2044,6 @@ app.config(function($translateProvider){
 
 app.controller('ctrl', ['$translate', '$scope', function ($translate, $scope) {
     $scope.changeLanguage = function () {
-		// alert ($translate.use()); // borraralerta
         $translate.use() === 'es'? ($translate.use('en'),idioma='en') : ($translate.use('es'),idioma='es');
         gE("iconoIdioma").src="icon/"+ $translate.use()+".svg";
     };
@@ -2073,7 +2051,6 @@ app.controller('ctrl', ['$translate', '$scope', function ($translate, $scope) {
 
 
 function masAlterna(){$("#alternativas").click()}
-
 
 function drag(b){
 	
@@ -2094,8 +2071,8 @@ function drag(b){
 					){marcadorElegido=i}
 		});
 		
-		if(marcadorElegido!=false 
-		
+		if(
+				marcadorElegido!=false 
 				&& 
 				(
 				(marcadorElegido!=etapometro[0] && b==0) 
@@ -2107,8 +2084,7 @@ function drag(b){
 			
 			){
 				
-				
-			marcadorPoblacion[marcadorElegido].setOptions({										// Restaurar anterior marcador
+			marcadorPoblacion[marcadorElegido].setOptions({										
 						draggable: true,
 						icon: jsIcono(b==0?"empezar":"finalizar")
 						});
@@ -2137,9 +2113,8 @@ function activoOn(b){b.src="icon/"+b.name+"1.svg"}
 
 function activoOff(b){b.src="icon/"+b.name+".svg"}
 
-function imprimirEtapometro(){$("#lista_etapometro").print()}
 
-
+// --------------------------------------- Menú principal de poblaciones
 
 function incluirMenu(){
 	for (var p=0;p<8;p++){
@@ -2157,10 +2132,12 @@ function incluirMenu(){
 }
 
 
-// Create a jquery plugin that prints the given element.
+// ----------------------------------- Imprimir resultado del Etapómetro
+
+function imprimirEtapometro(){$("#lista_etapometro").print()}
+
 jQuery.fn.print = function(){
-    // NOTE: We are trimming the jQuery collection down to the
-    // first element in the collection.
+    
     if (this.size() > 1){
         this.eq( 0 ).print();
         return;
@@ -2168,17 +2145,8 @@ jQuery.fn.print = function(){
         return;
     }
 
-    // ASSERT: At this point, we know that the current jQuery
-    // collection (as defined by THIS), contains only one
-    // printable element.
+    var jFrame = $( "<iframe name='iframePrint'>" );
 
-    // Create a random name for the print frame.
-    var strFrameName = ("printer-" + (new Date()).getTime());
-
-    // Create an iFrame with the new name.
-    var jFrame = $( "<iframe name='" + strFrameName + "'>" );
-
-    // Hide the frame (sort of) and attach to the body.
     jFrame
         .css( "width", "1px" )
         .css( "height", "1px" )
@@ -2187,46 +2155,23 @@ jQuery.fn.print = function(){
         .appendTo( $( "body:first" ) )
     ;
 
-    // Get a FRAMES reference to the new frame.
-    var objFrame = window.frames[ strFrameName ];
+    var objFrame = window.frames[ "iframePrint" ];
 
-    // Get a reference to the DOM in the new frame.
     var objDoc = objFrame.document;
-
-    // Grab all the style tags and copy to the new
-    // document so that we capture look and feel of
-    // the current document.
-
-    // Create a temp document DIV to hold the style tags.
-    // This is the only way I could find to get the style
-    // tags into IE.
     var jStyleDiv = $( "<div>" ).append(
         $( "style" ).clone()
         );
-
-    // Write the HTML for the document. In this, we will
-    // write out the HTML of the current element.
     objDoc.open();
     objDoc.write( "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">" );
     objDoc.write( "<html><body><head><title>ViTA-Visor de TransAndalus</title>" );
-    // objDoc.write( "" );
-    // objDoc.write( "" );
-    // objDoc.write( "" );
-    // objDoc.write( document.title );
-    // objDoc.write( "" );
     objDoc.write( jStyleDiv.html() );
     objDoc.write( "</head>" );
     objDoc.write( this.html() );
     objDoc.write( "</body></html>" );
-    // objDoc.write( "" );
     objDoc.close();
-
-    // Print the document.
     objFrame.focus();
     objFrame.print();
-
-    // Have the frame remove itself in about a minute so that
-    // we don't build up too many of these frames.
+    
     setTimeout(
         function(){
             jFrame.remove();
