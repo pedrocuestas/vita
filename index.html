@@ -36,10 +36,10 @@
 				<img id="iconoIdioma" ng-click="changeLanguage()" title="{{'idioma'|translate}}" src="icon/es.svg">
 			</td>
 			<td>
-				<input id="buscar3" title="{{'buscar_transandalus'|translate}}" class="buscar3" type="text" name="buscar3" placeholder="{{'buscar_transandalus'|translate}}" size="20" min="4" max="100"  oninput="minBuscador(3)" onmouseover="contenidoListaBuscador()">
+				<input id="buscar3" title="{{'buscar_transandalus'|translate}}" class="buscar3" type="text" name="buscar3" placeholder="{{'buscar_transandalus'|translate}}" size="20" min="4" max="100" onmouseover="contenidoListaBuscador()"> <!-- oninput="minBuscador(3)" -->
 			</td>
 			<td>
-				<img title="{{'buscar'|translate}}" src="icon/buscar.svg" onclick="buscador(3)">
+				<img title="{{'buscar'|translate}}" src="icon/buscar.svg" onclick="auxbuscador()">
 			</td>
 			<td>
 					<img title="{{'etapometro'|translate}}" src="icon/etapometro.svg" onclick="desplegarEtapometro()">
@@ -162,10 +162,10 @@
    </li>
    <li class='active has-sub'><a href='#'><img src="icon/climatologia.svg"><span>{{'climatologia'|translate}}</span></a>
 		<ul>
-			<li href='#' onclick="climaTA(0)"><a id="clima0" href='#' ><img src="icon/temperatura.svg"><span>{{'temperatura'|translate}}</span></a>
-			<li href='#' onclick="climaTA(1)"><a id="clima1" href='#' ><img src="icon/lluvia.svg"><span>{{'lluvia'|translate}}</span></a>
-			<li href='#' onclick="climaTA(2)"><a id="clima2" href='#' ><img src="icon/nieve.svg"><span>{{'nieve'|translate}}</span></a>
-			<li class='last' href='#' onclick="climaTA(3)"><a id="clima3" href='#' ><img src="icon/viento.svg"><span>{{'viento'|translate}}</span></a>
+			<li href='#' onclick="climaTA(1)"><a id="clima1" href='#' ><img src="icon/temperatura.svg"><span>{{'temperatura'|translate}}</span></a>
+			<li href='#' onclick="climaTA(2)"><a id="clima2" href='#' ><img src="icon/lluvia.svg"><span>{{'lluvia'|translate}}</span></a>
+			<li href='#' onclick="climaTA(3)"><a id="clima3" href='#' ><img src="icon/nieve.svg"><span>{{'nieve'|translate}}</span></a>
+			<li class='last' href='#' onclick="climaTA(4)"><a id="clima4" href='#' ><img src="icon/viento.svg"><span>{{'viento'|translate}}</span></a>
 		</ul>
    </li>
    
@@ -221,11 +221,11 @@
 				<img  title="{{'inicio'|translate}}" src="icon/menu/empezar.png" onclick="" draggable="true" ondragstart="drag(0)">
 			</td>
 			<td colspan ="5">
-				<input id="buscar0" title="{{'inicio'|translate}}" class="buscarIniFin" type="text" placeholder="{{'inicio'|translate}}" oninput="cambiaIF(0)" onfocus="focusIFA(0)">
+				<input id="buscar0" title="{{'inicio'|translate}}" class="buscarIniFin" type="text" placeholder="{{'inicio'|translate}}" onfocus="focusIFA(0)"> <!-- oninput="cambiaIF(0)"   -->
 			</td>
 			
 			<td width="24px">
-				<img id="lupa_0" class="imgalign" title="{{'buscar'|translate}}" src="icon/buscar_sombra.svg" onclick="buscarIF(0)">
+				<img id="lupa_0" class="imgalign" title="{{'buscar'|translate}}" src="icon/buscar_sombra.svg" onclick="buscarIF(0)"> 
 			</td>
 			<td rowspan ="2" width="24px" >
 				<img id="sentido" title="{{'sentido'|translate}}" style="float: right;" src="icon/sentidoA.svg" onclick="cambiarSentido()">
@@ -238,7 +238,7 @@
 				<img title="{{'final'|translate}}" src="icon/menu/finalizar.png" onclick="" draggable="true" ondragstart="drag(1)">
 			</td>
 			<td colspan ="5">
-				<input id="buscar1" title="{{'final'|translate}}" class="buscarIniFin" type="text" placeholder="{{'final'|translate}}" oninput="cambiaIF(1)" onfocus="focusIFA(1)">
+				<input id="buscar1" title="{{'final'|translate}}" class="buscarIniFin" type="text" placeholder="{{'final'|translate}}" onfocus="focusIFA(1)"> <!-- oninput="cambiaIF(1)"    -->
 			</td>
 			
 			<td width="24px">

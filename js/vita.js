@@ -6,8 +6,6 @@ var principal=[4,1,7,3,8,5,9,1,10,4,11,2,15,5,16,3,16,5,16,6,20,8,22,3,40,1,45,2
 var totalPrincipal=principal.length;
 var andalucia=["Almer\u00eda",37.45,-2.122,"C\u00e1diz",36.255,-5.376,"C\u00f3rdoba",37.968,-4.852,"Granada",37.372,-3.028,"Huelva",37.516,-6.604,"Ja\u00e9n",37.777,-3.605,"M\u00e1laga",36.705,-4.627,"Sevilla",37.258,-5.363];
 
-// Nodos para Etapómetro
-
 var nodo=[];
 var sentidoah=[];
 var aTA=[];
@@ -32,12 +30,11 @@ var opacidad=.5;
 var etapasEtapometro=0;
 var meteoRuta="";
 pvAnterior=8;
-// pv=!1;
 
 var PlanRuta=[];
 var PlanPerfil=[];
 var PlanContador=0;
-var OWM=[4];OWM[0]=OWM[1]=OWM[2]=OWM[3]=false;
+var OWM=[4];OWM[0]=false;OWM[1]=false;OWM[2]=false;OWM[3]=false;
 var weatherLayer=new google.maps.weather.WeatherLayer({temperatureUnits:google.maps.weather.TemperatureUnit.CELSIUS});
 var cloudLayer=new google.maps.weather.CloudLayer;
 
@@ -97,18 +94,16 @@ var pob2=27;
 var acumuladoAH=28;
 var acumuladoHO=29;
 var turismo=30;
-
 var alterna=false;
 
 
-var app = angular.module('myApp', ['pascalprecht.translate']);
+var app=angular.module('myApp', ['pascalprecht.translate']);
 
 
 var AlojamientoKML=campingKML=transporteKML=protegidosKML=false;
 
 var menuPrincipalVisible=false;
 var etapometroActivo=false;
-// var puntero_enlace=0;
 var perfilAnterior=perfilActivo=false;
 var etapometroActivo=false;
 var mapaAnterior=1;
@@ -120,7 +115,6 @@ var climataAnterior=false;
 var marcadorElegido=false;
 var V=[];
 var variarEtapasOn=false;
-// var lengua=[2];lengua[0]="es";lengua[1]="en";
 var idioma='es';
 var activoPE=false;
 var primeraVuelta=false;
@@ -184,7 +178,7 @@ var worldRelief=new google.maps.ImageMapType({
 	
 var mapaOWM=[4];	
 		
-mapaOWM[0]=new google.maps.ImageMapType({
+mapaOWM[1]=new google.maps.ImageMapType({
 		getTileUrl:function(b,c){
 					return"http://undefined.tile.openweathermap.org/map/temp/"+c+"/"+b.x+"/"+b.y+".png"
 				},
@@ -196,18 +190,7 @@ mapaOWM[0]=new google.maps.ImageMapType({
 		maxZoom:19
 });
 
-	
-mapaOWM[1]=new google.maps.ImageMapType({
-	getTileUrl:function(b,c){return"http://undefined.tile.openweathermap.org/map/snow/"+c+"/"+b.x+"/"+b.y+".png"
-				},
-		tileSize:tam,
-		isPng:true,
-		opacity:.7,
-		alt:"OWMsnow",
-		name:"OWMsnow",
-		maxZoom:19
-});
-	
+
 mapaOWM[2]=new google.maps.ImageMapType({
 		getTileUrl:function(b,c){
 					return"http://undefined.tile.openweathermap.org/map/precipitation/"+c+"/"+b.x+"/"+b.y+".png"
@@ -219,8 +202,21 @@ mapaOWM[2]=new google.maps.ImageMapType({
 		name:"OWMprecipitation",
 		maxZoom:19
 });
-		
+
+	
 mapaOWM[3]=new google.maps.ImageMapType({
+	getTileUrl:function(b,c){return"http://undefined.tile.openweathermap.org/map/snow/"+c+"/"+b.x+"/"+b.y+".png"
+				},
+		tileSize:tam,
+		isPng:true,
+		opacity:.7,
+		alt:"OWMsnow",
+		name:"OWMsnow",
+		maxZoom:19
+});
+	
+		
+mapaOWM[4]=new google.maps.ImageMapType({
 		getTileUrl:function(b,c){
 					return"http://undefined.tile.openweathermap.org/map/wind/"+c+"/"+b.x+"/"+b.y+".png"
 					},
@@ -231,6 +227,8 @@ mapaOWM[3]=new google.maps.ImageMapType({
 		name:"OWMwind",
 		maxZoom:19
 });
+
+
 
 
 var escalaSigPac="MTNSIGPAC@3785 MTNSIGPAC@3785 MTNSIGPAC@3785 MTNSIGPAC@3785 MTNSIGPAC@3785 MTNSIGPAC@3785 MTN2000@3785 MTN2000@3785 MTN2000@3785 MTN2000@3785 MTN2000@3785 MTN200@3785 MTN200@3785 MTN200@3785 MTN25@3785 MTN25@3785 ORTOFOTOS@3785 ORTOFOTOS@3785".split(" ");
@@ -262,6 +260,8 @@ var map = new google.maps.Map(gE("map_canvas"),{
 			panControl:true,
 			panControlOptions:{position:google.maps.ControlPosition.RIGHT_BOTTOM},
 			disableDoubleClickZoom:true,
+			
+			
 		});
 
 map.mapTypes.set("SigPac",mapaSigPac);
@@ -298,7 +298,7 @@ function transandalus(){
 																	verProvincias();
 																	colocarPoblaciones();
 																	incluirMenu();
-																	setTimeout("borrarInicio()",4000);
+																	setTimeout("borrarInicio()",3000);
 																	
 																});
 														
@@ -378,7 +378,7 @@ function perfil(b,c,r,d){
 				  trigger: 'selection'
 				},
 				curveType: 'function',
-				// legend: { position: 'bottom' },
+				
 				legend: 'none'
 		}
       
@@ -426,7 +426,20 @@ function desplegarMenu(){
 			$("#selectorcapa"+ii).css("transform",menuPrincipalVisible?"translate(+325px, 0%)":"translate(0%, 0%)");
 			$("#selectorcapa"+ii).css("transition",menuPrincipalVisible?"all 0.60s ease-in-out":"all 0.60s ease-in-out");
 		}
+		
 }
+
+function desplazarEtapometro(){
+	if ($("#lista_etapometro").css("top")=="160px"){
+				$("#lista_etapometro").css("top","0px");
+				$("#subaj").attr("src","icon/bajar.svg");
+			}
+			else{
+					$("#lista_etapometro").css("top","160px");
+					$("#subaj").attr("src","icon/subir.svg");
+			}
+}
+
 
 // ------------------------------------- Menú desplegable de poblaciones
 
@@ -457,6 +470,9 @@ function desplegarEtapometro(){
 	
 	if(etapometroActivo=!etapometroActivo){$("#pestana").css("background-image","url(icon/replegar.svg)")}
 		else{$("#pestana").css("background-image","url(icon/desplegar.svg)")}
+		
+	if ($("#lista_etapometro").html()==''){$("#lista_etapometro").html(poblacionesProvincia(1))}
+	
 }
 
 //------------------------------------- Pestaña ETAPÓMETRO (ver/ocultar)
@@ -688,9 +704,7 @@ function provinciaListar(b,c){
 						{
 								puntoPoblacion(i),
 								imagen(i,"home-mini"),
-								// puntero_enlace=i,
 								grupo=1,
-								// i_poblacion+='<li onclick="centrarTramoE('+i+') class="lugar_encontrado""><img src="'+img.src+'" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + ta[i][nombre] + "</li>";	 //  
 								i_poblacion+='<li onclick="centrarTramoE('+i+')"><a id="'+img.name+'" class="lugar_encontrado"><img src="'+img.src+'" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + ta[i][nombre] + "</a></li>";
 						}
 					}
@@ -770,7 +784,6 @@ function infomarcador2(b){
 //------------------------------------ Opciones: variar número de etapas
 
 function variableEtapometro(){
-	// if (PlanRuta.length>0){htmlAnterior=$("#lista_etapometro").html()}
 	$("#lista_etapometro").html($("#variables").html());
 	cargarValores();
 	if (PlanContador>0){$("#etapas").text(etapasEtapometro)}
@@ -832,31 +845,25 @@ function infoClima(b){b=ta[b][31];meteoRuta='<div id="c_'+b+'" class="mini" styl
 
 
 function climaTA(b){
-	
+
 	if (OWM[b]=!OWM[b]){
-		$("#clima"+b).css("background-color","#26CA26");// a.style.backgroundColor="#26CA26";
-		map.overlayMapTypes.setAt(b,mapaOWM[b]);
 		
-			/*
-			if (climataAnterior){
-				$("#clima"+climataAnterior).css("background-color","initial");
-				
-				OWM[climataAnterior]=false;
-				// map.overlayMapTypes.removeAt(climataAnterior);	
-				
-			};
-			*/
-		// climataAnterior=b;
-		// for (var i=0;i<=3;i++){if (i!=b){map.overlayMapTypes.removeAt(i);$("#clima"+i).css("background-color","initial");OWM[i]=false}}
-		}
-		else {
+		map.overlayMapTypes.clear();
+		map.overlayMapTypes.setAt(0,mapaOWM[b]);
+		$("#clima"+b).css("background-color","#26CA26");
+		for (var i=1;i<5;i++){
+			if(i!=b){$("#clima"+i).css("background-color","initial");OWM[i]=false;}
+			}
+		
+	
+	}
+	else {
 			$("#clima"+b).css("background-color","initial");
-			// climataAnterior=false;
-			map.overlayMapTypes.removeAt(b);
+			map.overlayMapTypes.clear();
 			}
 			
-		$("#licencia2").css("visibility","visible");
-		$("#licencia2").html('Capa superpuesta de <a target="_blank" href="http://openweathermap.org/">OpenWeatherMap</a>');
+	$("#licencia2").css("visibility","visible");
+	$("#licencia2").html('Capa superpuesta de <a target="_blank" href="http://openweathermap.org/">OpenWeatherMap</a>');
 }
 
 
@@ -873,7 +880,9 @@ function interesTramo(b,c){
 
 function infopint(b,c,d){listener(b,"click",function(b){punto=this.getPosition();infopint2(c,d);ventanaPoblacion.setOptions({disableAutoPan:!1});ventana(ventanaPoblacion)})}
 
-function infopint2(b,c){info=htmlIcono(icono[50>interes[b][c][3]?interes[b][c][3]:11])+interes[b][c][2];"0"!=interes[b][c][4]&&(info=htmlIcono(icono[interes[b][c][3]])+enl+interes[b][c][4]+'">'+interes[b][c][2]+"</a>");"0"!=interes[b][c][5]&&(info+="<p><src="+interes[b][c][5]+"></p>")}
+function infopint2(b,c){
+	info=htmlIcono(icono[50>interes[b][c][3]?interes[b][c][3]:11])+interes[b][c][2];"0"!=interes[b][c][4]&&(info=htmlIcono(icono[interes[b][c][3]])+enl+interes[b][c][4]+'">'+interes[b][c][2]+"</a>");"0"!=interes[b][c][5]&&(info+="<p><src="+interes[b][c][5]+"></p>")
+	}
 
 
 function imagen(b,c){
@@ -1099,12 +1108,12 @@ function rutandalus(){
 	var t=
 			'<table id="resultado_etapometro" border="0px">'
 			+'<tr><td bgcolor="#008000" colspan="7"></td></tr>'
-			+'<tr><td colspan="7">'+htmlIconoM('calcular')+'<img title="'+(tt?'Imprimir resultado':'Print the result')+'" src="icon/imprimir.svg" style="float: right" onclick="imprimirEtapometro()"></td></tr>'
+			+'<tr><td colspan="7">'+htmlIconoM('calcular')+'<img id="subaj" src="icon/bajar.svg" title="'+(tt?'Mover ventana':'***')+'"style="float: right" onclick="desplazarEtapometro()">'+'<img title="'+(tt?'Imprimir resultado':'Print the result')+'" src="icon/imprimir.svg" style="float: right" onclick="imprimirEtapometro()"></td></tr>'
 			+'<tr><td bgcolor="#008000" colspan="7"></td></tr>'
 			+'<tr><td colspan="7">'+'<img title="'+(tt?'Opciones de etapa':'Stage options')+'" src="icon/variables.svg">'+htmlIconoM("resultado")+' <img title="'+(tt?'Distancia m&aacute;xima por etapa':'Stage maximun distance')+'" src="icon/distancia.svg"> '+V[0]+' Km | <img title="'+(tt?'Duraci&oacute;n m&aacute;xima por etapa':'Stage maximun duration')+'" src="icon/reloj.svg"> '+V[2]+' h | <img title="'+(tt?'Desnivel acumulado m&aacute;ximo por etapa':'Stage maximun accumulated drop')+'" src="icon/desnivel.svg"> '+V[1]+' m</td></tr>'
 			+'<tr><td bgcolor="#008000" colspan="7"></td></tr>'
-			+'<tr><td bgcolor="#BFBFBF" colspan="7">'+htmlIconoM('empezar')+ta[etapometro[0]][nombre]+'</td></tr>'
-			+'<tr><td bgcolor="#BFBFBF" colspan="7">'+htmlIconoM('finalizar')+ta[etapometro[1]][nombre]+'</td></tr>'
+			+'<tr><td bgcolor="#90EE90" colspan="7">'+htmlIconoM('empezar')+ta[etapometro[0]][nombre]+'</td></tr>'
+			+'<tr><td bgcolor="#90EE90" colspan="7">'+htmlIconoM('finalizar')+ta[etapometro[1]][nombre]+'</td></tr>'
 			
 			+'<tr><td id="kilometraje" bgcolor="#90EE90" colspan="7">Km</td></tr>'
 			
@@ -1118,8 +1127,7 @@ function rutandalus(){
 			+'<img title="'+(tt?'Dificultad t&eacute;cnica':'Technical difficulty')+'" src="icon/tecnica-mini.svg"></td><td style="width: 12%;  text-align: center;">'
 			+'<img title="'+(tt?'Valoraci&oacute;n':'Valoration')+'" src="icon/missta-mini.svg"></td><td style="width: 24%;  text-align: center;">'
 			+'<img title="'+(tt?'Tipo de terreno':'Ground type')+'" src="icon/terreno-mini.svg"></td></tr>'
-			;
-				
+			;	
 		}
 	
 	
@@ -1128,17 +1136,13 @@ function rutandalus(){
 		var b=PlanRuta[c];
 
 					tramoRuTAndalus=c;
-					// tramo=PlanRuta[c][1];
 					tramo=b[1];
 					k+=distanciaTramo(tramo);
 					h+=ta[tramo][tecnica];
 					
-					// "H"==PlanRuta[c][2]?
 					"H"==b[2]?
-					(s_H=!0,s1=pob2,s2=pob1,ser=pob2,tah=28):
-					(s_H=!1,s1=pob1,s2=pob2,ser=pob1,tah=29);
-				
-					// distancia=0;
+					(s_H=!0,s1=pob2,s2=pob1,ser=pob1,tah=28):
+					(s_H=!1,s1=pob1,s2=pob2,ser=pob2,tah=29);
 					
 					kmEtapometro+=kmTramo;
 					deEtapometro+=ta[tramo][tah];
@@ -1151,14 +1155,14 @@ function rutandalus(){
 					if (!variarEtapasOn){
 						v =   '<tr><td colspan="7" bgcolor="#008000"></tr>'+
 							  '<tr>'+
-									'<td colspan="7"><div class="provisional" id="provisional'+c+'"></div>'+
+									'<td colspan="7"><div class="provisional" id="provisional'+c+'"></div></td>'+
 							  '</tr>'+
 							  '<tr>'+
 							  '</tr>'+
 							  '<tr>'+
 									'<td colspan="7">'+htmlIconoM('poblacion')+ta[ta[tramo][s1]][nombre]+" "+htmlIconoM('poblacion')+ta[ta[tramo][s2]][nombre]+" ("+serviciosHorizontal(ta[tramo][ser])+')'+ hr +
 							  '</tr>'+
-							  '<tr style="font-size: 12px, color: blue">'+
+							  '<tr class="right">'+
 									'<td class="right">'+kmTramo+
 									'Km<td class="right">'+horas(tiempoTramo)+
 									'<td class="right">'+ta[tramo][tah]+
@@ -1184,8 +1188,7 @@ function rutandalus(){
 	}
 
 	(!variarEtapasOn)&&(t+=u+subTotal(0));
-	u="";
-	kmEtapometro=deEtapometro=tiEtapometro=0;
+	u="";kmEtapometro=deEtapometro=tiEtapometro=0;
 	itaMedia=Math.round(itaMedia/tramoRuTAndalus);
 	
 	if (!variarEtapasOn){
@@ -1193,6 +1196,7 @@ function rutandalus(){
 	   '<td >'+Math.round(w)+' Km</td><td>'+horas(B)+'</td><td>'+A+' m</td><td colspan="2">'+itaMedia+'<small>/76</small></td><td colspan="2">Total: '+
 	   tramoRuTAndalus+(idioma=='es'?' tramos':' stages')+'</td></tr></table>';
 
+		desplazarEtapometro(); // $("#lista_etapometro").css("top","0px");
 		$("#lista_etapometro").html(t);
 		
 		var PlanPerfil=[];
@@ -1225,14 +1229,22 @@ function subTotal(b){
 			htmlIconoM("desnivel-mini")+'</td><td colspan="4"></td></tr>'+
 			'<tr style="background-color: #BFBFBF;text-align: right; font-size: 12px; font-weight: bold; color: blue;"><td>'+Math.round(kmEtapometro-kmTramo*b)+' Km</td><td>'+horas(tiEtapometro-tiempoTramo*b)+'</td><td>'+
  			(deEtapometro-ta[tramo][tah]*b)+'m</td><td colspan="4" style="text-align: center;">'+(idioma=='es'?'Etapa (d&iacute;a): ':'Stage (day): ')+etapasEtapometro+'</td></tr>';
-
 }
 
 
 function terreno(){
-	var terrenoACS="";
-	0<ta[tramo][asfalto]&&(terrenoACS+=htmlIconoMicro("carretera")+ta[tramo][asfalto]);0<ta[tramo][camino]&&(terrenoACS+=htmlIconoMicro("camino")+ta[tramo][camino]);0<ta[tramo][sendero]&&(terrenoACS+=htmlIconoMicro("sendero")+ta[tramo][sendero]);
-	return terrenoACS
+	
+	/*
+	0<ta[tramo][asfalto]&&(terrenoACS+='<img src="icon/carretera-mini.svg" width="'+ta[tramo][asfalto]+'" height="16">');
+	0<ta[tramo][camino]&&(terrenoACS+='<img src="icon/camino-mini.svg" width="'+ta[tramo][camino]+'" height="16">');
+	0<ta[tramo][sendero]&&(terrenoACS+='<img src="icon/sendero-mini.svg" width="'+ta[tramo][sendero]+'" height="16">');
+	*/
+	
+	return '<span style="color: #7F7F7F">'+ta[tramo][asfalto]+'</span>'+
+	'<span style="color: #F9A745">'+ta[tramo][camino]+'</span>'+
+	'<span style="color: #00BD00">'+ta[tramo][sendero]+'</span>';
+	
+	
 }
 	
 function dificultadTecnica(){
@@ -1244,6 +1256,8 @@ function timeTramo(b){
 	}
 	
 function horas(b){horasT=Math.floor(b);minutosT=Math.floor(Math.round(60*(b-horasT)));return horasT+"h "+minutosT+"'"}
+
+// ------------------------------------------------ Funciones auxiliares
 
 function htmlIcono(b){return'<img src="icon/menu/'+b+'.png">'}
 
@@ -1308,11 +1322,16 @@ function centrarTramoE(c){
 
 function iniciofinalColocar(){
 	
+	console.log("inicio: "+etapometro[0]+" final: "+etapometro[1]); // borraralerta
 	if (etapometro[0] && !etapometro[1]){
 	
 		if (etapometro[3]){resetMarcador(etapometro[3])};
 		
 		activarMarcador(etapometro[0],"empezar");
+		
+		// resetMarcador(etapometro[1]);
+		// resetearTrack();
+		
 		
 		etapometro[3]=etapometro[0];
 		
@@ -1324,11 +1343,20 @@ function iniciofinalColocar(){
 		
 		activarMarcador(etapometro[1],"finalizar");
 		
+		// resetMarcador(etapometro[0]);
+		// resetearTrack();
+		
 		etapometro[4]=etapometro[1];
 		
 		cambiaEIF(1);
 																		
 		}
+		else if (!etapometro[0] && !etapometro[1]){
+			resetMarcador(etapometro[0]);
+			resetMarcador(etapometro[1]);
+			resetearTrack();
+			}
+		
 	
 	if(etapometro[0]&&etapometro[1]){calcularTramos()}
 }
@@ -1336,10 +1364,12 @@ function iniciofinalColocar(){
 //-------------------------------- Marcadores Inicio/Final de Etapómetro
 
 function resetMarcador(b){
-	if(marcadorPoblacion[b]){marcadorPoblacion[b].setOptions({visible: true, icon: jsIcono(tipoPoblacion(b)),draggable: false})};
+	if(marcadorPoblacion[b]){
+		marcadorPoblacion[b].setOptions({visible: true, icon: jsIcono(tipoPoblacion(b)),draggable: false});
+		google.maps.event.clearListeners(marcadorPoblacion[b],'drag');
+		google.maps.event.clearListeners(marcadorPoblacion[b],'dragend');
+		};
 	
-	google.maps.event.clearListeners(marcadorPoblacion[b],'drag');
-	google.maps.event.clearListeners(marcadorPoblacion[b],'dragend');// b.clearListeners('dragend');// new google.maps.MapsEventListener.clearListeners(b,'dragend');
 }
 
 function activarMarcador(b,c){
@@ -1372,16 +1402,36 @@ function swne(b){
 
 //------------------------------------------------------------- Buscador
 
-function minBuscador(b){	
-	if($('#buscar'+b).val().length>3){
+
+
+
+
+
+
+
+function minBuscador(b){
+		
+		if($('#buscar'+b).val().length>3){
 		minBuscador2(b);
 		}
 }
 
+
+
+
 function minBuscador2(b){
-	buscador(b);
-	etapometro[b]=iniciofinalPoblacion;
-	if (b<3){c=ta[iniciofinalPoblacion][nombre];$("#buscar"+b).val(c)}		
+	buscarPoblacion(b);
+	if (iniciofinalPoblacion){
+		etapometro[b]=iniciofinalPoblacion;
+		if (b<3){$("#buscar"+b).val(ta[iniciofinalPoblacion][nombre])}
+		}
+		else{
+			etapometro[b]=false;
+			$("#buscar"+b).val("");
+			// iniciofinalColocar();
+			}
+		// $("#buscar"+b).val(c)
+	// return c;	
 }
 
 function buscador(b){
@@ -1401,12 +1451,13 @@ function buscador(b){
 			grupo=1;
 			inicioOfinal=0;
 			patronBuscador(TOTAL_POBLACIONES);
-			if (0==encontrado){listaLateral="No encontrado"};
+			if (0==encontrado){iniciofinalPoblacion=false; listaLateral="No encontrado"};
 			$("#lista_etapometro").html(listaLateral);
 			
 			}
 	}
-	return iniciofinalPoblacion;
+	console.log(iniciofinalPoblacion); // borraralerta
+	// return iniciofinalPoblacion;
 }
 
 
@@ -1425,32 +1476,21 @@ function buscarGrupos(){
 	totalEncontrado="<p class='lugar_encontrado'>Lugar/es encontrado/s: "+encontrado+"</p>"+hr+listaLateral;
 	}
 
-function patronBuscador(b){
-	pat="";
-	var c=new RegExp(lugar,"gi");
-	inicioOfinal=0;
-	for(var i=1;i<=b;i++){
-		switch(grupo){
-			
-			case 1: limpiarBuscador(ta[i][30]); break;
-			
-			case 2: interes[ii][i]&&limpiarBuscador(interes[ii][i][2]); break;
-			
-		}
-			busca=c.exec(pat);
-			if (busca!=null){
-				listadoLateral(i);
-				pat="";
-				inicioOfinal++;
-				if (inicioOfinal==1){iniciofinalPoblacion=i}
-				}			
-	}
-}
+
+
 
 function listaBuscador(b){
+	// return i_buscador='<a id="'+img.name+'" onclick="infopint_lateral'+grupo+'(this);" ><img name="'+img.name+'" src="'+img.src+'" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + b + "</span></a>";
 	return i_buscador='<a id="'+img.name+'" onclick="infopint_lateral'+grupo+'(this);" ><img name="'+img.name+'" src="'+img.src+'" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + b + "</span></a>";
+
 }
 
+
+function nuevalistaBuscador(b){
+	// return i_buscador='<a id="'+img.name+'" onclick="infopint_lateral'+grupo+'(this);" ><img name="'+img.name+'" src="'+img.src+'" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + b + "</span></a>";
+	return i_buscador='<a onclick="infopintPoblacion('+b+')" ><img src="icon/menu/home-mini.png" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + ta[b][nombre] + "</span></a>";
+
+}
 
 // á\u00e1  é\u00e9  í\u00ed  ó\u00f3  ú\u00fa ü\00fc ñ\u00f1
 
@@ -1470,13 +1510,32 @@ function cambiarHtml(b){
 	return pat=b.replace(/<br>/gi,"\n")
 }
 
+/*
 function infopint_lateral1(b){
 	puntoPoblacion(b.id);
 	infomarcador2(b.id);
 	ventana(ventanaPoblacion);
 }
+*/
+
+function infopintPoblacion(b){
+	puntoPoblacion(b);
+	infomarcador2(b);
+	ventana(ventanaPoblacion);
+}
+
+function infopintInteres(b,c){
+	// var n=b.id.split(",");
+	// tramo=n[0];
+	// pTramo=n[1];
+	infopint2(b,c);
+	map.setCenter(ll(interes[b][c][y],interes[b][c][x]));
+	ventana(ventanaPoblacion)
+}
 
 
+
+/*
 function infopint_lateral2(b){
 	var n=b.id.split(",");
 	tramo=n[0];
@@ -1485,8 +1544,9 @@ function infopint_lateral2(b){
 	map.setCenter(ll(interes[n[0]][pTramo][y],interes[n[0]][n[1]][x]));
 	ventana(ventanaPoblacion)
 }
+*/
 
-
+/*
 function listadoLateral(b){
 	switch(grupo){
 		case 1:
@@ -1509,12 +1569,102 @@ function listadoLateral(b){
 		map.setZoom(9);
 		listaLateral+="<p class='lugar_encontrado'>"+i_buscador+'<hr style="margin-left: 40px;">';
 }
+*/
 
 
-function cambiaIF(b){
-	minBuscador(b);
-	iniciofinalColocar();
+$('#buscar0').keyup(function(event){
+	cambiaIF(0,event);
+});
+
+$('#buscar1').keyup(function(event){
+	cambiaIF(1,event);
+});
+
+$('#buscar2').keyup(function(event){
+	cambiaIF(2,event);
+});
+
+$('#buscar3').keyup(function(event){
+	var e=event.keyCode;
+	if(($('#buscar3').val().length>3) && (e!=8 && e!=46 && e!=37 && e!=39)){
+	auxbuscador();
+	}
+});
+
+function auxbuscador(){
+	$("#lista_buscador").html(buscarPoblacion(3)+buscarInteres());
 }
+
+function cambiaIF(b,event){
+	
+	console.log(('#buscar'+b).event); // borraralerta
+	var e=event.keyCode;
+	if(($('#buscar'+b).val().length>3) && (e!=8 && e!=46 && e!=37 && e!=39)){	
+			
+			buscarPoblacion(b);			
+			if (iniciofinalPoblacion){
+				etapometro[b]=iniciofinalPoblacion;
+				$("#buscar"+b).val(ta[iniciofinalPoblacion][nombre])
+			}
+			
+			
+		}
+		
+			
+			else if(!iniciofinalPoblacion){
+					resetMarcador(etapometro[b]);
+					etapometro[b]=false;
+					
+					resetearTrack();
+					$("#buscar"+b).val("");
+				}
+		
+		
+		iniciofinalColocar();
+	
+	
+	}
+
+
+/*
+function cambiaIF(b){
+	// $('#buscar'+b).keyup(function(event){
+		// console.log(event.keyCode); // borraralerta
+	//	var e=event.keyCode;
+	//	if(($('#buscar'+b).val().length>3) && (e!=8 && e!=46 && e!=37 && e!=39)){
+	console.log(('#buscar'+b).event); // borraralerta
+	if(($('#buscar'+b).val().length>3)){		
+			
+			buscarPoblacion(b);
+			
+			
+			
+			
+			if (iniciofinalPoblacion){
+				etapometro[b]=iniciofinalPoblacion;
+				$("#buscar"+b).val(ta[iniciofinalPoblacion][nombre])
+			}
+			
+			
+			else{
+					etapometro[b]=false;
+					$("#buscar"+b).val("");
+			// iniciofinalColocar();
+				}
+			// $("#buscar"+b).val(minBuscador2(b))
+			
+			
+			
+			
+			
+		} // else if ()
+		
+		iniciofinalColocar();
+	//})
+	// minBuscador(b);
+	// iniciofinalColocar();
+}
+*/
 
 
 function focusIFA(b){
@@ -1525,6 +1675,7 @@ function focusIFA(b){
 	
 	$("#lupa_"+b).attr("src","icon/buscar.svg");
 	$("#buscar"+b).css("background-color","orange");
+	
 	for (var c=0;c<3;c++){
 		if (b!=c){
 			$("#buscar"+c).css("background-color","initial");
@@ -1877,7 +2028,7 @@ function resetearEtapometro(){
 	$("#buscar0").val("");
 	$("#buscar1").val("");
 	$("#buscar2").val("");
-	$("#lista_etapometro").html("");
+	$("#lista_etapometro").html(poblacionesProvincia(1));
 }
 
 
@@ -1885,7 +2036,19 @@ function resetearEtapometro(){
 
 function resetearPlanRuta(){
 	
-		if(PlanContador>0){												
+		resetearTrack();
+		
+		if (etapometro[3] && etapometro[3]!=etapometro[0]){resetMarcador(etapometro[3])};
+		
+		if (etapometro[4] && etapometro[4]!=etapometro[1]){resetMarcador(etapometro[4])};
+		
+		resetMarcador(etapometro[0]);
+		resetMarcador(etapometro[1]);
+						
+}
+
+function resetearTrack(){
+	if(PlanContador>0){												
 			
 			for (var e=1;e<=TOTAL_POBLACIONES;e++){
 				trackTA[e].setOptions({
@@ -1894,19 +2057,15 @@ function resetearPlanRuta(){
 							})			
 				}
 		}
-		
-		if (etapometro[3] && etapometro[3]!=etapometro[0]){resetMarcador(etapometro[3])};
-		
-		if (etapometro[4] && etapometro[4]!=etapometro[1]){resetMarcador(etapometro[4])};
-		
-		resetMarcador(etapometro[0]);
-		resetMarcador(etapometro[1]);
+	
 		PlanRuta=[];
 		tramoAlterna=[];
 		marcadorAlterna=[];														
-		PlanContador=0;				
+		PlanContador=0;	
 	
 }
+
+
 
 //----------------------------------------------------- Menú desplegable
 
@@ -2039,14 +2198,17 @@ app.config(function($translateProvider){
 		maxetapas: 'Etapas'
 	  });
 	$translateProvider.preferredLanguage('es');
+	
+	
+	
 });  
 
 
 app.controller('ctrl', ['$translate', '$scope', function ($translate, $scope) {
-    $scope.changeLanguage = function () {
-        $translate.use() === 'es'? ($translate.use('en'),idioma='en') : ($translate.use('es'),idioma='es');
-        gE("iconoIdioma").src="icon/"+ $translate.use()+".svg";
-    };
+			$scope.changeLanguage = function () {
+				$translate.use() === 'es'? ($translate.use('en')) : ($translate.use('es'));
+			gE("iconoIdioma").src="icon/"+ (idioma=$translate.use()) +".svg";
+			};
 }]);
 
 
@@ -2186,3 +2348,176 @@ jQuery.fn.print = function(){
 function crearJSON(){	
 	$("#lista_etapometro").html(JSON.stringify(icono));	
 }
+
+
+function buscarPoblacion(b){
+	var lugar=limpiarBuscador($('#buscar'+b).val());
+	if (lugar!=""){
+		// pat="";
+		var c=new RegExp(lugar,"gi");
+		var encontradoAnterior=0;
+		var listaLateral="";
+		
+						for(var i=1;i<=88;i++){
+					
+							busca=c.exec(ta[i][30]);
+							
+							
+								if (busca!=null){
+								
+									puntoPoblacion(i);
+									nuevalistaBuscador(i);
+									b>POBLACIONES&&colocarPoblaciones2(i);
+
+									map.setCenter(punto);
+									map.setZoom(9);
+									listaLateral+="<p class='lugar_encontrado'>"+i_buscador+'<hr style="margin-left: 40px;">';
+									
+										if (busca.length>encontradoAnterior){
+										
+											encontradoAnterior=busca.length; 
+											iniciofinalPoblacion=i; 
+											console.log("ultima población elegida"+i);  // borraralerta
+										
+										}
+								
+								}			
+							}
+			
+		// if (0==encontradoAnterior){iniciofinalPoblacion=false; listaLateral="No encontrado"};
+		$("#lista_etapometro").html(listaLateral);
+	}
+	
+	return listaLateral;
+}
+
+
+
+function buscarInteres(b){
+	var lugar=limpiarBuscador($('#buscar3').val());
+	if (lugar!=""){
+		var c=new RegExp(lugar,"gi");
+		var listaLateral="";
+		
+		marcadorInteres.forEach(function(b,d){b&&b.forEach(function(b,c){b&&(b.setMap(null),marcadorInteres[d][c]=null)})});
+		ventanaPoblacion.close();
+		
+		
+		for(var ii=1;ii<=TOTAL_POBLACIONES;ii++){
+			// total2=;
+			
+			
+			
+			
+			// patronBuscador(total2)
+			for(var i=1,b=interes[ii].length;i<=b;i++){
+				// alert (interes[ii][i][2]); // borraralerta
+				
+				if (interes[ii][i])
+							{
+							limpiarBuscador(interes[ii][i][2]);	
+							busca=c.exec(pat);
+							if (busca!=null){
+								
+								// listadoLateral(i);
+								if (interes[ii][i]){
+								
+									ll(interes[ii][i][y],interes[ii][i][x]),
+									ij=50>interes[ii][i][3]?interes[ii][i][3]:11,
+									// imagen(ii+","+i,icono[ii]+"-mini"),
+									
+									// listaBuscador(interes[ii][b][2]),
+									i_buscador='<a onclick="infopintInteres('+ii+','+i+')" ><img src="icon/menu/'+icono[ij]+'.png" style="padding-left: 20px;"/><span style="padding-left: 20px;">' + interes[ii][i][2] + "</span></a>";
+
+									interesTramo(ii,i)
+								};
+								
+								
+								map.setCenter(punto);
+								map.setZoom(9);
+								listaLateral+="<p class='lugar_encontrado'>"+i_buscador+'<hr style="margin-left: 40px;">';
+								
+
+							}
+					}
+			
+			}
+				
+	};
+		
+		// totalEncontrado="<p class='lugar_encontrado'>Lugar/es encontrado/s: "+encontrado+"</p>"+hr+listaLateral;
+		// if (0==encontrado){totalEncontrado+=htmlIcono("direccion")};
+		$("#lista_buscador").css("visibility","visible");
+		$("#lista_buscador").html(listaLateral);
+		
+
+	}
+	
+	return listaLateral;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*	
+function buscador(b){
+	listaLateral="";
+	encontrado=0;
+	lugar=limpiarBuscador($('#buscar'+b).val());
+	if (lugar!=""){
+	
+		if (b==3){
+				marcadorInteres.forEach(function(b,d){b&&b.forEach(function(b,c){b&&(b.setMap(null),marcadorInteres[d][c]=null)})});
+				ventanaPoblacion.close();
+				buscarGrupos();
+				if (0==encontrado){totalEncontrado+=htmlIcono("direccion")};
+				$("#lista_buscador").css("visibility","visible");
+				$("#lista_buscador").html(totalEncontrado);
+		}
+		else if (b<2){
+			grupo=1;
+			inicioOfinal=0;
+			patronBuscador(TOTAL_POBLACIONES);
+			if (0==encontrado){iniciofinalPoblacion=false; listaLateral="No encontrado"};
+			$("#lista_etapometro").html(listaLateral);
+			
+			}
+	}
+	console.log(iniciofinalPoblacion); // borraralerta
+	// return iniciofinalPoblacion;
+}	
+
+function patron(){
+	pat="";
+	var c=new RegExp(lugar,"gi");
+	var inicioOfinal=0;
+	var encontradoAnterior=0;
+	for(var i=1;i<=88;i++){
+		
+			
+		limpiarBuscador(ta[i][30]);
+			
+			
+		
+			busca=c.exec(pat);
+			
+			if (busca!=null){
+				
+				listadoLateral(i);
+			pat="";
+				inicioOfinal++;
+				nuevoEncontrado[i]=busca.length;
+				if (busca.length>encontradoAnterior){encontradoAnterior=busca.length; iniciofinalPoblacion=i}
+				
+				// if (inicioOfinal==1){iniciofinalPoblacion=i}
+				}			
+	}
+}
+*/		

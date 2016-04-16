@@ -602,9 +602,9 @@ div#licencia2 {
 .right{
 		font-family: Arial;
 		font-style: bold;
-		font-size: 12 px;
+		font-size: 8 px;
 		text-align: right;
-		color: blue;
+		color: #008000;
 }
 
 #cuadro_buscar {
