@@ -29,7 +29,7 @@ var opacidad=.5;
 
 var etapasEtapometro=0;
 var meteoRuta="";
-pvAnterior=8;
+var pvAnterior=false;// pvAnterior=8;
 
 var PlanRuta=[];
 var PlanPerfil=[];
@@ -47,7 +47,7 @@ var variableE=[];
 	variableE[3]=20;      // Velocidad máxima asfalto
 	variableE[4]=14;      // Velocidad máxima camino/pista
 	variableE[5]=5;       // Velocidad máxima sendero
-	variableE[6]=variableE[7]=variableE[8]=!0; // Variables vincular velocidaes
+	variableE[6]=variableE[7]=variableE[8]=!0; // Variables vincular velocidades
 
 
 var trackTA=[];
@@ -63,37 +63,37 @@ var a=2;
 
 //-------------------------------------------------------------Servicios
 
-var nombre=0;
-var meteo=1;
-var asfalto=2;
-var camino=3;
-var sendero=enlace=4;
-var tecnica=foto=5;
-var webta=6;
-var ita=7;
-var missta=8;
-var accesita=9;
-var dormir=10;
-var comer=11;
-var comprar=12;
-var tiendabici=13;
-var tallerbici=14;
-var tallermecanico=15;
-var centrosalud=16;
-var farmacia=17;
-var cajero=18;
-var policia=19;
-var acampar=20;
-var internet=21;
-var bus=22;
-var tren=23;
-var avion=24;
-var provNumero=25;
-var pob1=26;
-var pob2=27;
-var acumuladoAH=28;
-var acumuladoHO=29;
-var turismo=30;
+var nombre=0,
+    meteo=1,
+    asfalto=2,
+    camino=3,
+    sendero=4,enlace=4,
+    tecnica=5, foto=5,
+    webta=6,
+    ita=7,
+    missta=8,
+    accesita=9,
+    dormir=10,
+    comer=11,
+    comprar=12,
+    tiendabici=13,
+    tallerbici=14,
+    tallermecanico=15,
+    centrosalud=16,
+    farmacia=17,
+    cajero=18,
+    policia=19,
+    acampar=20,
+    internet=21,
+    bus=22,
+    tren=23,
+    avion=24,
+    provNumero=25,
+    pob1=26,
+    pob2=27,
+    acumuladoAH=28,
+    acumuladoHO=29,
+    turismo=30,
 var alterna=false;
 
 
@@ -259,8 +259,8 @@ var map = new google.maps.Map(gE("map_canvas"),{
 			rotateControl:true,
 			panControl:true,
 			panControlOptions:{position:google.maps.ControlPosition.RIGHT_BOTTOM},
-			disableDoubleClickZoom:true,
-			
+			disableDoubleClickZoom:true
+		
 			
 		});
 
@@ -589,7 +589,7 @@ function limite(b){
 		
 		if (!poligonoProvincia[b].getVisible()){
 			poligonoProvincia[b].setOptions({visible: true});
-			if (pvAnterior!=8 && (pvAnterior!=b)){// 
+			if (pvAnterior && (pvAnterior!=b)){// if (pvAnterior!=8 && (pvAnterior!=b)){
 				poligonoProvincia[pvAnterior].setOptions({visible: false});
 				ventanaProvincia.setMap(null);
 				ventanaPoblacion.setMap(null);
@@ -1240,8 +1240,8 @@ function terreno(){
 	0<ta[tramo][sendero]&&(terrenoACS+='<img src="icon/sendero-mini.svg" width="'+ta[tramo][sendero]+'" height="16">');
 	*/
 	
-	return '<span style="color: #7F7F7F">'+ta[tramo][asfalto]+'</span>'+
-	'<span style="color: #F9A745">'+ta[tramo][camino]+'</span>'+
+	return '<span style="color: #7F7F7F">'+ta[tramo][asfalto]+'</span>|'+
+	'<span style="color: #F9A745">'+ta[tramo][camino]+'</span>|'+
 	'<span style="color: #00BD00">'+ta[tramo][sendero]+'</span>';
 	
 	
