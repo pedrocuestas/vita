@@ -67,8 +67,8 @@ var nombre=0,
     meteo=1,
     asfalto=2,
     camino=3,
-    sendero=4,enlace=4,
-    tecnica=5, foto=5,
+    sendero=4,
+    tecnica=5,
     webta=6,
     ita=7,
     missta=8,
@@ -93,14 +93,34 @@ var nombre=0,
     pob2=27,
     acumuladoAH=28,
     acumuladoHO=29,
-    turismo=30,
+    turismo=30;
 var alterna=false;
 
 
+//-----------------------------------------------------Angular Translate
+
 var app=angular.module('myApp', ['pascalprecht.translate']);
 
+app.config(function($translateProvider){
 
-var AlojamientoKML=campingKML=transporteKML=protegidosKML=false;
+	$translateProvider.useStaticFilesLoader({
+		prefix: './language/',
+		suffix: '.json'
+	});
+	$translateProvider.preferredLanguage('es');
+
+});  
+
+
+app.controller('ctrl', ['$translate', '$scope', function ($translate, $scope) {
+			$scope.changeLanguage = function () {
+				$translate.use() === 'es'? ($translate.use('en')) : ($translate.use('es'));
+			gE("iconoIdioma").src="icon/"+ (idioma=$translate.use()) +".svg";
+			};
+}]);
+
+
+var AlojamientoKML=campingKML=transporteKML=false;
 
 var menuPrincipalVisible=false;
 var etapometroActivo=false;
@@ -119,7 +139,7 @@ var idioma='es';
 var activoPE=false;
 var primeraVuelta=false;
 var nodoActual=false;
-
+var focusActivo=false;
 var ventanaPoblacion = new google.maps.InfoWindow();
 var ventanaProvincia = new google.maps.InfoWindow();
 var marcadorPoblacion=[];
@@ -317,7 +337,7 @@ function transandalus(){
 
 function perfilEtapometro(){
 	if (PlanContador>0){
-		perfil(PlanRuta, (idioma=='es'?"Etapometro: ":"Stagemeter: ")+ta[etapometro[0]][nombre] + ' -----> ' + ta[etapometro[1]][nombre],PlanRuta.length,"chart_perfil")
+		perfil(PlanRuta, (idioma=='es'?"Etapometro: ":"Stagemeter: ")+ta[etapometro[0]][nombre] + ' ===> ' + ta[etapometro[1]][nombre],PlanRuta.length,"chart_perfil")
 		}
 }
 
@@ -350,7 +370,7 @@ function perfil(b,c,r,d){
 					ppp++;
 					DistanciaX+=google.maps.geometry.spherical.computeDistanceBetween(tTA.getAt(p),tTA.getAt(p+1))/1000;
 					
-					function computarD(b,c){return }
+					// function computarD(b,c){return }
 					DistanciaX=parseFloat(redondeo(DistanciaX,2));
 					if (ppp==r){
 						tTAtotal.push(tTA.getAt(p+1));	
@@ -373,12 +393,8 @@ function perfil(b,c,r,d){
 				vAxis: {title: (tt?'Altitud (msnm)':'Elevation (masl)'),
 						titleTextStyle: {color: '#0000FF'},minValue: 0},
 				colors: [d=='chart_perfil'?'#FF0000':colorGrafico, '#90EE90'],
-				crosshair: {
-				  color: '#000',
-				  trigger: 'selection'
-				},
+				crosshair: {color: '#000',trigger: 'selection'},
 				curveType: 'function',
-				
 				legend: 'none'
 		}
       
@@ -405,8 +421,8 @@ function perfil(b,c,r,d){
 		});  
 
 	if (!activoPE){
-		$('#chart_perfil').css("visibility","visible");
-		$('#chart_perfil').css("background-color","transparent");
+		$('#chart_perfil').css("visibility","visible").css("background-color","transparent");
+		// $('#chart_perfil').css("background-color","transparent");
 		$("#cerrarperfil").css("visibility","visible");
 		}
 		
@@ -423,8 +439,10 @@ function desplegarMenu(){
 		$("#cabecera_menu").toggleClass("active");
 		
 		for (var ii=1;ii<7;ii++){
-			$("#selectorcapa"+ii).css("transform",menuPrincipalVisible?"translate(+325px, 0%)":"translate(0%, 0%)");
-			$("#selectorcapa"+ii).css("transition",menuPrincipalVisible?"all 0.60s ease-in-out":"all 0.60s ease-in-out");
+			$("#selectorcapa"+ii).css("transform",menuPrincipalVisible?"translate(+325px, 0%)":"translate(0%, 0%)")
+						         .css("transition",menuPrincipalVisible?"all 0.60s ease-in-out":"all 0.60s ease-in-out");
+
+			// $("#selectorcapa"+ii).css("transition",menuPrincipalVisible?"all 0.60s ease-in-out":"all 0.60s ease-in-out");
 		}
 		
 }
@@ -465,8 +483,8 @@ function desplegarEtapometro(){
 	$("#lista_buscador").css("visibility","hidden"); 
 	$("#menu_etapometro").toggleClass("active");
 	$("#lista_etapometro").toggleClass("active");
-	$("#pestana").css("visibility","visible");
-	$("#pestana").toggleClass("active");
+	$("#pestana").css("visibility","visible").toggleClass("active");
+	// $("#pestana").toggleClass("active");
 	
 	if(etapometroActivo=!etapometroActivo){$("#pestana").css("background-image","url(icon/replegar.svg)")}
 		else{$("#pestana").css("background-image","url(icon/desplegar.svg)")}
@@ -488,8 +506,8 @@ function esconderPestana(){
 				$("#pestana").toggleClass("active");
 				$("#menu_etapometro").toggleClass("active");
 				$("#lista_etapometro").toggleClass("active");
-				$("#pestana").css("visibility","hidden");
-				$("#pestana").css("background-image","url(icon/replegar.svg)");
+				$("#pestana").css("visibility","hidden").css("background-image","url(icon/replegar.svg)");
+				// $("#pestana").css("background-image","url(icon/replegar.svg)");
 				etapometroActivo=false;	
 			}
 }
@@ -758,7 +776,7 @@ function puntos_principalesOn(){(principales=!principales)?(Fon(gE("interes")),p
 function puntos_principales(){
 	i_puntos="<p>"+htmlIcono("importante")+rojo3+"Inter&eacute;s  e  incidencias:"+"</p>"+hr;
 	for(i=0;i<totalPrincipal-2;i+=2)tramo=principal[i],pTramo=principal[i+1],iNom=tramo+","+pTramo,ll(interes[tramo][pTramo][y],interes[tramo][pTramo][x]),grupo=2,cambiarHtml(interes[tramo][pTramo][2]),marcadorPrincipal[i/2+1]=gmM(opcionesMarcador(1,pat,icono[interes[tramo][pTramo][3]])),infopint(marcadorPrincipal[i/2+1],tramo,pTramo),imagen(iNom,icono[interes[tramo][pTramo][3]]), // puntero_enlace=i,
-	i_puntos+=listaBuscador(verde2+"Tramo: "+ta[ta[tramo][pob1]][nombre]+hacia+ta[ta[tramo][pob2]][nombre]+cl+azul2+interes[tramo][pTramo][2]+hr);i_puntos+=htmlIcono("importante")+hr;ventanaLateral(i_puntos)
+	i_puntos+=listaBuscador(verde2+"Tramo: "+ta[ta[tramo][pob1]][nombre]+hacia+ta[ta[tramo][pob2]][nombre]+cl+azul2+interes[tramo][pTramo][2]+hr);i_puntos+=htmlIcono("importante")+hr;$("#lista_etapometro").html(i_puntos);
 }
 
 function borrarPrincipales(){marcadorPrincipal.forEach(function(b){b&&b.setMap(null)})}
@@ -862,8 +880,9 @@ function climaTA(b){
 			map.overlayMapTypes.clear();
 			}
 			
-	$("#licencia2").css("visibility","visible");
-	$("#licencia2").html('Capa superpuesta de <a target="_blank" href="http://openweathermap.org/">OpenWeatherMap</a>');
+	$("#licencia2").css("visibility","visible").html('Capa superpuesta de <a target="_blank" href="http://openweathermap.org/">OpenWeatherMap</a>');
+
+	// $("#licencia2").html('Capa superpuesta de <a target="_blank" href="http://openweathermap.org/">OpenWeatherMap</a>');
 }
 
 
@@ -937,17 +956,15 @@ function cerrarPerfil(){
 }
 
 
-function tramoPlan(c){ // ¿b=track? c=número de tramo
+function tramoPlan(c){ 
 		
 		PlanContador++;
-		PlanRuta[PlanContador]=[]; 										 // Declarar tramoRuta
+		PlanRuta[PlanContador]=[]; 										 
 
-		PlanRuta[PlanContador][1]=c; 									// Seleccionar tramoRuta
+		PlanRuta[PlanContador][1]=c; 				
 		
 		PlanRuta[PlanContador][2]=sentidoah[nodoActual][nodoSiguiente]==0?"H":"A";
-		
-										// Seleccionar sentido
-		
+
 		if(c>76 ){
 				tramoAlterna[c]=true;
 				trackTA[c].setOptions({visible:true});
@@ -956,11 +973,6 @@ function tramoPlan(c){ // ¿b=track? c=número de tramo
 		
 		trackTA[c].setOptions({strokeColor:tinta[5],strokeWeight:8}); 
 }
-
-
-
-// function listadoTramos(){listaEnlaces="";planKm=0;if(0<PlanContador)for(ii=0;ii<=PlanContador;ii++)PlanRuta[ii][3]&&0!=PlanRuta[ii][3]&&(0==ii?(ff="empezar",iii=0):(ff=ii==PlanContador?"finalizar":"poblacion",iii=distanciaTramo(PlanRuta[ii][1]),planKm+=iii),listaEnlaces+=htmlIcono(ff)+ta[PlanRuta[ii][3]][nombre]+"("+redondeo(planKm,0)+"Km)"+cl);gE("enlaces").style.display="initial";gE("enlaces").innerHTML=listaEnlaces}
-
 
 
 //-------------------------------- Arrastrar población de inicio o final
@@ -1028,17 +1040,6 @@ function cambiaEIF(c){
 }		
 
 
-/*
-//----------------------------------------------- Deshacer Planificación
-
-function deshacerPlan(){
-	resetearRutandalus();
-	PlanContador=0;
-	PlanRuta=[];
-	for(var i=1;i<=TOTAL_POBLACIONES;i++)trackTA[i].setOptions({strokeColor:i<=POBLACIONES?"#FF00E2":"#0000E9",strokeWeight:ancho,strokeOpacity:opacidad}),i<=POBLACIONES&&marcadorPoblacion[i].setOptions({icon:"icon/poblacion.png"});listadoTramos();gE("enlaces").style.display="none"
-}
-*/
-
 function verSiEsta(b){
 	esta=false;
 	for(var f=1, fx=PlanRuta.length;f<fx;f++){
@@ -1055,15 +1056,11 @@ function ventana(b){
 	b.open(map)
 }
 
-function ventanaLateral(b){$("#lista_etapometro").html(b)}
-
 function help(){
 	$.ajax({
 		url: 'html/etapometro.html',
 		dataType: 'html',
-		success: function(html) {
-								$("#lista_etapometro").html(html);
-								}
+		success: function(html) {$("#lista_etapometro").html(html)}
 	})
 }
 
@@ -1081,17 +1078,15 @@ function rutaTA(){
 		setTimeout('rutandalus()',600);
 		
 	}
-		else {help();
-			// $('#lista_etapometro').html('<img src="icon/calcular.svg"> Seleccione primero poblaciones de inicio y final de ruta.')
-			};
+		else {help()};
 }
 
 //------------------------------------------------- Resultado Etapómetro
 
 function rutandalus(){
-	
+	conta=0;
 	itaMedia=0;
-	h=0,k=0;
+	// h=0,k=0;
 	var v="",u="";
 	etapasEtapometro=1;
 	var w=tiEtapometro=deEtapometro=kmEtapometro=A=B=0;
@@ -1137,14 +1132,14 @@ function rutandalus(){
 
 					tramoRuTAndalus=c;
 					tramo=b[1];
-					k+=distanciaTramo(tramo);
-					h+=ta[tramo][tecnica];
+					// k+=distanciaTramo(tramo);
+					// h+=ta[tramo][tecnica];
 					
 					"H"==b[2]?
-					(s_H=!0,s1=pob2,s2=pob1,ser=pob1,tah=28):
-					(s_H=!1,s1=pob1,s2=pob2,ser=pob2,tah=29);
+					(s1=pob2,s2=pob1,ser=pob1,tah=28):
+					(s1=pob1,s2=pob2,ser=pob2,tah=29);
 					
-					kmEtapometro+=kmTramo;
+					kmEtapometro+=distanciaTramo(tramo);
 					deEtapometro+=ta[tramo][tah];
 					tiEtapometro+=timeTramo(tramo);
 					w+=kmTramo;
@@ -1153,22 +1148,15 @@ function rutandalus(){
 					itaMedia+=ta[tramo][ita];
 					
 					if (!variarEtapasOn){
-						v =   '<tr><td colspan="7" bgcolor="#008000"></tr>'+
-							  '<tr>'+
-									'<td colspan="7"><div class="provisional" id="provisional'+c+'"></div></td>'+
-							  '</tr>'+
-							  '<tr>'+
-							  '</tr>'+
-							  '<tr>'+
-									'<td colspan="7">'+htmlIconoM('poblacion')+ta[ta[tramo][s1]][nombre]+" "+htmlIconoM('poblacion')+ta[ta[tramo][s2]][nombre]+" ("+serviciosHorizontal(ta[tramo][ser])+')'+ hr +
-							  '</tr>'+
-							  '<tr class="right">'+
-									'<td class="right">'+kmTramo+
+						v =   '<tr><td colspan="7" bgcolor="#008000"></tr><tr><td colspan="7"><div class="provisional" id="provisional'
+								+c+'"></div></td></tr><tr></tr><tr><td colspan="7" style="font: Arial; text-weight: 12px; color: #A52A2A">'
+								+htmlIconoM('poblacion')+ta[ta[tramo][s1]][nombre]+" "+htmlIconoM('poblacion')+ta[ta[tramo][s2]][nombre]+" ("+serviciosHorizontal(ta[tramo][ser])+')'+ hr +
+								'</tr><tr class="right"><td class="right">'+kmTramo+
 									'Km<td class="right">'+horas(tiempoTramo)+
 									'<td class="right">'+ta[tramo][tah]+
 									'm<td class="right">'+ta[tramo][ita]+
 									'<small>/76</small><td style="text-align: center;">'+dificultadTecnica()+
-									'<td style="text-align: left;"><img src="icon/missta'+ta[tramo][missta]+'.svg">'+
+									'<td style="text-align: center;"><img src="icon/missta'+ta[tramo][missta]+'.svg">'+
 									'<td style="text-align: center;">'+terreno()+
 							  '</tr>';	
 						}else{v=""}
@@ -1176,8 +1164,9 @@ function rutandalus(){
 					if (kmEtapometro>V[0]||deEtapometro>V[1]||tiEtapometro>V[2])
 						{  
 							if (1!=c){
-								if (!variarEtapasOn){t+=u+subTotal(1)};
-								etapasEtapometro++;
+								if (!variarEtapasOn){
+									t+=u+subTotal(1)};
+									etapasEtapometro++;
 								}
 							u=v;
 							kmEtapometro=kmTramo;
@@ -1189,11 +1178,10 @@ function rutandalus(){
 
 	(!variarEtapasOn)&&(t+=u+subTotal(0));
 	u="";kmEtapometro=deEtapometro=tiEtapometro=0;
-	itaMedia=Math.round(itaMedia/tramoRuTAndalus);
 	
 	if (!variarEtapasOn){
 	t+='<tr style="text-align: right;font-size: 12px;font-weight: bold;color: orange;">'+
-	   '<td >'+Math.round(w)+' Km</td><td>'+horas(B)+'</td><td>'+A+' m</td><td colspan="2">'+itaMedia+'<small>/76</small></td><td colspan="2">Total: '+
+	   '<td >'+Math.round(w)+' Km</td><td>'+horas(B)+'</td><td>'+A+' m</td><td colspan="2">'+Math.round(itaMedia/tramoRuTAndalus)+'<small>/76</small></td><td colspan="2">Total: '+
 	   tramoRuTAndalus+(idioma=='es'?' tramos':' stages')+'</td></tr></table>';
 
 		desplazarEtapometro(); // $("#lista_etapometro").css("top","0px");
@@ -1208,13 +1196,13 @@ function rutandalus(){
 			PlanPerfil[1][1]=b[1];
 			PlanPerfil[1][2]=b[2];
 			SENTIDO=="A"?(s1=pob1,s2=pob2):(s1=pob2,s2=pob1);
-			perfil(PlanPerfil, (idioma=='es'?"Tramo: ":"Section: ") + ta[ta[b[1]][s1]][nombre] +' ----> '+ ta[ta[b[1]][s2]][nombre],10,"provisional"+c);
+			perfil(PlanPerfil, (idioma=='es'?"Tramo: ":"Section: ") + ta[ta[b[1]][s1]][nombre] +' ----> '+ ta[ta[b[1]][s2]][nombre],1,"provisional"+c);
 			})
 		activoPE=false;
 		perfilActivo=perfilActivoA;	
 		}else{$("#etapas").text(etapasEtapometro)};
 	
-	$("#kilometraje").html(htmlIconoM('bici')+Math.round(w)+" Km");
+	$("#kilometraje").html(htmlIconoM('bici')+Math.round(w)+" Km | "+tramoRuTAndalus+(idioma=='es'?' tramos':' section') + " | " +etapasEtapometro+(idioma=='es'?' etapas':' stages')) ;
 	$('#calcular').attr("src","icon/calcular.svg");	
 					
 }
@@ -1222,29 +1210,19 @@ function rutandalus(){
 
 function subTotal(b){
 	
-	return	'<tr><td bgcolor="#008000" colspan="7"></td></tr>'+
-			'<tr style="text-align: center; font-size: 12px; font-weight: bold; color: blue;"><td>'
+	return	'<tr><td bgcolor="#008000" colspan="7"></td></tr><tr style="text-align: center; font-size: 14px; font-weight: bold; color: blue;"><td>'
 			+htmlIconoM("distancia-mini")+'</td><td>'
-			+htmlIconoM("reloj-mini")+'</td><td>'+
-			htmlIconoM("desnivel-mini")+'</td><td colspan="4"></td></tr>'+
-			'<tr style="background-color: #BFBFBF;text-align: right; font-size: 12px; font-weight: bold; color: blue;"><td>'+Math.round(kmEtapometro-kmTramo*b)+' Km</td><td>'+horas(tiEtapometro-tiempoTramo*b)+'</td><td>'+
+			+htmlIconoM("reloj-mini")+'</td><td>'
+			+htmlIconoM("desnivel-mini")+'</td><td colspan="4"></td></tr><tr style="background-color: #BFBFBF;text-align: right; font-size: 12px; font-weight: bold; color: blue;"><td>'
+			+Math.round(kmEtapometro-kmTramo*b)+' Km</td><td>'+horas(tiEtapometro-tiempoTramo*b)+'</td><td>'+
  			(deEtapometro-ta[tramo][tah]*b)+'m</td><td colspan="4" style="text-align: center;">'+(idioma=='es'?'Etapa (d&iacute;a): ':'Stage (day): ')+etapasEtapometro+'</td></tr>';
+
 }
 
 
 function terreno(){
-	
-	/*
-	0<ta[tramo][asfalto]&&(terrenoACS+='<img src="icon/carretera-mini.svg" width="'+ta[tramo][asfalto]+'" height="16">');
-	0<ta[tramo][camino]&&(terrenoACS+='<img src="icon/camino-mini.svg" width="'+ta[tramo][camino]+'" height="16">');
-	0<ta[tramo][sendero]&&(terrenoACS+='<img src="icon/sendero-mini.svg" width="'+ta[tramo][sendero]+'" height="16">');
-	*/
-	
-	return '<span style="color: #7F7F7F">'+ta[tramo][asfalto]+'</span>|'+
-	'<span style="color: #F9A745">'+ta[tramo][camino]+'</span>|'+
-	'<span style="color: #00BD00">'+ta[tramo][sendero]+'</span>';
-	
-	
+
+	return '<span style="color: #7F7F7F">'+ta[tramo][asfalto]+'</span> | <span style="color: #F9A745">'+ta[tramo][camino]+'</span> | <span style="color: #00BD00">'+ta[tramo][sendero]+'</span>';
 }
 	
 function dificultadTecnica(){
@@ -1252,8 +1230,10 @@ function dificultadTecnica(){
 }
 
 function timeTramo(b){
+	
 	return tiempoTramo=ta[b][asfalto]/variableE[3]+ta[b][camino]/variableE[4]+ta[b][sendero]/variableE[5]
-	}
+	
+}
 	
 function horas(b){horasT=Math.floor(b);minutosT=Math.floor(Math.round(60*(b-horasT)));return horasT+"h "+minutosT+"'"}
 
@@ -1275,16 +1255,7 @@ function puntoPoblacion(b){return punto=trackTA[b].getPath().getAt(0)}
 
 function ll(b,c){return punto=new google.maps.LatLng(b,c)}
 
-function opcionesMarcador(b,c,d){
-	
-	return{
-		map:map,
-		position:punto,
-		zIndex:b,
-		title:c,
-		icon:jsIcono(d)
-		}
-}
+function opcionesMarcador(b,c,d){return{map:map,position:punto,zIndex:b,title:c,icon:jsIcono(d)}}
 	
 function listener(b,c,d){return google.maps.event.addListener(b,c,d)}
 
@@ -1295,9 +1266,6 @@ function gmM(s){return new google.maps.Marker(s)}
 function colorPerfil(b){return Math.round((POBLACIONES-ta[b][ita])/(POBLACIONES/5))}
 
 function tipoPoblacion(b){return b<=POBLACIONES?"home":"home2"}
-
-
-//--------------------------------------------------------- Centrar mapa
 
 function centrarMapa(){map.setOptions({zoom: 8,center: CENTRO})}
 
@@ -1314,15 +1282,17 @@ function centrarTramo(b){
 
 
 function centrarTramoE(c){		
-	$("#buscar"+focusActivo).val(ta[c][nombre]);
+	if (!focusActivo){focusActivo=0}
+	$("#buscar"+focusActivo).focus().val(ta[c][nombre]);
 	etapometro[focusActivo]=c;
+	map.setCenter(puntoPoblacion(c));
 	iniciofinalColocar();
 }
 
 
 function iniciofinalColocar(){
 	
-	console.log("inicio: "+etapometro[0]+" final: "+etapometro[1]); // borraralerta
+	// console.log("inicio: "+etapometro[0]+" final: "+etapometro[1]); // borraralerta
 	if (etapometro[0] && !etapometro[1]){
 	
 		if (etapometro[3]){resetMarcador(etapometro[3])};
@@ -1456,7 +1426,7 @@ function buscador(b){
 			
 			}
 	}
-	console.log(iniciofinalPoblacion); // borraralerta
+	// console.log(iniciofinalPoblacion); // borraralerta
 	// return iniciofinalPoblacion;
 }
 
@@ -1597,7 +1567,7 @@ function auxbuscador(){
 
 function cambiaIF(b,event){
 	
-	console.log(('#buscar'+b).event); // borraralerta
+	// console.log(('#buscar'+b).event); // borraralerta
 	var e=event.keyCode;
 	if(($('#buscar'+b).val().length>3) && (e!=8 && e!=46 && e!=37 && e!=39)){	
 			
@@ -2118,100 +2088,6 @@ function campingOn(){
 }
 
 
-//------------------------------------------------------------ Traductor
-
-app.config(function($translateProvider){
-	  $translateProvider
-	  .translations('en', {
-		volver_principal: 'Main page',
-		menu: 'Main menu',
-		ayuda: 'Help',
-		idioma: 'Languaje (ES/EN)',
-		cerrar: 'Close tab',
-		plegar: 'Fold over',
-		desplegar: 'Unfold',
-		plegardesplegar: 'Fold over or Unfold Stagemeter',
-		buscar_transandalus: 'Search in TransAndalus',
-		buscar: 'Search',
-		etapometro: 'Stagemeter',
-		poblaciones: 'Towns',
-		alternativas: 'Alternatives | Links',
-		alternativa: 'Alternative stage',
-		sentido: 'Route direction',
-		servicios: 'Services',
-		alojamiento: 'Lodgings',
-		talleres: 'Bicycle workshops',
-		camping: 'Campings',
-		estacionestren: 'Train stations',
-		climatologia: 'Weather',
-		temperatura: 'Temperature',
-		lluvia: 'Rain',
-		nieve: 'Snow',
-		viento: 'Wind',
-		otros: 'Others',
-		centrar: 'Map center',
-		inicio: 'Starting route',
-		final: 'Ending route',
-		variables: 'Stagemeter Options',
-		calcular: 'Work out planned route',
-		borrar: 'Deleting planned route',
-		perfil: 'Profile of planned route',
-		opciones: 'Maximum stage values',
-		maxetapas: 'Stages'
-	  })
-	  
-	  .translations('es',{
-		volver_principal: 'Volver a principal',
-		menu: 'Men\u00fa principal',
-		ayuda: 'Ayuda',
-		idioma: 'Idioma (ES/EN)',
-		cerrar: 'Cerrar ventana',
-		plegar: 'Ocultar ventana',
-		desplegar: 'Desplegar',
-		plegardesplegar: 'Plegar o desplegar Etap\u00f3metro',
-		buscar_transandalus: 'Buscar en TransAndalus',
-		buscar: 'Buscar',
-		etapometro: 'Etap\u00f3metro',
-		poblaciones: 'Poblaciones',
-		alternativas: 'Alternativas | Enlaces',
-		alternativa: 'Tramo alternativo',
-		sentido: 'Sentido de la ruta',
-		servicios: 'Servicios',
-		alojamiento: 'Alojamiento',
-		talleres: 'Talleres/tiendas de bici',
-		camping: 'Camping',
-		estacionestren: 'Estaciones de tren', 
-		climatologia: 'Capas climatol\u00f3gicas',
-		temperatura: 'Temperatura',
-		lluvia: 'Lluvia',
-		nieve: 'Nieve',
-		viento: 'Viento',
-		otros: 'Otros',
-		centrar: 'Centrar mapa',
-		inicio: 'Inicio de ruta',
-		final: 'Final de ruta',
-		variables: 'Opciones de etapa',
-		calcular: 'Calcular ruta planificada',
-		borrar: 'Borrar ruta planificada',
-		perfil: 'Perfil de la ruta planificada',
-		opciones: 'Valores m\u00e1ximos por etapa',
-		maxetapas: 'Etapas'
-	  });
-	$translateProvider.preferredLanguage('es');
-	
-	
-	
-});  
-
-
-app.controller('ctrl', ['$translate', '$scope', function ($translate, $scope) {
-			$scope.changeLanguage = function () {
-				$translate.use() === 'es'? ($translate.use('en')) : ($translate.use('es'));
-			gE("iconoIdioma").src="icon/"+ (idioma=$translate.use()) +".svg";
-			};
-}]);
-
-
 function masAlterna(){$("#alternativas").click()}
 
 function drag(b){
@@ -2307,9 +2183,8 @@ jQuery.fn.print = function(){
         return;
     }
 
-    var jFrame = $( "<iframe name='iframePrint'>" );
-
-    jFrame
+    var jFrame = $( "<iframe name='iframePrint'>" )
+    // jFrame
         .css( "width", "1px" )
         .css( "height", "1px" )
         .css( "position", "absolute" )
@@ -2320,9 +2195,7 @@ jQuery.fn.print = function(){
     var objFrame = window.frames[ "iframePrint" ];
 
     var objDoc = objFrame.document;
-    var jStyleDiv = $( "<div>" ).append(
-        $( "style" ).clone()
-        );
+    var jStyleDiv = $( "<div>" ).append($( "style" ).clone());
     objDoc.open();
     objDoc.write( "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">" );
     objDoc.write( "<html><body><head><title>ViTA-Visor de TransAndalus</title>" );
@@ -2334,12 +2207,7 @@ jQuery.fn.print = function(){
     objFrame.focus();
     objFrame.print();
     
-    setTimeout(
-        function(){
-            jFrame.remove();
-        },
-        (60 * 1000)
-        );
+    setTimeout(function(){jFrame.remove()},(60 * 1000));
 }
 
 
@@ -2377,7 +2245,7 @@ function buscarPoblacion(b){
 										
 											encontradoAnterior=busca.length; 
 											iniciofinalPoblacion=i; 
-											console.log("ultima población elegida"+i);  // borraralerta
+											// console.log("ultima población elegida"+i);  // borraralerta
 										
 										}
 								
@@ -2445,79 +2313,11 @@ function buscarInteres(b){
 				
 	};
 		
-		// totalEncontrado="<p class='lugar_encontrado'>Lugar/es encontrado/s: "+encontrado+"</p>"+hr+listaLateral;
-		// if (0==encontrado){totalEncontrado+=htmlIcono("direccion")};
-		$("#lista_buscador").css("visibility","visible");
-		$("#lista_buscador").html(listaLateral);
+		$("#lista_buscador").css("visibility","visible").html(listaLateral);
+		// $("#lista_buscador");
 		
 
 	}
 	
 	return listaLateral;
 }
-
-
-
-
-
-
-
-
-
-
-
-/*	
-function buscador(b){
-	listaLateral="";
-	encontrado=0;
-	lugar=limpiarBuscador($('#buscar'+b).val());
-	if (lugar!=""){
-	
-		if (b==3){
-				marcadorInteres.forEach(function(b,d){b&&b.forEach(function(b,c){b&&(b.setMap(null),marcadorInteres[d][c]=null)})});
-				ventanaPoblacion.close();
-				buscarGrupos();
-				if (0==encontrado){totalEncontrado+=htmlIcono("direccion")};
-				$("#lista_buscador").css("visibility","visible");
-				$("#lista_buscador").html(totalEncontrado);
-		}
-		else if (b<2){
-			grupo=1;
-			inicioOfinal=0;
-			patronBuscador(TOTAL_POBLACIONES);
-			if (0==encontrado){iniciofinalPoblacion=false; listaLateral="No encontrado"};
-			$("#lista_etapometro").html(listaLateral);
-			
-			}
-	}
-	console.log(iniciofinalPoblacion); // borraralerta
-	// return iniciofinalPoblacion;
-}	
-
-function patron(){
-	pat="";
-	var c=new RegExp(lugar,"gi");
-	var inicioOfinal=0;
-	var encontradoAnterior=0;
-	for(var i=1;i<=88;i++){
-		
-			
-		limpiarBuscador(ta[i][30]);
-			
-			
-		
-			busca=c.exec(pat);
-			
-			if (busca!=null){
-				
-				listadoLateral(i);
-			pat="";
-				inicioOfinal++;
-				nuevoEncontrado[i]=busca.length;
-				if (busca.length>encontradoAnterior){encontradoAnterior=busca.length; iniciofinalPoblacion=i}
-				
-				// if (inicioOfinal==1){iniciofinalPoblacion=i}
-				}			
-	}
-}
-*/		
