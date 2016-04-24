@@ -152,9 +152,9 @@
    
    <li class='active has-sub'><a href='#'><img src="icon/servicios.svg"><span>{{'servicios'|translate}}</span></a>
 		<ul>
-			<li href='#' onclick="alojamientoOn()"><a href='#'><img src="icon/alojamiento.svg"><span>{{'alojamiento'|translate}}</span></a>
-			<li href='#' onclick="campingOn()"><a href='#'><img src="icon/camping.svg"><span>{{'camping'|translate}}</span></a>
-			<li href='#' onclick="transporteOn()"><a href='#'><img src="icon/estacionestren.svg"><span>{{'estacionestren'|translate}}</span></a>
+			<li href='#' onclick="serviciosOn(0)"><a id="servicio0" href='#'><img src="icon/alojamiento.svg"><span>{{'alojamiento'|translate}}</span></a>
+			<li href='#' onclick="serviciosOn(1)"><a id="servicio1"  href='#'><img src="icon/camping.svg"><span>{{'camping'|translate}}</span></a>
+			<li href='#' onclick="serviciosOn(2)"><a id="servicio2" href='#'><img src="icon/estacionestren.svg"><span>{{'estacionestren'|translate}}</span></a>
 
 			<li href='#'><a href='#'><img src="icon/talleres.svg"><span>{{'talleres' | translate}}</span></a>
 			<li class='last' href='#'><a href='#'><img src="icon/variables.svg"><span>{{'otros' | translate}}</span></a>
@@ -375,6 +375,8 @@ Puede tardar unos segundos, dependiendo de su PC y conexi&oacute;n a Internet.<b
 <script type="text/javascript" src="js/angular-translate.min.js"></script>
 
 <script type="text/javascript" src="js/angular-translate-loader-static-files.min.js"></script>
+
+<script type="text/javascript" src="js/jszip.js"></script>
 
 <script type="text/javascript" src="js/clave.js"></script>
 
