@@ -41,12 +41,18 @@ body {
 }
 
 .provisional {
-				background-color: #008000;
+				
+				
+				/*background-color: #008000;*/
+				background-color: #000000;
 				opacity: 0.8;
 				height: 135px;
+				/*height: 160px;*/
 				width: 380px;
-				border: 1px solid green;
-				border-radius: 25px;
+				/*width: 440px;*/
+				/*border: 1px solid #FF06CE;*/
+				border: 1px solid #000000;
+				border-radius: 0px;
 				position: relative;
 				overflow: hidden;
 				z-index: 3000; 
@@ -601,7 +607,7 @@ div#licencia2 {
 
 .right{
 		font-family: Arial;
-		font-size: 14px;
+		font-size: 12px;
 		text-align: right;
 		color: #A52A2A;
 }

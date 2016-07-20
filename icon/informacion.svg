@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="alojamiento.svg">
+   sodipodi:docname="informacion.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="8.9717495"
-     inkscape:cy="13.121108"
+     inkscape:zoom="8"
+     inkscape:cx="-17.125"
+     inkscape:cy="22.956912"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -59,9 +59,9 @@
     <ellipse
        style="opacity:1;fill:#ff6600;fill-opacity:1;stroke:#ff6600;stroke-width:1.20341349;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4139-3"
-       cx="12"
-       cy="1040.2997"
-       rx="10.837099"
+       cx="12.125001"
+       cy="1040.4872"
+       rx="10.837098"
        ry="10.727262"
        inkscape:transform-center-x="11.497423"
        inkscape:transform-center-y="10.031811" />
@@ -86,23 +86,24 @@
        height="20"
        x="-15.278557"
        y="1033.4219" />
-    <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.00000024;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 2.077126,1035.0478 c -0.044194,12.1534 -0.044194,11.01 -0.044194,11.01 l 0,0 0,0 0,0"
-       id="path4171"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
-    <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.94442654;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 18.74063,1042.4831 c -7.207825,2.5307 -11.423377,0 -11.423377,0 l 0,0 -0.7730161,-3.1199 -1.5460325,1.5126"
-       id="path4171-8"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
-    <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.00000024;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 21.853945,1039.7009 c -0.04419,12.1534 -0.04419,3.7122 -0.04419,3.7122"
-       id="path4171-4"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+    <rect
+       style="opacity:0.5;fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4153-9"
+       width="20.083002"
+       height="19.088001"
+       x="2.1006446"
+       y="1033.5054" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.06488991px;line-height:125%;font-family:'Gentium Book Basic';-inkscape-font-specification:'Gentium Book Basic';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="11.890078"
+       y="1239.9945"
+       id="text4141"
+       sodipodi:linespacing="125%"
+       transform="scale(1.1826512,0.84555785)"><tspan
+         sodipodi:role="line"
+         id="tspan4143"
+         x="11.890078"
+         y="1239.9945">i</tspan></text>
   </g>
 </svg>

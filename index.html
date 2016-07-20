@@ -23,7 +23,7 @@
 
 <body ng-app="myApp" style="cursor:default" onselectstart="return false" onload="transandalus()">
 
-<div id="trigger" ng-app="myApp">
+<div id="trigger">
 	<table id="cuadro_buscar" width="100%" cellpadding="1px" cellspacing="1px">
 		<tr>
 			<td>
@@ -64,102 +64,93 @@
       <ul>
 		  
 		 <!-- ALMERÍA  --> 
-         <li  id="prov0"  class='has-sub'><a onclick="limite(0)" href='#'><img src="img/provincia/0.svg" width="12%" height="12%"><span >ALMER&Iacute;A</span></a>
-         </li>
+         <li  id="prov0"  class='has-sub'><a onclick="limite(0)" href='#'><img src="img/provincia/0.svg" width="12%" height="12%"><span >ALMER&Iacute;A</span></a></li>
          
          <!-- CÁDIZ -->
-         <li id="prov1" class='has-sub'><a onclick="limite(1)" href='#'><img src="img/provincia/1.svg" width="12%" height="12%"><span>C&Aacute;DIZ</span></a>
-         </li>
+         <li id="prov1" class='has-sub'><a onclick="limite(1)" href='#'><img src="img/provincia/1.svg" width="12%" height="12%"><span>C&Aacute;DIZ</span></a></li>
          
          <!-- CÓRDOBA -->
-         <li id="prov2" class='has-sub'><a onclick="limite(2)" href='#'><img src="img/provincia/2.svg" width="12%" height="12%"><span> C&Oacute;RDOBA</span></a>
-
-         </li>
-		<!-- GRANADA  -->          
-         <li id="prov3" class='has-sub'><a onclick="limite(3)" href='#' ><img src="img/provincia/3.svg" width="12%" height="12%"><span>GRANADA</span></a>
-
-         </li>
+         <li id="prov2" class='has-sub'><a onclick="limite(2)" href='#'><img src="img/provincia/2.svg" width="12%" height="12%"><span> C&Oacute;RDOBA</span></a></li>
+		
+		 <!-- GRANADA  -->          
+         <li id="prov3" class='has-sub'><a onclick="limite(3)" href='#' ><img src="img/provincia/3.svg" width="12%" height="12%"><span>GRANADA</span></a></li>
+         
          <!-- HUELVA -->
-         <li id="prov4" class='has-sub'><a onclick="limite(4)" href='#' ><img src="img/provincia/4.svg" width="12%" height="12%"><span>HUELVA</span></a>
-		 </li>
+         <li id="prov4" class='has-sub'><a onclick="limite(4)" href='#' ><img src="img/provincia/4.svg" width="12%" height="12%"><span>HUELVA</span></a></li>
 		
 		 <!-- JAÉN -->         
-         <li id="prov5" class='has-sub'><a onclick="limite(5)" href='#' ><img src="img/provincia/5.svg" width="12%" height="12%"><span>JA&Eacute;N</span></a>
-         </li>
+         <li id="prov5" class='has-sub'><a onclick="limite(5)" href='#' ><img src="img/provincia/5.svg" width="12%" height="12%"><span>JA&Eacute;N</span></a></li>
          
          <!-- MÁLAGA -->
-         <li id="prov6" class='has-sub'><a onclick="limite(6)" href='#' ><img src="img/provincia/6.svg" width="12%" height="12%"><span> M&Aacute;LAGA</span></a>
-         </li>
+         <li id="prov6" class='has-sub'><a onclick="limite(6)" href='#' ><img src="img/provincia/6.svg" width="12%" height="12%"><span> M&Aacute;LAGA</span></a></li>
          
          <!-- SEVILLA -->
-         <li id="prov7" class='has-sub'><a onclick="limite(7)" href='#' ><img src="img/provincia/7.svg" width="12%" height="12%"><span>SEVILLA</span></a>
-         </li> 
-         
-              
+         <li id="prov7" class='has-sub'><a onclick="limite(7)" href='#' ><img src="img/provincia/7.svg" width="12%" height="12%"><span>SEVILLA</span></a></li> 
+               
       </ul>
       
    </li>
    
    <!--------------------- ALTERNATIVAS | ENLACES --------------------->
    
-   <li class='active has-sub' ><a  id="alternativas" onclick="poblacionesAlternativasOn()" href='#' ><img src="icon/alternativas.svg"><span>{{'alternativas'|translate}}</span></a>
+   <li class='active has-sub' id="alternativas"><a id="alternativas2" onclick="poblacionesAlternativasOn()" href='#' ><img src="icon/alternativas.svg"><span>{{'alternativas'|translate}}</span></a>
       
-      <!-- Alternativas(Secundario) Granada -->
+   <ul> 
+	       
+		<!-- Alternativas(Secundario) Córdoba -->
+		 <li id="alterna2" class='has-sub'><a href='#'><img src="img/provincia/2.svg" width="7%" height="7%"><span> C&Oacute;RDOBA</span></a></li> 
       
-      <ul>
-		 <li class='has-sub'><a href='#'><span> GRANADA</span></a>
-            <ul>
-               <li><a href='#' onclick="centrarTramo(82)"><img src="icon/menu/home-mini.png"><span> Lanjar&oacute;n (Alternativa)</span></a></li>
-               <li class='last' onclick="centrarTramo(84)"><a href='#'><img src="icon/menu/home-mini.png"><span> Granada (Enlace)</span></a></li>
-            </ul>
-         </li> 
-	  </ul>
+		<!-- Alternativas(Secundario) Granada -->
+		 <li id="alterna3" class='has-sub'><a href='#'><img src="img/provincia/3.svg" width="7%" height="7%"><span> GRANADA</span></a></li> 
 	  
-	   <!-- Alternativas(Secundario) Córdoba -->
-	   
-      <ul>
-		 <li class='has-sub'><a href='#'><span> C&Oacute;RDOBA</span></a>
-            <ul>
-               <li class='last' onclick="centrarTramo(88)"><a href='#'><img src="icon/menu/home-mini.png"><span> C&oacute;rdoba (Enlace)</span></a></li>
-            </ul>
-         </li> 
-	  </ul>
-	  
-	  <!-- Alternativas(Secundario) Sevilla -->
-	  
-      <ul>
-		 <li class='has-sub'><a href='#'><span> SEVILLA</span></a>
-            <ul>
-               <li><a href='#' onclick="centrarTramo(83)"><img src="icon/menu/home-mini.png"><span> Sevilla (Enlace)</span></a></li>
-               <li><a href='#' onclick="centrarTramo(80)"><img src="icon/menu/home-mini.png"><span> Coria del R&iacute;o (Alternativa)</span></a></li>
-               <li><a href='#' onclick="centrarTramo(79)"><img src="icon/menu/home-mini.png"><span> Villamanrrique de la Condesa (Alternativa)</span></a></li>
-               <li class='last' onclick="centrarTramo(78)"><a href='#'><img src="icon/menu/home-mini.png"><span> Almonte (Alternativa)</span></a></li>
-            </ul>
-         </li> 
-	  </ul>
-	  
-	  <!-- Alternativas(Secundario) Málaga -->
-	  
-      <ul>
-		 <li class='has-sub'><a href='#'><span> M&Aacute;LAGA</span></a>
-            <ul>
-              <li class='last' onclick="centrarTramo(85)"><a href='#'><img src="icon/menu/home-mini.png"><span> M&aacute;laga (Enlace)</span></a></li>
-            </ul>
-         </li> 
+	    <!-- Alternativas(Secundario) Huelva -->     
+		 <li id="alterna4" class='has-sub'><a href='#'><img src="img/provincia/4.svg" width="7%" height="7%"><span> HUELVA</span></a></li> 
+         
+	    <!-- Alternativas(Secundario) Jaén -->      
+		 <li id="alterna5" class='has-sub'><a href='#'><img src="img/provincia/5.svg" width="7%" height="7%"><span> JA&Eacute;N</span></a></li> 
+         
+	    <!-- Alternativas(Secundario) Málaga -->      
+		 <li id="alterna6" class='has-sub'><a href='#'><img src="img/provincia/6.svg" width="7%" height="7%"><span> M&Aacute;LAGA</span></a></li> 
+         
+        <!-- Alternativas(Secundario) Sevilla -->
+		 <li id="alterna7" class='has-sub'><a href='#'><img src="img/provincia/7.svg" width="7%" height="7%"><span> SEVILLA</span></a></li> 
+              
 	  </ul>
 	  
    </li>
    
-   <li class='active has-sub'><a href='#'><img src="icon/servicios.svg"><span>{{'servicios'|translate}}</span></a>
-		<ul>
-			<li href='#' onclick="serviciosOn(0)"><a id="servicio0" href='#'><img src="icon/alojamiento.svg"><span>{{'alojamiento'|translate}}</span></a>
-			<li href='#' onclick="serviciosOn(1)"><a id="servicio1"  href='#'><img src="icon/camping.svg"><span>{{'camping'|translate}}</span></a>
-			<li href='#' onclick="serviciosOn(2)"><a id="servicio2" href='#'><img src="icon/estacionestren.svg"><span>{{'estacionestren'|translate}}</span></a>
+   <!-------------------------- MARCADORES ---------------------------->
 
-			<li href='#'><a href='#'><img src="icon/talleres.svg"><span>{{'talleres' | translate}}</span></a>
-			<li class='last' href='#'><a href='#'><img src="icon/variables.svg"><span>{{'otros' | translate}}</span></a>
+   <li class='active has-sub'><a href='#'><img src="icon/marcador.svg"><span>{{'marcadores'|translate}}</span></a>
+		<ul>
+
+			<li href='#' onclick="marcadoresOn(0)"><a id="marcador0" href='#'><img src="icon/poi.svg"><span>{{'todosmarcadores'|translate}}</span></a>
+			<li class='last' href='#' onclick="marcadoresOn(1)"><a id="marcador1"><img src="icon/alerta.svg"><span>{{'alertas' | translate}}</span></a>
+
 		</ul>
    </li>
+
+
+   <!--------------------------- SERVICIOS ---------------------------->
+
+   <li class='active has-sub'><a href='#'><img src="icon/servicios.svg"><span>{{'servicios'|translate}}</span></a>
+		<ul>
+
+			<li href='#' onclick="serviciosOn(0)"><a id="servicio0" href='#'><img src="icon/alojamiento.svg"><span>{{'alojamiento'|translate}}</span></a>
+			<li href='#' onclick="serviciosOn(1)"><a id="servicio1" href='#'><img src="icon/restaurante.svg"><span>{{'restaurantes'|translate}}</span></a>
+			<li href='#' onclick="serviciosOn(2)"><a id="servicio2" href='#'><img src="icon/supermercado.svg"><span>{{'supermercados'|translate}}</span></a>
+			<li href='#' onclick="serviciosOn(3)"><a id="servicio3" href='#'><img src="icon/farmacia.svg"><span>{{'salud'|translate}}</span></a>
+			<li href='#' onclick="serviciosOn(4)"><a id="servicio4" href='#'><img src="icon/taller.svg"><span>{{'talleres'|translate}}</span></a>
+			<li href='#' onclick="serviciosOn(5)"><a id="servicio5" href='#'><img src="icon/informacion.svg"><span>{{'informacion'|translate}}</span></a>
+			<li href='#' onclick="serviciosOn(6)"><a id="servicio6" href='#'><img src="icon/policia.svg"><span>{{'policia'|translate}}</span></a>
+			<li href='#' onclick="serviciosOn(7)"><a id="servicio7" href='#'><img src="icon/tren.svg"><span>{{'estaciones de tren'|translate}}</span></a>
+			<li class='last' href='#' onclick="serviciosOn(8)"><a id="servicio8"><img src="icon/otros.svg"><span>{{'otros' | translate}}</span></a>
+
+		</ul>
+   </li>
+  
+    <!---------------------------- CAPAS ------------------------------>
+   
    <li class='active has-sub'><a href='#'><img src="icon/climatologia.svg"><span>{{'climatologia'|translate}}</span></a>
 		<ul>
 			<li href='#' onclick="climaTA(1)"><a id="clima1" href='#' ><img src="icon/temperatura.svg"><span>{{'temperatura'|translate}}</span></a>
@@ -170,7 +161,7 @@
    </li>
    
    <li class='last' onclick="centrarMapa()"><a href='#'><img src="icon/centrar.svg"><span>{{'centrar'|translate}}</span></a></li>
-
+   <li class='last' onclick="limpiarMapa()"><a href='#'><img src="icon/limpiar.svg"><span>{{'limpiar'|translate}}</span></a></li>
 </ul>
 </div>
 
